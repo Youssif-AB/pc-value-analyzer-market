@@ -1,0 +1,11 @@
+{
+  "total_rows": 1200,
+  "valid_rows": 1196,
+  "duplicate_rows": 1,
+  "missing_cpu": 0,
+  "missing_gpu": 1,
+  "invalid_ram": 1,
+  "invalid_storage": 0,
+  "invalid_target_price": 1,
+  "normalization_failures": 0
+}

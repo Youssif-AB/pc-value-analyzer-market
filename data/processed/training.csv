@@ -1,0 +1,1197 @@
+source,source_id,cpu,gpu,ram_gb,ram_type,storage_gb,storage_type,condition,brand,system_age_years,asking_price,sold_price,cpu_score,gpu_score,condition_score
+synthetic_demo,demo-00000,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4090,32,DDR5,1024,SATA SSD,good,Lenovo,3.3,1651.08,1480.73,96.0,100.0,0.84
+synthetic_demo,demo-00001,AMD Ryzen 9 7900X,AMD Radeon RX 6700 XT,32,DDR5,512,NVMe SSD,new,Alienware,4.4,1059.04,1164.05,88.0,57.0,1.0
+synthetic_demo,demo-00002,Intel Core i5-12400,AMD Radeon RX 7900 XT,16,DDR4,1024,NVMe SSD,like_new,HP,3.0,1538.69,1481.9,56.0,84.0,0.95
+synthetic_demo,demo-00004,Intel Core i7-14700K,Intel Arc A770,16,DDR5,512,SATA SSD,fair,custom,2.9,1193.07,1097.83,93.0,48.0,0.72
+synthetic_demo,demo-00005,Intel Core i5-12400,NVIDIA GeForce RTX 3070,64,DDR5,1024,NVMe SSD,good,custom,1.3,1467.88,1554.77,56.0,60.0,0.84
+synthetic_demo,demo-00006,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3070,128,DDR4,2048,NVMe SSD,good,MSI,4.3,1552.58,1519.88,74.0,60.0,0.84
+synthetic_demo,demo-00007,Intel Core i7-14700K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,good,Lenovo,1.6,1783.06,1740.34,93.0,62.0,0.84
+synthetic_demo,demo-00008,AMD Ryzen 7 5800X3D,AMD Radeon RX 6800 XT,32,DDR5,1024,HDD,good,Lenovo,2.1,1416.39,1295.6,78.0,69.0,0.84
+synthetic_demo,demo-00009,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3060,64,DDR4,2048,NVMe SSD,good,HP,3.4,1454.8,1343.2,74.0,48.0,0.84
+synthetic_demo,demo-00010,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,4096,NVMe SSD,good,ASUS,6.4,1307.0,1321.83,58.0,84.0,0.84
+synthetic_demo,demo-00011,Intel Core i5-14600K,NVIDIA GeForce RTX 4070,16,DDR5,1024,NVMe SSD,good,Lenovo,1.4,1933.84,1677.37,84.0,72.0,0.84
+synthetic_demo,demo-00012,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,16,DDR5,4096,SATA SSD,new,custom,2.6,1469.76,1534.92,87.0,44.0,1.0
+synthetic_demo,demo-00013,AMD Ryzen 7 7700X,Intel Arc A750,16,DDR5,2048,NVMe SSD,good,HP,3.9,1393.8,1273.67,82.0,43.0,0.84
+synthetic_demo,demo-00014,Intel Core i5-12600K,NVIDIA GeForce RTX 3080,64,DDR4,2048,NVMe SSD,like_new,Lenovo,1.7,2003.38,1904.95,68.0,72.0,0.95
+synthetic_demo,demo-00015,AMD Ryzen 5 5600X,Intel Arc A750,32,DDR4,1024,NVMe SSD,fair,ASUS,3.2,1096.87,1032.49,58.0,43.0,0.72
+synthetic_demo,demo-00016,AMD Ryzen 5 5600X,AMD Radeon RX 7600,64,DDR4,1024,NVMe SSD,excellent,ASUS,4.0,1343.52,1256.9,58.0,50.0,0.9
+synthetic_demo,demo-00018,AMD Ryzen 9 7950X3D,Intel Arc A770,32,DDR5,256,NVMe SSD,excellent,Lenovo,2.0,1331.17,1314.76,100.0,48.0,0.9
+synthetic_demo,demo-00019,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR4,2048,SATA SSD,good,Lenovo,5.3,1329.04,1169.08,88.0,84.0,0.84
+synthetic_demo,demo-00020,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3080,32,DDR4,1024,NVMe SSD,excellent,ASUS,0.0,1880.18,1780.01,78.0,72.0,0.9
+synthetic_demo,demo-00021,Intel Core i7-14700K,AMD Radeon RX 7800 XT,64,DDR5,1024,SATA SSD,new,Lenovo,3.8,2054.98,1835.89,93.0,73.0,1.0
+synthetic_demo,demo-00022,AMD Ryzen 5 7600X,AMD Radeon RX 6700 XT,16,DDR4,512,NVMe SSD,fair,MSI,2.2,1137.85,1010.71,74.0,57.0,0.72
+synthetic_demo,demo-00023,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,good,Lenovo,2.5,1351.54,1458.49,95.0,84.0,0.84
+synthetic_demo,demo-00024,Intel Core i5-13600K,NVIDIA GeForce RTX 3090,64,DDR5,2048,SATA SSD,good,HP,1.2,2032.72,1928.13,79.0,82.0,0.84
+synthetic_demo,demo-00025,Intel Core i7-12700K,AMD Radeon RX 7800 XT,64,DDR5,512,NVMe SSD,new,ASUS,4.0,1749.03,1656.51,76.0,73.0,1.0
+synthetic_demo,demo-00026,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,1024,NVMe SSD,excellent,Alienware,3.9,1698.94,1564.87,95.0,80.0,0.9
+synthetic_demo,demo-00027,AMD Ryzen 9 7900X,AMD Radeon RX 7800 XT,64,DDR5,2048,NVMe SSD,good,custom,1.7,1759.71,1756.5,88.0,73.0,0.84
+synthetic_demo,demo-00028,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3090,16,DDR5,1024,NVMe SSD,new,HP,0.8,2169.72,2184.89,88.0,82.0,1.0
+synthetic_demo,demo-00029,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XTX,16,DDR5,2048,NVMe SSD,fair,MSI,2.8,1806.98,1665.95,100.0,92.0,0.72
+synthetic_demo,demo-00030,Intel Core i5-12400,AMD Radeon RX 7700 XT,16,DDR4,1024,NVMe SSD,good,ASUS,3.9,1144.02,1146.69,56.0,64.0,0.84
+synthetic_demo,demo-00032,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,SATA SSD,good,Alienware,0.6,1843.35,1706.84,78.0,84.0,0.84
+synthetic_demo,demo-00033,AMD Ryzen 9 7950X,Intel Arc A770,16,DDR5,2048,NVMe SSD,excellent,ASUS,1.3,1877.42,1604.73,95.0,48.0,0.9
+synthetic_demo,demo-00034,Intel Core i9-13900K,NVIDIA GeForce RTX 3090,16,DDR5,512,NVMe SSD,fair,custom,2.2,1397.99,1476.8,95.0,82.0,0.72
+synthetic_demo,demo-00035,AMD Ryzen 9 7950X3D,AMD Radeon RX 7800 XT,32,DDR5,1024,NVMe SSD,good,Alienware,2.5,1503.54,1494.42,100.0,73.0,0.84
+synthetic_demo,demo-00036,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,1024,NVMe SSD,good,Lenovo,4.2,1393.92,1286.56,93.0,84.0,0.84
+synthetic_demo,demo-00037,Intel Core i5-12600K,NVIDIA GeForce RTX 4090,32,DDR4,1024,NVMe SSD,like_new,custom,3.2,1498.14,1673.17,68.0,100.0,0.95
+synthetic_demo,demo-00038,AMD Ryzen 7 7800X3D,AMD Radeon RX 6800 XT,16,DDR5,1024,NVMe SSD,good,MSI,2.9,1520.91,1430.41,96.0,69.0,0.84
+synthetic_demo,demo-00039,AMD Ryzen 5 5600X,AMD Radeon RX 7600,32,DDR4,2048,SATA SSD,good,Dell,2.8,1357.8,1336.33,58.0,50.0,0.84
+synthetic_demo,demo-00040,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4090,32,DDR4,512,NVMe SSD,good,HP,1.1,2002.43,1885.52,95.0,100.0,0.84
+synthetic_demo,demo-00041,Intel Core i5-12400,NVIDIA GeForce RTX 4090,16,DDR4,4096,NVMe SSD,good,Lenovo,5.1,1799.18,1672.58,56.0,100.0,0.84
+synthetic_demo,demo-00042,Intel Core i5-12400,NVIDIA GeForce RTX 4070,32,DDR5,512,NVMe SSD,good,MSI,5.3,982.43,1006.56,56.0,72.0,0.84
+synthetic_demo,demo-00043,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 2080,16,DDR5,1024,NVMe SSD,good,HP,1.2,1165.53,1291.68,95.0,44.0,0.84
+synthetic_demo,demo-00044,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3090,64,DDR5,4096,SATA SSD,good,Dell,3.9,1512.33,1693.69,82.0,82.0,0.84
+synthetic_demo,demo-00045,Intel Core i7-12700K,NVIDIA GeForce RTX 3090,16,DDR5,2048,NVMe SSD,good,Alienware,1.1,2143.94,1907.74,76.0,82.0,0.84
+synthetic_demo,demo-00046,AMD Ryzen 7 5800X,AMD Radeon RX 7800 XT,32,DDR4,2048,NVMe SSD,good,HP,6.2,1668.57,1542.92,70.0,73.0,0.84
+synthetic_demo,demo-00047,Intel Core i9-13900K,NVIDIA GeForce RTX 3080,64,DDR5,4096,NVMe SSD,excellent,MSI,1.1,2021.6,1895.07,95.0,72.0,0.9
+synthetic_demo,demo-00048,Intel Core i5-12400,NVIDIA GeForce RTX 3060,64,DDR5,512,NVMe SSD,fair,Dell,1.4,1045.31,1067.96,56.0,48.0,0.72
+synthetic_demo,demo-00049,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,good,HP,2.6,1906.69,1806.08,95.0,80.0,0.84
+synthetic_demo,demo-00050,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3080,16,DDR4,1024,NVMe SSD,new,ASUS,2.5,1304.94,1495.58,70.0,72.0,1.0
+synthetic_demo,demo-00051,Intel Core i9-13900K,Intel Arc A770,32,DDR5,2048,NVMe SSD,excellent,HP,2.0,1910.59,1570.18,95.0,48.0,0.9
+synthetic_demo,demo-00052,Intel Core i9-13900K,AMD Radeon RX 7900 XTX,32,DDR5,1024,NVMe SSD,excellent,ASUS,3.0,2044.99,2065.5,95.0,92.0,0.9
+synthetic_demo,demo-00053,AMD Ryzen 7 5800X3D,Intel Arc A770,32,DDR5,1024,NVMe SSD,good,Lenovo,0.8,1214.15,1254.96,78.0,48.0,0.84
+synthetic_demo,demo-00055,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,2048,SATA SSD,fair,Alienware,1.3,1792.71,1662.24,78.0,84.0,0.72
+synthetic_demo,demo-00056,Intel Core i9-14900K,NVIDIA GeForce RTX 3090,64,DDR5,512,HDD,good,MSI,2.5,1585.42,1626.87,100.0,82.0,0.84
+synthetic_demo,demo-00057,AMD Ryzen 9 7900X,AMD Radeon RX 7800 XT,32,DDR5,2048,NVMe SSD,good,Alienware,3.6,1386.12,1510.86,88.0,73.0,0.84
+synthetic_demo,demo-00058,AMD Ryzen 7 7700X,Intel Arc A750,32,DDR4,2048,NVMe SSD,excellent,MSI,0.6,1927.79,1609.3,82.0,43.0,0.9
+synthetic_demo,demo-00059,Intel Core i5-12600K,AMD Radeon RX 7800 XT,16,DDR4,1024,NVMe SSD,good,ASUS,3.1,1426.13,1334.6,68.0,73.0,0.84
+synthetic_demo,demo-00060,Intel Core i5-12600K,AMD Radeon RX 6800 XT,32,DDR5,4096,NVMe SSD,good,Lenovo,5.0,1477.11,1478.72,68.0,69.0,0.84
+synthetic_demo,demo-00061,Intel Core i7-12700K,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,excellent,ASUS,4.7,1755.43,1470.73,76.0,69.0,0.9
+synthetic_demo,demo-00062,AMD Ryzen 5 5600X,AMD Radeon RX 7600,32,DDR5,1024,SATA SSD,excellent,Dell,3.1,890.0,985.4,58.0,50.0,0.9
+synthetic_demo,demo-00063,Intel Core i9-13900K,NVIDIA GeForce RTX 3060,64,DDR5,512,NVMe SSD,like_new,Alienware,5.6,1598.41,1563.93,95.0,48.0,0.95
+synthetic_demo,demo-00064,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XT,32,DDR5,1024,NVMe SSD,good,MSI,2.1,1872.15,2014.59,88.0,84.0,0.84
+synthetic_demo,demo-00065,AMD Ryzen 9 7950X3D,AMD Radeon RX 6700 XT,32,DDR5,256,NVMe SSD,good,MSI,1.3,1644.69,1643.8,100.0,57.0,0.84
+synthetic_demo,demo-00066,Intel Core i7-12700K,AMD Radeon RX 6800 XT,64,DDR5,1024,NVMe SSD,excellent,HP,2.8,1722.34,1604.03,76.0,69.0,0.9
+synthetic_demo,demo-00067,Intel Core i5-13600K,NVIDIA GeForce RTX 4090,32,DDR4,2048,NVMe SSD,fair,Lenovo,5.2,1412.93,1279.37,79.0,100.0,0.72
+synthetic_demo,demo-00068,Intel Core i5-12400,NVIDIA GeForce RTX 4090,64,DDR4,1024,SATA SSD,good,MSI,0.0,1842.45,1927.9,56.0,100.0,0.84
+synthetic_demo,demo-00069,Intel Core i5-14600K,NVIDIA GeForce RTX 4060 Ti,16,DDR5,1024,NVMe SSD,good,HP,0.7,1401.96,1392.78,84.0,62.0,0.84
+synthetic_demo,demo-00070,AMD Ryzen 5 5600X,AMD Radeon RX 7900 XT,16,DDR4,512,NVMe SSD,new,Dell,4.4,1268.91,1216.52,58.0,84.0,1.0
+synthetic_demo,demo-00071,AMD Ryzen 5 7600X,Intel Arc A750,16,DDR4,4096,NVMe SSD,fair,Alienware,2.0,1389.5,1218.57,74.0,43.0,0.72
+synthetic_demo,demo-00072,AMD Ryzen 9 7950X3D,Intel Arc A770,16,DDR5,512,NVMe SSD,excellent,ASUS,3.7,1543.17,1506.2,100.0,48.0,0.9
+synthetic_demo,demo-00073,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 2080,16,DDR4,1024,NVMe SSD,like_new,Dell,1.6,1270.81,1194.09,58.0,44.0,0.95
+synthetic_demo,demo-00074,AMD Ryzen 7 7800X3D,AMD Radeon RX 6700 XT,8,DDR5,1024,HDD,excellent,ASUS,3.1,1199.05,1142.98,96.0,57.0,0.9
+synthetic_demo,demo-00075,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR4,2048,SATA SSD,good,MSI,3.2,2342.79,1908.3,70.0,84.0,0.84
+synthetic_demo,demo-00076,AMD Ryzen 7 7800X3D,AMD Radeon RX 6700 XT,64,DDR5,1024,NVMe SSD,good,Dell,1.3,1413.85,1582.1,96.0,57.0,0.84
+synthetic_demo,demo-00077,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XT,64,DDR5,512,NVMe SSD,good,ASUS,1.8,2255.43,1943.36,100.0,84.0,0.84
+synthetic_demo,demo-00078,Intel Core i5-12600K,Intel Arc A750,16,DDR5,2048,NVMe SSD,good,Lenovo,1.6,993.74,1204.14,68.0,43.0,0.84
+synthetic_demo,demo-00079,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3060,64,DDR4,2048,NVMe SSD,good,MSI,2.5,1187.49,1203.06,58.0,48.0,0.84
+synthetic_demo,demo-00080,Intel Core i5-14600K,AMD Radeon RX 6700 XT,32,DDR5,1024,NVMe SSD,like_new,Alienware,1.3,1501.75,1737.68,84.0,57.0,0.95
+synthetic_demo,demo-00081,Intel Core i7-14700K,NVIDIA GeForce RTX 3080,32,DDR5,2048,NVMe SSD,new,Alienware,0.3,2528.74,2775.0,93.0,72.0,1.0
+synthetic_demo,demo-00082,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,good,MSI,0.9,2930.75,2202.73,88.0,82.0,0.84
+synthetic_demo,demo-00083,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,NVMe SSD,excellent,Lenovo,0.8,2029.25,1889.16,100.0,84.0,0.9
+synthetic_demo,demo-00084,Intel Core i5-12600K,NVIDIA GeForce RTX 2080,32,DDR5,2048,NVMe SSD,good,Dell,5.7,907.96,894.12,68.0,44.0,0.84
+synthetic_demo,demo-00085,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3090,16,DDR4,1024,NVMe SSD,fair,ASUS,4.1,1181.58,1178.77,58.0,82.0,0.72
+synthetic_demo,demo-00086,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4060,16,DDR5,1024,HDD,good,Dell,2.6,944.76,929.72,78.0,54.0,0.84
+synthetic_demo,demo-00087,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060,32,DDR5,1024,NVMe SSD,like_new,custom,2.3,1608.62,1634.0,96.0,54.0,0.95
+synthetic_demo,demo-00088,AMD Ryzen 9 7950X,AMD Radeon RX 6800 XT,16,DDR5,4096,NVMe SSD,like_new,custom,3.6,2165.55,2051.6,95.0,69.0,0.95
+synthetic_demo,demo-00089,Intel Core i9-14900K,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,good,MSI,3.4,1547.1,1487.59,100.0,64.0,0.84
+synthetic_demo,demo-00090,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XTX,32,DDR5,1024,NVMe SSD,good,Dell,1.6,1938.5,1881.55,88.0,92.0,0.84
+synthetic_demo,demo-00091,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3090,16,DDR5,2048,NVMe SSD,excellent,Lenovo,6.4,1715.24,1590.27,88.0,82.0,0.9
+synthetic_demo,demo-00092,Intel Core i7-13700K,AMD Radeon RX 7800 XT,64,DDR5,1024,NVMe SSD,good,custom,1.5,1788.76,1543.21,87.0,73.0,0.84
+synthetic_demo,demo-00093,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060,32,DDR5,1024,NVMe SSD,good,Alienware,3.2,1269.64,1466.87,96.0,54.0,0.84
+synthetic_demo,demo-00094,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XT,32,DDR5,1024,NVMe SSD,good,ASUS,4.4,1506.0,1621.17,100.0,84.0,0.84
+synthetic_demo,demo-00095,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR4,2048,NVMe SSD,good,ASUS,2.0,1899.18,1816.97,84.0,84.0,0.84
+synthetic_demo,demo-00096,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3080,64,DDR5,512,NVMe SSD,good,Lenovo,2.3,1581.79,1558.72,82.0,72.0,0.84
+synthetic_demo,demo-00097,Intel Core i9-14900K,AMD Radeon RX 7800 XT,16,DDR5,2048,NVMe SSD,good,HP,3.1,1425.41,1819.67,100.0,73.0,0.84
+synthetic_demo,demo-00098,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,NVMe SSD,new,Alienware,2.4,2338.41,2186.25,84.0,84.0,1.0
+synthetic_demo,demo-00099,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3080,32,DDR5,2048,NVMe SSD,good,Dell,2.2,1508.28,1405.93,100.0,72.0,0.84
+synthetic_demo,demo-00100,AMD Ryzen 7 5800X3D,AMD Radeon RX 6700 XT,32,DDR5,2048,NVMe SSD,excellent,ASUS,5.7,1199.73,1065.12,78.0,57.0,0.9
+synthetic_demo,demo-00101,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,NVMe SSD,good,Lenovo,2.2,1482.22,1585.76,96.0,62.0,0.84
+synthetic_demo,demo-00102,AMD Ryzen 9 7950X,AMD Radeon RX 7800 XT,16,DDR5,1024,NVMe SSD,good,MSI,2.2,2018.06,1837.5,95.0,73.0,0.84
+synthetic_demo,demo-00103,AMD Ryzen 9 7950X3D,AMD Radeon RX 6800 XT,32,DDR5,512,NVMe SSD,good,HP,5.7,1478.17,1363.74,100.0,69.0,0.84
+synthetic_demo,demo-00104,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4060,16,DDR5,512,NVMe SSD,good,custom,5.8,1212.41,1079.81,95.0,54.0,0.84
+synthetic_demo,demo-00105,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4060 Ti,32,DDR5,256,SATA SSD,fair,custom,2.3,1041.05,1072.96,74.0,62.0,0.72
+synthetic_demo,demo-00106,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,512,NVMe SSD,excellent,MSI,4.5,1474.22,1318.34,84.0,80.0,0.9
+synthetic_demo,demo-00107,Intel Core i5-13600K,AMD Radeon RX 7700 XT,16,DDR5,1024,NVMe SSD,good,Alienware,2.5,1812.62,1625.54,79.0,64.0,0.84
+synthetic_demo,demo-00108,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3080,64,DDR5,2048,NVMe SSD,excellent,custom,5.9,1377.96,1560.91,88.0,72.0,0.9
+synthetic_demo,demo-00109,Intel Core i9-14900K,NVIDIA GeForce RTX 3070,64,DDR5,1024,NVMe SSD,good,HP,2.7,1332.43,1348.37,100.0,60.0,0.84
+synthetic_demo,demo-00110,Intel Core i7-14700K,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,like_new,ASUS,5.4,1333.22,1374.3,93.0,48.0,0.95
+synthetic_demo,demo-00111,AMD Ryzen 5 7600X,AMD Radeon RX 6700 XT,32,DDR5,2048,SATA SSD,good,ASUS,1.1,1417.29,1543.31,74.0,57.0,0.84
+synthetic_demo,demo-00112,Intel Core i7-13700K,AMD Radeon RX 7900 XTX,128,DDR5,2048,NVMe SSD,fair,Alienware,1.7,2317.68,2005.73,87.0,92.0,0.72
+synthetic_demo,demo-00113,Intel Core i5-12600K,AMD Radeon RX 6700 XT,32,DDR5,512,SATA SSD,fair,custom,3.8,684.02,639.01,68.0,57.0,0.72
+synthetic_demo,demo-00114,AMD Ryzen 7 7700X,AMD Radeon RX 7900 XT,64,DDR5,4096,NVMe SSD,excellent,Lenovo,2.9,2616.93,2177.83,82.0,84.0,0.9
+synthetic_demo,demo-00115,Intel Core i7-13700K,Intel Arc A750,16,DDR5,1024,NVMe SSD,fair,ASUS,0.0,1294.7,1177.98,87.0,43.0,0.72
+synthetic_demo,demo-00116,Intel Core i5-13600K,AMD Radeon RX 6800 XT,8,DDR5,512,NVMe SSD,fair,ASUS,0.1,1754.73,1629.53,79.0,69.0,0.72
+synthetic_demo,demo-00117,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XT,128,DDR5,2048,SATA SSD,like_new,Dell,4.2,2070.3,1846.21,88.0,84.0,0.95
+synthetic_demo,demo-00118,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4080,32,DDR5,512,NVMe SSD,excellent,HP,4.6,1722.8,1620.03,100.0,90.0,0.9
+synthetic_demo,demo-00119,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4060 Ti,16,DDR5,1024,NVMe SSD,good,Lenovo,3.3,1187.2,1157.96,78.0,62.0,0.84
+synthetic_demo,demo-00120,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3090,32,DDR5,1024,SATA SSD,good,Dell,2.5,1803.33,1581.89,82.0,82.0,0.84
+synthetic_demo,demo-00121,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,16,DDR5,4096,NVMe SSD,good,Dell,1.0,2003.74,1686.44,56.0,62.0,0.84
+synthetic_demo,demo-00122,Intel Core i5-14600K,NVIDIA GeForce RTX 3070,16,DDR5,1024,NVMe SSD,good,Lenovo,1.5,1394.96,1315.71,84.0,60.0,0.84
+synthetic_demo,demo-00123,Intel Core i9-14900K,NVIDIA GeForce RTX 3070,8,DDR5,2048,SATA SSD,good,MSI,4.2,1540.19,1313.15,100.0,60.0,0.84
+synthetic_demo,demo-00124,AMD Ryzen 9 7950X,Intel Arc A770,64,DDR4,2048,NVMe SSD,excellent,ASUS,4.3,1708.75,1559.91,95.0,48.0,0.9
+synthetic_demo,demo-00125,AMD Ryzen 7 5800X,Intel Arc A770,16,DDR4,2048,NVMe SSD,fair,ASUS,6.8,643.88,766.84,70.0,48.0,0.72
+synthetic_demo,demo-00126,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3070,64,DDR5,512,SATA SSD,fair,Dell,5.5,960.97,914.53,95.0,60.0,0.72
+synthetic_demo,demo-00127,Intel Core i7-12700K,NVIDIA GeForce RTX 4060 Ti,16,DDR5,2048,NVMe SSD,fair,MSI,5.0,795.82,869.9,76.0,62.0,0.72
+synthetic_demo,demo-00128,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3080,64,DDR5,4096,NVMe SSD,excellent,custom,0.1,2334.94,2154.08,78.0,72.0,0.9
+synthetic_demo,demo-00129,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,4096,HDD,good,Dell,3.7,1472.49,1638.42,84.0,84.0,0.84
+synthetic_demo,demo-00130,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XTX,8,DDR5,1024,NVMe SSD,good,Lenovo,0.0,1916.39,1930.24,88.0,92.0,0.84
+synthetic_demo,demo-00131,Intel Core i7-13700K,Intel Arc A750,64,DDR5,512,SATA SSD,good,Lenovo,3.6,1288.25,1222.45,87.0,43.0,0.84
+synthetic_demo,demo-00132,Intel Core i9-13900K,Intel Arc A770,16,DDR5,512,NVMe SSD,like_new,custom,4.1,1409.74,1289.78,95.0,48.0,0.95
+synthetic_demo,demo-00133,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3070,128,DDR5,512,NVMe SSD,excellent,Dell,1.6,1977.72,1866.34,95.0,60.0,0.9
+synthetic_demo,demo-00134,Intel Core i5-12400,AMD Radeon RX 7900 XT,32,DDR5,2048,NVMe SSD,good,Lenovo,4.2,1512.7,1385.1,56.0,84.0,0.84
+synthetic_demo,demo-00135,Intel Core i7-12700K,NVIDIA GeForce RTX 3080,8,DDR5,1024,HDD,good,custom,2.3,1421.14,1265.54,76.0,72.0,0.84
+synthetic_demo,demo-00136,Intel Core i7-14700K,AMD Radeon RX 6800 XT,64,DDR5,2048,NVMe SSD,fair,MSI,0.0,1373.32,1539.97,93.0,69.0,0.72
+synthetic_demo,demo-00137,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,SATA SSD,good,Alienware,0.0,2065.8,1852.83,84.0,84.0,0.84
+synthetic_demo,demo-00138,AMD Ryzen 7 7700X,AMD Radeon RX 6700 XT,16,DDR5,2048,NVMe SSD,good,Alienware,2.3,1762.23,1533.81,82.0,57.0,0.84
+synthetic_demo,demo-00139,Intel Core i9-13900K,NVIDIA GeForce RTX 4070,64,DDR5,1024,HDD,fair,Lenovo,5.1,1251.3,1064.61,95.0,72.0,0.72
+synthetic_demo,demo-00140,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060 Ti,16,DDR4,2048,SATA SSD,good,Alienware,3.0,1089.58,1111.18,58.0,62.0,0.84
+synthetic_demo,demo-00141,Intel Core i9-13900K,NVIDIA GeForce RTX 4090,16,DDR5,512,NVMe SSD,good,HP,0.3,1817.86,1810.26,95.0,100.0,0.84
+synthetic_demo,demo-00142,Intel Core i5-14600K,NVIDIA GeForce RTX 2080,32,DDR5,512,NVMe SSD,new,MSI,4.2,1447.92,1605.62,84.0,44.0,1.0
+synthetic_demo,demo-00143,Intel Core i5-12600K,NVIDIA GeForce RTX 3070,32,DDR4,4096,HDD,good,HP,3.5,1257.53,1156.38,68.0,60.0,0.84
+synthetic_demo,demo-00144,AMD Ryzen 7 7800X3D,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,new,Dell,2.6,1630.47,1439.29,96.0,64.0,1.0
+synthetic_demo,demo-00145,Intel Core i5-12400,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,good,custom,1.8,1080.32,1157.87,56.0,48.0,0.84
+synthetic_demo,demo-00146,AMD Ryzen 7 7800X3D,Intel Arc A750,32,DDR5,2048,NVMe SSD,good,Alienware,1.7,1626.03,1592.47,96.0,43.0,0.84
+synthetic_demo,demo-00147,Intel Core i7-12700K,NVIDIA GeForce RTX 3060,64,DDR5,1024,NVMe SSD,excellent,Dell,3.4,1664.31,1419.98,76.0,48.0,0.9
+synthetic_demo,demo-00148,Intel Core i7-14700K,NVIDIA GeForce RTX 4070,32,DDR5,1024,SATA SSD,good,ASUS,2.2,1513.08,1319.48,93.0,72.0,0.84
+synthetic_demo,demo-00149,Intel Core i7-14700K,NVIDIA GeForce RTX 4070,32,DDR5,1024,NVMe SSD,like_new,Dell,2.2,2144.25,1988.47,93.0,72.0,0.95
+synthetic_demo,demo-00150,Intel Core i7-12700K,NVIDIA GeForce RTX 4080,64,DDR5,1024,NVMe SSD,excellent,ASUS,2.6,2471.22,2000.83,76.0,90.0,0.9
+synthetic_demo,demo-00151,Intel Core i5-13600K,NVIDIA GeForce RTX 3090,64,DDR5,1024,SATA SSD,excellent,Alienware,6.3,1439.74,1363.36,79.0,82.0,0.9
+synthetic_demo,demo-00152,Intel Core i7-12700K,AMD Radeon RX 6800 XT,128,DDR5,2048,NVMe SSD,new,ASUS,4.6,1931.89,1799.94,76.0,69.0,1.0
+synthetic_demo,demo-00153,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4090,16,DDR5,2048,NVMe SSD,excellent,Alienware,2.8,1867.15,1951.74,58.0,100.0,0.9
+synthetic_demo,demo-00154,AMD Ryzen 7 7700X,AMD Radeon RX 6700 XT,32,DDR5,512,HDD,like_new,Lenovo,0.1,1102.85,1188.08,82.0,57.0,0.95
+synthetic_demo,demo-00155,AMD Ryzen 7 5800X,AMD Radeon RX 7900 XTX,32,DDR5,1024,NVMe SSD,excellent,Lenovo,2.0,2194.5,1778.76,70.0,92.0,0.9
+synthetic_demo,demo-00156,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4080,16,DDR5,2048,SATA SSD,good,HP,4.7,1381.36,1285.26,88.0,90.0,0.84
+synthetic_demo,demo-00157,Intel Core i5-13600K,Intel Arc A770,32,DDR4,1024,NVMe SSD,like_new,ASUS,2.1,1494.43,1411.79,79.0,48.0,0.95
+synthetic_demo,demo-00158,Intel Core i5-13600K,AMD Radeon RX 7600,32,DDR5,512,NVMe SSD,new,Dell,3.9,1484.14,1294.62,79.0,50.0,1.0
+synthetic_demo,demo-00159,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070,64,DDR4,1024,SATA SSD,good,Alienware,0.9,2087.81,1606.29,70.0,72.0,0.84
+synthetic_demo,demo-00160,AMD Ryzen 7 7700X,AMD Radeon RX 7900 XTX,32,DDR5,1024,NVMe SSD,excellent,HP,3.2,2091.01,1993.05,82.0,92.0,0.9
+synthetic_demo,demo-00161,AMD Ryzen 9 7950X,AMD Radeon RX 7900 XT,8,DDR5,2048,NVMe SSD,good,HP,3.8,1588.14,1552.5,95.0,84.0,0.84
+synthetic_demo,demo-00162,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,4096,NVMe SSD,good,ASUS,1.5,2124.72,2225.2,100.0,80.0,0.84
+synthetic_demo,demo-00163,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,512,NVMe SSD,new,MSI,3.9,2177.25,2022.23,93.0,84.0,1.0
+synthetic_demo,demo-00164,Intel Core i9-14900K,NVIDIA GeForce RTX 3060,16,DDR5,2048,NVMe SSD,good,Alienware,2.3,1571.42,1557.2,100.0,48.0,0.84
+synthetic_demo,demo-00165,Intel Core i7-14700K,NVIDIA GeForce RTX 2080,32,DDR4,2048,SATA SSD,excellent,Alienware,4.4,951.45,945.36,93.0,44.0,0.9
+synthetic_demo,demo-00166,AMD Ryzen 7 7700X,Intel Arc A750,16,DDR5,4096,NVMe SSD,good,Lenovo,0.0,1710.72,1454.22,82.0,43.0,0.84
+synthetic_demo,demo-00167,Intel Core i5-14600K,AMD Radeon RX 6700 XT,32,DDR5,4096,HDD,excellent,HP,4.3,1176.71,1322.52,84.0,57.0,0.9
+synthetic_demo,demo-00168,AMD Ryzen 9 7900X,AMD Radeon RX 7700 XT,32,DDR5,1024,SATA SSD,good,Dell,0.0,1922.64,1499.67,88.0,64.0,0.84
+synthetic_demo,demo-00169,Intel Core i5-14600K,AMD Radeon RX 7800 XT,8,DDR5,1024,NVMe SSD,fair,custom,3.5,1186.91,1092.41,84.0,73.0,0.72
+synthetic_demo,demo-00170,Intel Core i5-12600K,AMD Radeon RX 7900 XTX,32,DDR4,1024,NVMe SSD,good,ASUS,0.1,1921.53,1830.12,68.0,92.0,0.84
+synthetic_demo,demo-00171,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3060,32,DDR4,1024,NVMe SSD,good,MSI,2.7,1416.46,1318.29,70.0,48.0,0.84
+synthetic_demo,demo-00172,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,good,Lenovo,3.9,1598.88,1415.21,95.0,84.0,0.84
+synthetic_demo,demo-00173,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 2080,32,DDR5,1024,NVMe SSD,good,MSI,5.6,865.1,909.45,78.0,44.0,0.84
+synthetic_demo,demo-00174,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,good,Lenovo,5.1,1615.63,1368.74,95.0,84.0,0.84
+synthetic_demo,demo-00175,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3060,16,DDR5,2048,HDD,good,HP,2.0,1501.33,1425.56,82.0,48.0,0.84
+synthetic_demo,demo-00176,AMD Ryzen 7 7700X,Intel Arc A770,32,DDR5,512,NVMe SSD,excellent,Alienware,3.2,1569.84,1563.86,82.0,48.0,0.9
+synthetic_demo,demo-00177,Intel Core i5-12600K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,SATA SSD,excellent,Alienware,1.2,1865.88,1719.33,68.0,84.0,0.9
+synthetic_demo,demo-00178,Intel Core i9-13900K,AMD Radeon RX 7700 XT,16,DDR5,4096,NVMe SSD,good,Lenovo,0.1,2083.7,2113.02,95.0,64.0,0.84
+synthetic_demo,demo-00179,Intel Core i5-12400,AMD Radeon RX 7600,8,DDR4,1024,NVMe SSD,like_new,Alienware,4.8,726.43,755.64,56.0,50.0,0.95
+synthetic_demo,demo-00180,AMD Ryzen 7 5800X3D,AMD Radeon RX 7800 XT,16,DDR5,1024,HDD,good,MSI,0.0,1548.54,1454.35,78.0,73.0,0.84
+synthetic_demo,demo-00181,Intel Core i5-14600K,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,like_new,ASUS,2.5,1897.91,1853.28,84.0,82.0,0.95
+synthetic_demo,demo-00182,Intel Core i5-14600K,AMD Radeon RX 7800 XT,64,DDR5,2048,NVMe SSD,like_new,Alienware,3.1,1945.26,1751.41,84.0,73.0,0.95
+synthetic_demo,demo-00183,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3080,16,DDR5,1024,NVMe SSD,good,Lenovo,3.9,1525.16,1392.01,82.0,72.0,0.84
+synthetic_demo,demo-00184,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3070,16,DDR5,1024,NVMe SSD,good,custom,3.3,1688.78,1637.54,96.0,60.0,0.84
+synthetic_demo,demo-00185,AMD Ryzen 5 7600X,AMD Radeon RX 7800 XT,64,DDR5,2048,SATA SSD,good,Alienware,2.3,1452.17,1550.18,74.0,73.0,0.84
+synthetic_demo,demo-00186,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,512,NVMe SSD,like_new,Dell,0.7,1904.74,1844.01,87.0,84.0,0.95
+synthetic_demo,demo-00187,Intel Core i5-13600K,NVIDIA GeForce RTX 4070,64,DDR5,1024,NVMe SSD,new,Alienware,3.4,1801.27,1869.61,79.0,72.0,1.0
+synthetic_demo,demo-00188,AMD Ryzen 7 7700X,AMD Radeon RX 6800 XT,64,DDR5,1024,NVMe SSD,excellent,custom,4.3,1651.02,1612.27,82.0,69.0,0.9
+synthetic_demo,demo-00189,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3090,32,DDR5,2048,SATA SSD,fair,Lenovo,1.7,1682.48,1589.05,95.0,82.0,0.72
+synthetic_demo,demo-00190,Intel Core i5-12400,NVIDIA GeForce RTX 4090,32,DDR4,1024,NVMe SSD,new,Dell,0.3,2300.73,2157.87,56.0,100.0,1.0
+synthetic_demo,demo-00191,AMD Ryzen 5 7600X,AMD Radeon RX 6700 XT,32,DDR4,2048,NVMe SSD,excellent,Lenovo,1.3,1424.76,1592.77,74.0,57.0,0.9
+synthetic_demo,demo-00192,Intel Core i5-12400,AMD Radeon RX 7600,64,DDR4,1024,NVMe SSD,good,ASUS,5.1,1252.77,1234.56,56.0,50.0,0.84
+synthetic_demo,demo-00193,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,16,DDR5,256,NVMe SSD,good,custom,3.4,696.8,753.82,87.0,44.0,0.84
+synthetic_demo,demo-00194,Intel Core i9-13900K,NVIDIA GeForce RTX 4070,16,DDR4,1024,NVMe SSD,good,ASUS,2.3,1496.87,1346.79,95.0,72.0,0.84
+synthetic_demo,demo-00195,Intel Core i5-13600K,Intel Arc A750,16,DDR5,512,NVMe SSD,new,Alienware,6.2,885.78,926.3,79.0,43.0,1.0
+synthetic_demo,demo-00196,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4060,64,DDR5,1024,NVMe SSD,good,HP,3.2,1528.44,1665.39,95.0,54.0,0.84
+synthetic_demo,demo-00197,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4080,64,DDR5,1024,NVMe SSD,new,ASUS,3.2,2042.25,2334.47,58.0,90.0,1.0
+synthetic_demo,demo-00198,Intel Core i9-13900K,NVIDIA GeForce RTX 3080,16,DDR5,1024,NVMe SSD,excellent,Alienware,0.6,1798.3,1820.25,95.0,72.0,0.9
+synthetic_demo,demo-00199,Intel Core i5-13600K,AMD Radeon RX 7700 XT,32,DDR5,2048,SATA SSD,good,HP,4.2,1132.45,1312.98,79.0,64.0,0.84
+synthetic_demo,demo-00200,AMD Ryzen 7 5800X3D,AMD Radeon RX 6800 XT,16,DDR5,512,NVMe SSD,good,ASUS,3.7,1449.36,1241.48,78.0,69.0,0.84
+synthetic_demo,demo-00201,Intel Core i7-12700K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,excellent,HP,1.7,1601.62,1463.86,76.0,62.0,0.9
+synthetic_demo,demo-00202,AMD Ryzen 5 5600X,Intel Arc A750,128,DDR4,4096,NVMe SSD,excellent,Lenovo,4.1,1430.49,1641.52,58.0,43.0,0.9
+synthetic_demo,demo-00203,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4090,16,DDR4,1024,SATA SSD,excellent,ASUS,3.7,1517.99,1427.32,78.0,100.0,0.9
+synthetic_demo,demo-00204,Intel Core i7-14700K,NVIDIA GeForce RTX 2080,32,DDR5,1024,NVMe SSD,fair,Dell,0.4,1261.02,1314.47,93.0,44.0,0.72
+synthetic_demo,demo-00205,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,excellent,custom,0.6,2231.19,2096.66,84.0,84.0,0.9
+synthetic_demo,demo-00206,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,excellent,HP,1.8,1900.49,1908.25,100.0,62.0,0.9
+synthetic_demo,demo-00207,AMD Ryzen 7 5800X,Intel Arc A770,16,DDR5,2048,NVMe SSD,like_new,custom,2.9,1426.81,1458.85,70.0,48.0,0.95
+synthetic_demo,demo-00208,Intel Core i5-14600K,NVIDIA GeForce RTX 4060 Ti,64,DDR5,1024,NVMe SSD,good,Dell,3.6,1325.81,1327.36,84.0,62.0,0.84
+synthetic_demo,demo-00209,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,good,ASUS,5.1,1024.79,1283.04,93.0,84.0,0.84
+synthetic_demo,demo-00210,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 2080,32,DDR5,512,SATA SSD,good,custom,5.5,1197.02,1197.65,78.0,44.0,0.84
+synthetic_demo,demo-00211,Intel Core i7-14700K,AMD Radeon RX 6800 XT,32,DDR4,1024,NVMe SSD,like_new,Dell,0.0,1858.95,1838.04,93.0,69.0,0.95
+synthetic_demo,demo-00212,Intel Core i7-13700K,AMD Radeon RX 7700 XT,32,DDR4,2048,SATA SSD,excellent,custom,2.5,1433.66,1305.76,87.0,64.0,0.9
+synthetic_demo,demo-00213,Intel Core i5-14600K,AMD Radeon RX 7800 XT,32,DDR4,1024,NVMe SSD,like_new,Lenovo,3.7,1412.92,1272.99,84.0,73.0,0.95
+synthetic_demo,demo-00214,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,excellent,Lenovo,6.3,1363.83,1355.34,95.0,80.0,0.9
+synthetic_demo,demo-00215,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,2048,SATA SSD,excellent,Lenovo,2.6,1624.44,1873.78,100.0,84.0,0.9
+synthetic_demo,demo-00216,AMD Ryzen 9 7900X,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,good,Lenovo,3.1,1489.6,1216.21,88.0,50.0,0.84
+synthetic_demo,demo-00217,Intel Core i9-13900K,AMD Radeon RX 6700 XT,16,DDR5,2048,NVMe SSD,good,Dell,2.5,1609.73,1731.59,95.0,57.0,0.84
+synthetic_demo,demo-00218,AMD Ryzen 7 5800X,AMD Radeon RX 6700 XT,32,DDR5,2048,NVMe SSD,good,ASUS,3.8,1342.88,1408.97,70.0,57.0,0.84
+synthetic_demo,demo-00219,Intel Core i9-14900K,AMD Radeon RX 7700 XT,16,DDR5,2048,NVMe SSD,good,Alienware,3.1,1768.88,1755.51,100.0,64.0,0.84
+synthetic_demo,demo-00220,Intel Core i5-14600K,AMD Radeon RX 7900 XT,32,DDR5,1024,NVMe SSD,good,ASUS,0.0,1867.79,1966.6,84.0,84.0,0.84
+synthetic_demo,demo-00221,Intel Core i7-14700K,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,good,Dell,2.2,1492.68,1716.84,93.0,92.0,0.84
+synthetic_demo,demo-00222,Intel Core i5-14600K,NVIDIA GeForce RTX 3090,16,DDR5,512,NVMe SSD,good,Alienware,0.1,1891.07,1914.56,84.0,82.0,0.84
+synthetic_demo,demo-00223,Intel Core i9-13900K,AMD Radeon RX 6700 XT,32,DDR5,1024,HDD,good,Dell,0.0,1698.55,1591.54,95.0,57.0,0.84
+synthetic_demo,demo-00224,Intel Core i5-13600K,NVIDIA GeForce RTX 4090,16,DDR5,1024,NVMe SSD,good,custom,1.6,1779.85,1584.09,79.0,100.0,0.84
+synthetic_demo,demo-00225,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3070,32,DDR5,2048,NVMe SSD,good,MSI,3.4,2055.18,1899.39,95.0,60.0,0.84
+synthetic_demo,demo-00226,AMD Ryzen 7 7800X3D,AMD Radeon RX 7900 XT,16,DDR5,1024,NVMe SSD,new,custom,3.5,2008.66,1790.77,96.0,84.0,1.0
+synthetic_demo,demo-00227,Intel Core i5-12400,NVIDIA GeForce RTX 4060,32,DDR5,1024,NVMe SSD,good,Dell,3.9,1285.38,1301.16,56.0,54.0,0.84
+synthetic_demo,demo-00228,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070,128,DDR5,1024,NVMe SSD,excellent,Alienware,2.1,2241.78,2003.23,96.0,72.0,0.9
+synthetic_demo,demo-00229,AMD Ryzen 7 5800X,Intel Arc A770,32,DDR4,1024,SATA SSD,good,MSI,5.3,871.88,874.05,70.0,48.0,0.84
+synthetic_demo,demo-00230,Intel Core i5-13600K,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,good,Alienware,3.3,1418.34,1249.42,79.0,50.0,0.84
+synthetic_demo,demo-00231,Intel Core i7-13700K,Intel Arc A770,32,DDR5,1024,NVMe SSD,good,ASUS,0.0,1392.28,1447.64,87.0,48.0,0.84
+synthetic_demo,demo-00232,Intel Core i9-14900K,AMD Radeon RX 7700 XT,64,DDR5,1024,HDD,good,MSI,0.0,1500.34,1581.83,100.0,64.0,0.84
+synthetic_demo,demo-00233,AMD Ryzen 9 7950X3D,Intel Arc A770,32,DDR4,4096,NVMe SSD,good,Alienware,2.5,1840.39,1812.31,100.0,48.0,0.84
+synthetic_demo,demo-00234,Intel Core i5-12600K,Intel Arc A750,32,DDR5,2048,SATA SSD,good,custom,1.0,1482.86,1295.17,68.0,43.0,0.84
+synthetic_demo,demo-00235,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060,8,DDR5,1024,NVMe SSD,excellent,MSI,1.1,1609.15,1468.4,96.0,54.0,0.9
+synthetic_demo,demo-00236,Intel Core i5-13600K,NVIDIA GeForce RTX 4080,32,DDR5,1024,HDD,good,HP,2.4,1697.45,1634.31,79.0,90.0,0.84
+synthetic_demo,demo-00237,Intel Core i9-13900K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,good,ASUS,4.0,1273.57,1226.01,95.0,62.0,0.84
+synthetic_demo,demo-00238,AMD Ryzen 5 5600X,Intel Arc A770,32,DDR5,4096,NVMe SSD,excellent,Dell,2.4,1231.23,1393.35,58.0,48.0,0.9
+synthetic_demo,demo-00239,Intel Core i9-14900K,NVIDIA GeForce RTX 4060,32,DDR5,1024,NVMe SSD,fair,ASUS,4.0,1025.58,1093.63,100.0,54.0,0.72
+synthetic_demo,demo-00240,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3070,16,DDR5,2048,NVMe SSD,excellent,Dell,2.6,1314.2,1618.61,58.0,60.0,0.9
+synthetic_demo,demo-00241,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3070,16,DDR5,4096,NVMe SSD,good,ASUS,0.3,2101.48,1771.73,82.0,60.0,0.84
+synthetic_demo,demo-00242,Intel Core i5-13600K,NVIDIA GeForce RTX 4060,16,DDR5,1024,SATA SSD,good,Lenovo,3.3,1147.65,1239.39,79.0,54.0,0.84
+synthetic_demo,demo-00243,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3090,16,DDR4,2048,NVMe SSD,new,HP,0.9,2211.96,2115.03,74.0,82.0,1.0
+synthetic_demo,demo-00244,Intel Core i9-13900K,AMD Radeon RX 7700 XT,16,DDR5,2048,NVMe SSD,fair,HP,3.7,1268.69,1188.12,95.0,64.0,0.72
+synthetic_demo,demo-00245,Intel Core i5-13600K,AMD Radeon RX 7700 XT,32,DDR5,2048,NVMe SSD,new,MSI,3.1,2189.69,1953.86,79.0,64.0,1.0
+synthetic_demo,demo-00246,AMD Ryzen 9 7900X,Intel Arc A750,32,DDR5,1024,NVMe SSD,fair,Alienware,0.0,1116.91,979.59,88.0,43.0,0.72
+synthetic_demo,demo-00247,Intel Core i7-12700K,NVIDIA GeForce RTX 4060 Ti,64,DDR5,512,NVMe SSD,good,MSI,4.8,966.85,1132.13,76.0,62.0,0.84
+synthetic_demo,demo-00248,Intel Core i9-14900K,NVIDIA GeForce RTX 4080,8,DDR5,1024,HDD,excellent,ASUS,3.0,2211.76,1813.27,100.0,90.0,0.9
+synthetic_demo,demo-00249,Intel Core i5-12400,AMD Radeon RX 7600,32,DDR5,4096,NVMe SSD,good,Dell,3.7,1254.65,1319.72,56.0,50.0,0.84
+synthetic_demo,demo-00250,AMD Ryzen 7 5800X3D,AMD Radeon RX 7800 XT,32,DDR5,2048,NVMe SSD,excellent,ASUS,2.8,1595.21,1699.75,78.0,73.0,0.9
+synthetic_demo,demo-00251,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,NVMe SSD,good,custom,6.3,1562.91,1354.8,70.0,62.0,0.84
+synthetic_demo,demo-00252,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,512,NVMe SSD,excellent,Alienware,1.2,2190.59,1984.3,87.0,80.0,0.9
+synthetic_demo,demo-00253,Intel Core i5-14600K,NVIDIA GeForce RTX 3080,64,DDR5,1024,SATA SSD,good,ASUS,3.6,1850.5,1676.88,84.0,72.0,0.84
+synthetic_demo,demo-00254,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4080,32,DDR4,1024,NVMe SSD,good,ASUS,4.1,1688.42,1571.97,74.0,90.0,0.84
+synthetic_demo,demo-00255,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,4096,NVMe SSD,fair,HP,0.0,1919.37,1949.82,100.0,80.0,0.72
+synthetic_demo,demo-00256,AMD Ryzen 7 7700X,AMD Radeon RX 7800 XT,64,DDR5,1024,NVMe SSD,good,Lenovo,0.6,2558.61,2109.5,82.0,73.0,0.84
+synthetic_demo,demo-00257,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3090,32,DDR4,1024,NVMe SSD,good,Dell,5.1,1495.21,1272.45,70.0,82.0,0.84
+synthetic_demo,demo-00258,AMD Ryzen 9 7900X,AMD Radeon RX 6700 XT,16,DDR4,2048,NVMe SSD,like_new,Dell,2.8,1435.77,1542.76,88.0,57.0,0.95
+synthetic_demo,demo-00259,Intel Core i5-12600K,AMD Radeon RX 7800 XT,16,DDR5,1024,SATA SSD,good,MSI,3.5,1199.81,1318.85,68.0,73.0,0.84
+synthetic_demo,demo-00260,AMD Ryzen 9 7950X,AMD Radeon RX 7800 XT,16,DDR5,1024,NVMe SSD,good,Dell,2.7,1820.22,1492.28,95.0,73.0,0.84
+synthetic_demo,demo-00261,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XTX,16,DDR5,256,SATA SSD,good,ASUS,4.3,1539.69,1445.89,100.0,92.0,0.84
+synthetic_demo,demo-00262,AMD Ryzen 9 7900X,AMD Radeon RX 6800 XT,128,DDR5,4096,NVMe SSD,new,HP,2.9,2200.58,2361.75,88.0,69.0,1.0
+synthetic_demo,demo-00263,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070,64,DDR5,4096,NVMe SSD,fair,HP,2.5,1359.2,1485.51,78.0,72.0,0.72
+synthetic_demo,demo-00264,Intel Core i5-14600K,AMD Radeon RX 7900 XTX,32,DDR5,2048,NVMe SSD,good,Dell,3.7,1494.48,1735.09,84.0,92.0,0.84
+synthetic_demo,demo-00265,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060 Ti,128,DDR5,1024,HDD,good,MSI,2.6,2083.84,1818.48,96.0,62.0,0.84
+synthetic_demo,demo-00266,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3070,32,DDR5,2048,NVMe SSD,excellent,HP,4.5,1401.18,1466.45,100.0,60.0,0.9
+synthetic_demo,demo-00267,Intel Core i7-14700K,NVIDIA GeForce RTX 4070,16,DDR5,4096,SATA SSD,good,HP,1.0,2086.92,1936.05,93.0,72.0,0.84
+synthetic_demo,demo-00268,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3090,16,DDR5,512,NVMe SSD,good,custom,5.0,1534.17,1494.16,100.0,82.0,0.84
+synthetic_demo,demo-00269,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4080,32,DDR4,1024,NVMe SSD,good,Alienware,0.7,1878.26,1769.07,74.0,90.0,0.84
+synthetic_demo,demo-00270,Intel Core i5-12600K,NVIDIA GeForce RTX 3070,16,DDR5,2048,NVMe SSD,good,MSI,2.5,1456.4,1367.15,68.0,60.0,0.84
+synthetic_demo,demo-00271,Intel Core i9-13900K,NVIDIA GeForce RTX 3090,32,DDR5,512,NVMe SSD,excellent,custom,1.9,1797.57,1678.18,95.0,82.0,0.9
+synthetic_demo,demo-00272,Intel Core i5-12400,AMD Radeon RX 6700 XT,64,DDR5,2048,NVMe SSD,new,Dell,2.1,1944.94,1822.26,56.0,57.0,1.0
+synthetic_demo,demo-00273,Intel Core i7-13700K,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,good,HP,0.9,1632.67,1379.2,87.0,50.0,0.84
+synthetic_demo,demo-00274,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3090,32,DDR5,2048,NVMe SSD,good,HP,0.8,1255.5,1470.46,74.0,82.0,0.84
+synthetic_demo,demo-00275,Intel Core i5-12400,AMD Radeon RX 7600,16,DDR4,1024,NVMe SSD,new,HP,2.8,1295.47,1259.89,56.0,50.0,1.0
+synthetic_demo,demo-00276,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,NVMe SSD,good,custom,4.9,1152.93,1067.93,93.0,84.0,0.84
+synthetic_demo,demo-00277,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4060,64,DDR5,1024,NVMe SSD,excellent,Dell,5.5,1098.68,1096.47,88.0,54.0,0.9
+synthetic_demo,demo-00278,Intel Core i9-14900K,NVIDIA GeForce RTX 4090,16,DDR5,1024,NVMe SSD,good,Alienware,1.5,1830.4,1817.0,100.0,100.0,0.84
+synthetic_demo,demo-00279,AMD Ryzen 7 5800X,AMD Radeon RX 7900 XTX,64,DDR5,1024,NVMe SSD,good,Dell,5.2,1747.52,1736.4,70.0,92.0,0.84
+synthetic_demo,demo-00280,Intel Core i9-14900K,NVIDIA GeForce RTX 3080,32,DDR5,2048,NVMe SSD,good,MSI,6.0,1651.33,1358.71,100.0,72.0,0.84
+synthetic_demo,demo-00281,Intel Core i9-13900K,NVIDIA GeForce RTX 4060,32,DDR5,1024,NVMe SSD,like_new,Dell,2.6,1703.65,1582.52,95.0,54.0,0.95
+synthetic_demo,demo-00282,Intel Core i5-12400,AMD Radeon RX 6700 XT,32,DDR4,1024,NVMe SSD,excellent,Lenovo,8.2,883.46,911.47,56.0,57.0,0.9
+synthetic_demo,demo-00283,AMD Ryzen 5 7600X,AMD Radeon RX 7700 XT,32,DDR5,4096,NVMe SSD,good,ASUS,4.4,1473.4,1486.74,74.0,64.0,0.84
+synthetic_demo,demo-00284,Intel Core i5-13600K,AMD Radeon RX 7800 XT,16,DDR5,2048,NVMe SSD,good,Lenovo,4.3,1479.26,1385.26,79.0,73.0,0.84
+synthetic_demo,demo-00285,AMD Ryzen 9 7950X,AMD Radeon RX 7600,8,DDR4,2048,NVMe SSD,excellent,MSI,2.8,1607.78,1485.25,95.0,50.0,0.9
+synthetic_demo,demo-00286,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,256,NVMe SSD,good,ASUS,0.0,1847.64,1961.83,74.0,84.0,0.84
+synthetic_demo,demo-00287,Intel Core i5-13600K,AMD Radeon RX 7700 XT,8,DDR5,1024,SATA SSD,good,Lenovo,0.3,1504.93,1435.45,79.0,64.0,0.84
+synthetic_demo,demo-00288,Intel Core i9-14900K,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,like_new,custom,1.6,2264.24,2499.76,100.0,100.0,0.95
+synthetic_demo,demo-00289,Intel Core i5-12600K,NVIDIA GeForce RTX 4070,16,DDR5,1024,NVMe SSD,excellent,HP,2.1,1506.72,1455.28,68.0,72.0,0.9
+synthetic_demo,demo-00290,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 2080,64,DDR5,1024,NVMe SSD,excellent,MSI,3.3,1435.41,1290.34,88.0,44.0,0.9
+synthetic_demo,demo-00291,AMD Ryzen 9 7900X,Intel Arc A750,128,DDR5,2048,NVMe SSD,excellent,HP,2.9,1163.12,1377.87,88.0,43.0,0.9
+synthetic_demo,demo-00292,AMD Ryzen 9 7950X,Intel Arc A750,8,DDR5,1024,NVMe SSD,good,Lenovo,2.8,1194.33,1159.93,95.0,43.0,0.84
+synthetic_demo,demo-00293,AMD Ryzen 7 7800X3D,AMD Radeon RX 7600,64,DDR5,1024,NVMe SSD,fair,ASUS,2.8,1480.64,1304.79,96.0,50.0,0.72
+synthetic_demo,demo-00294,AMD Ryzen 5 5600X,AMD Radeon RX 6800 XT,32,DDR5,512,SATA SSD,excellent,Alienware,0.9,1272.78,1367.6,58.0,69.0,0.9
+synthetic_demo,demo-00295,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,good,Lenovo,3.3,1759.66,1765.2,87.0,84.0,0.84
+synthetic_demo,demo-00296,Intel Core i9-13900K,AMD Radeon RX 7900 XTX,64,DDR4,512,NVMe SSD,fair,custom,0.0,1351.77,1412.96,95.0,92.0,0.72
+synthetic_demo,demo-00297,AMD Ryzen 7 7800X3D,AMD Radeon RX 7900 XT,16,DDR5,512,NVMe SSD,good,MSI,1.9,1715.16,1643.1,96.0,84.0,0.84
+synthetic_demo,demo-00298,Intel Core i9-13900K,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,good,HP,2.3,2087.08,2146.32,95.0,100.0,0.84
+synthetic_demo,demo-00299,Intel Core i7-12700K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,NVMe SSD,good,ASUS,1.3,1555.62,1754.91,76.0,62.0,0.84
+synthetic_demo,demo-00300,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR4,1024,NVMe SSD,excellent,custom,3.5,1583.45,1544.44,88.0,84.0,0.9
+synthetic_demo,demo-00301,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4090,64,DDR4,1024,SATA SSD,like_new,HP,5.5,1841.81,1478.14,88.0,100.0,0.95
+synthetic_demo,demo-00302,Intel Core i5-12400,AMD Radeon RX 6800 XT,32,DDR4,512,NVMe SSD,like_new,Lenovo,2.4,1287.28,1229.51,56.0,69.0,0.95
+synthetic_demo,demo-00303,Intel Core i9-13900K,AMD Radeon RX 7900 XTX,8,DDR4,1024,NVMe SSD,like_new,HP,1.0,1991.52,1844.5,95.0,92.0,0.95
+synthetic_demo,demo-00304,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070,16,DDR5,1024,NVMe SSD,excellent,Dell,3.7,1522.8,1337.26,78.0,72.0,0.9
+synthetic_demo,demo-00305,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,4096,NVMe SSD,good,HP,4.8,2038.64,1865.28,79.0,84.0,0.84
+synthetic_demo,demo-00306,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070,32,DDR5,4096,NVMe SSD,good,Dell,5.1,1250.97,1240.79,96.0,72.0,0.84
+synthetic_demo,demo-00307,Intel Core i5-14600K,NVIDIA GeForce RTX 3060,32,DDR5,2048,NVMe SSD,excellent,Lenovo,1.3,1590.67,1618.41,84.0,48.0,0.9
+synthetic_demo,demo-00308,AMD Ryzen 7 5800X,AMD Radeon RX 7700 XT,32,DDR5,4096,NVMe SSD,good,HP,2.5,2045.45,1999.41,70.0,64.0,0.84
+synthetic_demo,demo-00309,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3060,32,DDR5,2048,NVMe SSD,fair,Alienware,3.5,1154.1,1101.69,74.0,48.0,0.72
+synthetic_demo,demo-00310,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,excellent,MSI,2.8,1760.12,1521.9,56.0,62.0,0.9
+synthetic_demo,demo-00311,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,2048,NVMe SSD,good,Alienware,5.6,1774.79,1614.98,100.0,84.0,0.84
+synthetic_demo,demo-00312,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070,32,DDR4,2048,NVMe SSD,good,Lenovo,0.8,1788.49,1577.11,58.0,72.0,0.84
+synthetic_demo,demo-00313,Intel Core i7-13700K,AMD Radeon RX 6800 XT,32,DDR5,2048,NVMe SSD,good,Dell,4.3,1633.89,1447.66,87.0,69.0,0.84
+synthetic_demo,demo-00314,Intel Core i5-12400,Intel Arc A770,32,DDR4,512,NVMe SSD,excellent,ASUS,3.6,1367.69,1279.49,56.0,48.0,0.9
+synthetic_demo,demo-00315,AMD Ryzen 9 7950X,AMD Radeon RX 6700 XT,128,DDR5,2048,NVMe SSD,fair,HP,2.2,1210.71,1620.89,95.0,57.0,0.72
+synthetic_demo,demo-00316,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4090,16,DDR5,1024,NVMe SSD,good,Alienware,3.5,953.36,1098.78,96.0,100.0,0.84
+synthetic_demo,demo-00317,Intel Core i5-14600K,NVIDIA GeForce RTX 2080,32,DDR5,2048,NVMe SSD,excellent,custom,3.6,1306.76,1414.62,84.0,44.0,0.9
+synthetic_demo,demo-00318,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,2048,NVMe SSD,good,Dell,1.6,1993.33,2010.23,79.0,80.0,0.84
+synthetic_demo,demo-00319,Intel Core i9-14900K,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,good,ASUS,6.6,1130.17,1045.68,100.0,48.0,0.84
+synthetic_demo,demo-00320,Intel Core i5-14600K,NVIDIA GeForce RTX 3060,16,DDR5,512,SATA SSD,excellent,custom,5.5,917.94,976.78,84.0,48.0,0.9
+synthetic_demo,demo-00321,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,good,MSI,2.6,1482.05,1640.3,78.0,82.0,0.84
+synthetic_demo,demo-00322,Intel Core i7-13700K,Intel Arc A750,16,DDR5,2048,SATA SSD,good,Alienware,2.4,1336.71,1180.38,87.0,43.0,0.84
+synthetic_demo,demo-00323,Intel Core i5-14600K,AMD Radeon RX 6700 XT,32,DDR5,256,NVMe SSD,good,MSI,2.9,1329.1,1291.16,84.0,57.0,0.84
+synthetic_demo,demo-00324,AMD Ryzen 9 7900X,AMD Radeon RX 6700 XT,16,DDR5,2048,NVMe SSD,good,Dell,3.2,1382.65,1470.86,88.0,57.0,0.84
+synthetic_demo,demo-00325,Intel Core i5-13600K,AMD Radeon RX 7600,64,DDR5,1024,NVMe SSD,like_new,Dell,1.0,1901.25,1903.6,79.0,50.0,0.95
+synthetic_demo,demo-00326,Intel Core i5-14600K,Intel Arc A770,16,DDR4,2048,NVMe SSD,excellent,Alienware,0.4,1829.24,1683.86,84.0,48.0,0.9
+synthetic_demo,demo-00327,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,2048,NVMe SSD,like_new,HP,0.2,2517.03,2260.35,100.0,80.0,0.95
+synthetic_demo,demo-00328,Intel Core i7-12700K,NVIDIA GeForce RTX 4060 Ti,32,DDR4,1024,NVMe SSD,good,Alienware,3.4,1252.77,1392.63,76.0,62.0,0.84
+synthetic_demo,demo-00329,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3060,64,DDR4,1024,NVMe SSD,like_new,HP,3.4,1307.2,1318.11,78.0,48.0,0.95
+synthetic_demo,demo-00330,Intel Core i5-12400,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,good,HP,4.3,1537.97,1261.21,56.0,50.0,0.84
+synthetic_demo,demo-00331,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,SATA SSD,excellent,Dell,5.0,1550.53,1441.99,78.0,84.0,0.9
+synthetic_demo,demo-00332,AMD Ryzen 7 5800X3D,AMD Radeon RX 7800 XT,32,DDR5,2048,NVMe SSD,good,Dell,4.1,1534.89,1457.53,78.0,73.0,0.84
+synthetic_demo,demo-00333,Intel Core i5-12400,NVIDIA GeForce RTX 2080,32,DDR5,2048,NVMe SSD,fair,custom,4.2,909.33,940.29,56.0,44.0,0.72
+synthetic_demo,demo-00334,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3070,64,DDR5,512,NVMe SSD,good,HP,2.1,1608.09,1545.79,74.0,60.0,0.84
+synthetic_demo,demo-00335,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3090,16,DDR5,2048,NVMe SSD,good,HP,3.4,1728.76,1724.42,96.0,82.0,0.84
+synthetic_demo,demo-00336,AMD Ryzen 7 5800X3D,Intel Arc A770,16,DDR5,1024,SATA SSD,excellent,Dell,4.1,1046.27,1141.57,78.0,48.0,0.9
+synthetic_demo,demo-00337,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,NVMe SSD,fair,Lenovo,5.3,812.85,929.52,56.0,62.0,0.72
+synthetic_demo,demo-00338,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070,64,DDR5,2048,NVMe SSD,like_new,MSI,1.0,2137.52,2045.05,96.0,72.0,0.95
+synthetic_demo,demo-00339,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3090,16,DDR5,1024,NVMe SSD,excellent,Alienware,2.3,1878.84,1704.98,82.0,82.0,0.9
+synthetic_demo,demo-00340,AMD Ryzen 5 5600X,Intel Arc A750,32,DDR4,1024,NVMe SSD,good,ASUS,3.4,1194.47,1104.98,58.0,43.0,0.84
+synthetic_demo,demo-00341,Intel Core i7-14700K,AMD Radeon RX 7800 XT,64,DDR5,1024,NVMe SSD,good,ASUS,3.8,1235.64,1231.26,93.0,73.0,0.84
+synthetic_demo,demo-00342,Intel Core i5-14600K,Intel Arc A750,32,DDR5,1024,NVMe SSD,excellent,HP,0.0,1609.61,1548.39,84.0,43.0,0.9
+synthetic_demo,demo-00343,AMD Ryzen 7 5800X,AMD Radeon RX 7700 XT,16,DDR5,2048,NVMe SSD,like_new,MSI,4.6,1761.52,1661.38,70.0,64.0,0.95
+synthetic_demo,demo-00344,Intel Core i5-13600K,NVIDIA GeForce RTX 3060,64,DDR5,2048,NVMe SSD,good,custom,1.9,1573.07,1593.45,79.0,48.0,0.84
+synthetic_demo,demo-00345,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060 Ti,32,DDR4,256,HDD,fair,ASUS,2.8,1146.44,1164.82,96.0,62.0,0.72
+synthetic_demo,demo-00346,Intel Core i9-14900K,NVIDIA GeForce RTX 4060 Ti,64,DDR5,2048,NVMe SSD,like_new,ASUS,4.2,1768.6,1872.49,100.0,62.0,0.95
+synthetic_demo,demo-00347,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4080,32,DDR5,1024,NVMe SSD,good,ASUS,4.5,1706.14,1624.6,78.0,90.0,0.84
+synthetic_demo,demo-00348,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4090,16,DDR5,512,NVMe SSD,good,custom,1.5,1670.4,1693.71,96.0,100.0,0.84
+synthetic_demo,demo-00349,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti,128,DDR5,1024,SATA SSD,excellent,ASUS,3.7,1842.3,1699.93,95.0,80.0,0.9
+synthetic_demo,demo-00350,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070 Ti,32,DDR5,2048,NVMe SSD,good,Alienware,0.7,2071.87,1971.4,96.0,80.0,0.84
+synthetic_demo,demo-00351,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,256,NVMe SSD,good,ASUS,7.0,1142.83,962.62,82.0,84.0,0.84
+synthetic_demo,demo-00352,AMD Ryzen 7 7700X,AMD Radeon RX 7900 XT,32,DDR5,1024,NVMe SSD,like_new,custom,3.1,1936.59,1841.16,82.0,84.0,0.95
+synthetic_demo,demo-00353,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,64,DDR5,1024,NVMe SSD,like_new,Lenovo,3.6,1661.5,1401.63,87.0,44.0,0.95
+synthetic_demo,demo-00354,Intel Core i9-14900K,NVIDIA GeForce RTX 4090,64,DDR5,2048,NVMe SSD,good,ASUS,2.0,2337.81,2396.37,100.0,100.0,0.84
+synthetic_demo,demo-00355,Intel Core i7-13700K,NVIDIA GeForce RTX 3070,32,DDR4,2048,NVMe SSD,like_new,HP,2.7,1543.16,1421.6,87.0,60.0,0.95
+synthetic_demo,demo-00356,AMD Ryzen 9 7900X,AMD Radeon RX 7600,64,DDR5,256,NVMe SSD,excellent,MSI,5.3,1254.46,1229.49,88.0,50.0,0.9
+synthetic_demo,demo-00357,Intel Core i7-12700K,NVIDIA GeForce RTX 2080,32,DDR5,1024,HDD,new,Lenovo,0.9,1203.4,1366.39,76.0,44.0,1.0
+synthetic_demo,demo-00358,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4090,16,DDR5,512,NVMe SSD,good,ASUS,1.2,2299.02,1961.78,88.0,100.0,0.84
+synthetic_demo,demo-00359,Intel Core i5-12600K,AMD Radeon RX 7900 XT,32,DDR4,1024,NVMe SSD,excellent,Lenovo,7.6,1183.71,1000.15,68.0,84.0,0.9
+synthetic_demo,demo-00360,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070,32,DDR4,1024,NVMe SSD,good,MSI,3.2,1476.37,1362.9,70.0,72.0,0.84
+synthetic_demo,demo-00361,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4080,16,DDR4,2048,NVMe SSD,good,Dell,2.9,1598.67,1600.0,74.0,90.0,0.84
+synthetic_demo,demo-00362,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti,8,DDR5,512,NVMe SSD,excellent,Lenovo,0.4,1653.19,1495.66,78.0,80.0,0.9
+synthetic_demo,demo-00363,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,NVMe SSD,like_new,custom,2.3,1588.95,1526.59,58.0,62.0,0.95
+synthetic_demo,demo-00364,Intel Core i9-13900K,AMD Radeon RX 7900 XT,16,DDR5,512,NVMe SSD,new,HP,4.2,1665.64,1709.41,95.0,84.0,1.0
+synthetic_demo,demo-00365,Intel Core i5-12600K,NVIDIA GeForce RTX 2080,16,DDR4,2048,NVMe SSD,excellent,custom,4.9,1376.17,1263.17,68.0,44.0,0.9
+synthetic_demo,demo-00366,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3090,32,DDR4,256,NVMe SSD,good,HP,4.5,1731.09,1501.36,96.0,82.0,0.84
+synthetic_demo,demo-00367,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060 Ti,64,DDR5,2048,NVMe SSD,good,HP,3.8,1710.7,1566.62,82.0,62.0,0.84
+synthetic_demo,demo-00368,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3060,16,DDR5,2048,NVMe SSD,new,Dell,0.9,1653.24,1827.96,74.0,48.0,1.0
+synthetic_demo,demo-00369,AMD Ryzen 7 7800X3D,AMD Radeon RX 7600,32,DDR5,512,NVMe SSD,new,HP,1.4,2119.84,1885.94,96.0,50.0,1.0
+synthetic_demo,demo-00370,AMD Ryzen 9 7900X,AMD Radeon RX 7800 XT,64,DDR5,2048,SATA SSD,good,Dell,5.3,1212.6,1311.24,88.0,73.0,0.84
+synthetic_demo,demo-00371,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3070,32,DDR4,1024,NVMe SSD,good,HP,2.4,1355.91,1293.94,70.0,60.0,0.84
+synthetic_demo,demo-00372,AMD Ryzen 7 5800X,AMD Radeon RX 6800 XT,64,DDR4,1024,NVMe SSD,new,Lenovo,4.7,1533.49,1426.23,70.0,69.0,1.0
+synthetic_demo,demo-00373,Intel Core i7-14700K,Intel Arc A750,64,DDR4,2048,NVMe SSD,excellent,ASUS,1.1,1842.07,1770.69,93.0,43.0,0.9
+synthetic_demo,demo-00374,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,4096,HDD,fair,Alienware,1.5,1648.06,1613.24,100.0,80.0,0.72
+synthetic_demo,demo-00375,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,NVMe SSD,excellent,ASUS,2.3,2047.99,1988.04,58.0,84.0,0.9
+synthetic_demo,demo-00376,AMD Ryzen 9 7900X,AMD Radeon RX 6700 XT,16,DDR4,512,NVMe SSD,new,ASUS,2.4,1136.61,1195.71,88.0,57.0,1.0
+synthetic_demo,demo-00377,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3090,16,DDR5,2048,NVMe SSD,good,Dell,2.4,1827.39,1551.04,82.0,82.0,0.84
+synthetic_demo,demo-00378,Intel Core i5-14600K,NVIDIA GeForce RTX 3080,16,DDR5,4096,NVMe SSD,like_new,custom,2.5,2340.32,2237.03,84.0,72.0,0.95
+synthetic_demo,demo-00379,AMD Ryzen 7 5800X3D,AMD Radeon RX 7800 XT,32,DDR5,1024,HDD,excellent,Dell,2.9,1455.9,1399.39,78.0,73.0,0.9
+synthetic_demo,demo-00380,Intel Core i5-14600K,NVIDIA GeForce RTX 3080,64,DDR5,512,NVMe SSD,good,custom,5.7,763.37,908.94,84.0,72.0,0.84
+synthetic_demo,demo-00381,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3060,16,DDR5,2048,NVMe SSD,new,Dell,1.9,1765.29,1591.77,70.0,48.0,1.0
+synthetic_demo,demo-00382,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060 Ti,8,DDR5,1024,NVMe SSD,good,custom,3.6,1270.15,1112.31,58.0,62.0,0.84
+synthetic_demo,demo-00383,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti,64,DDR5,512,NVMe SSD,fair,Alienware,4.6,1468.98,1292.81,84.0,80.0,0.72
+synthetic_demo,demo-00384,AMD Ryzen 7 5800X,AMD Radeon RX 7900 XTX,32,DDR4,2048,NVMe SSD,excellent,MSI,3.3,1852.05,1668.84,70.0,92.0,0.9
+synthetic_demo,demo-00385,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4090,128,DDR5,1024,NVMe SSD,like_new,MSI,3.0,2789.56,2349.51,88.0,100.0,0.95
+synthetic_demo,demo-00386,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,1024,NVMe SSD,good,HP,0.0,1463.91,1588.97,95.0,80.0,0.84
+synthetic_demo,demo-00387,Intel Core i5-13600K,NVIDIA GeForce RTX 4090,32,DDR5,1024,NVMe SSD,excellent,HP,2.2,1674.34,1882.83,79.0,100.0,0.9
+synthetic_demo,demo-00388,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4080,32,DDR5,1024,NVMe SSD,good,HP,1.1,2158.58,1678.86,82.0,90.0,0.84
+synthetic_demo,demo-00389,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,512,NVMe SSD,good,ASUS,5.9,1233.46,1228.98,95.0,84.0,0.84
+synthetic_demo,demo-00390,Intel Core i5-12400,NVIDIA GeForce RTX 4090,128,DDR5,2048,NVMe SSD,good,Dell,0.8,1935.73,1882.43,56.0,100.0,0.84
+synthetic_demo,demo-00391,Intel Core i5-12600K,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,new,MSI,1.1,1463.09,1662.64,68.0,48.0,1.0
+synthetic_demo,demo-00392,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4080,64,DDR5,1024,NVMe SSD,fair,Alienware,1.5,1743.76,1619.66,58.0,90.0,0.72
+synthetic_demo,demo-00393,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3090,32,DDR4,1024,NVMe SSD,fair,Lenovo,3.5,1210.82,1075.84,96.0,82.0,0.72
+synthetic_demo,demo-00394,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,64,DDR5,4096,NVMe SSD,excellent,ASUS,1.4,2160.49,2079.52,87.0,44.0,0.9
+synthetic_demo,demo-00395,Intel Core i7-14700K,AMD Radeon RX 6700 XT,8,DDR4,2048,NVMe SSD,like_new,MSI,0.5,1892.03,1757.52,93.0,57.0,0.95
+synthetic_demo,demo-00396,Intel Core i5-13600K,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,excellent,Lenovo,3.8,1698.49,1423.5,79.0,69.0,0.9
+synthetic_demo,demo-00397,Intel Core i5-13600K,NVIDIA GeForce RTX 4090,32,DDR5,1024,NVMe SSD,fair,MSI,4.5,1484.73,1331.58,79.0,100.0,0.72
+synthetic_demo,demo-00398,Intel Core i9-13900K,NVIDIA GeForce RTX 4080,8,DDR4,1024,NVMe SSD,good,custom,6.1,1377.02,1501.33,95.0,90.0,0.84
+synthetic_demo,demo-00399,Intel Core i7-14700K,AMD Radeon RX 7900 XTX,32,DDR5,1024,HDD,good,HP,1.2,1851.91,1982.41,93.0,92.0,0.84
+synthetic_demo,demo-00400,Intel Core i5-13600K,Intel Arc A750,32,DDR5,2048,NVMe SSD,good,Dell,0.6,1516.58,1401.62,79.0,43.0,0.84
+synthetic_demo,demo-00401,AMD Ryzen 5 7600X,AMD Radeon RX 6700 XT,64,DDR5,1024,SATA SSD,good,ASUS,2.6,1263.47,1299.09,74.0,57.0,0.84
+synthetic_demo,demo-00402,Intel Core i7-13700K,AMD Radeon RX 6700 XT,8,DDR4,1024,NVMe SSD,like_new,HP,1.6,1700.18,1340.66,87.0,57.0,0.95
+synthetic_demo,demo-00403,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3060,64,DDR4,1024,NVMe SSD,fair,MSI,3.3,1216.35,1227.28,82.0,48.0,0.72
+synthetic_demo,demo-00404,Intel Core i9-13900K,AMD Radeon RX 7800 XT,8,DDR5,1024,NVMe SSD,good,ASUS,2.5,1123.12,1449.51,95.0,73.0,0.84
+synthetic_demo,demo-00405,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4080,32,DDR5,2048,NVMe SSD,excellent,Lenovo,0.5,1519.55,1864.43,100.0,90.0,0.9
+synthetic_demo,demo-00406,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti,64,DDR5,2048,NVMe SSD,excellent,HP,0.8,2480.73,2395.56,87.0,80.0,0.9
+synthetic_demo,demo-00407,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4080,32,DDR4,1024,NVMe SSD,good,Alienware,5.0,1661.92,1486.17,88.0,90.0,0.84
+synthetic_demo,demo-00408,AMD Ryzen 9 7900X,AMD Radeon RX 6800 XT,64,DDR5,4096,HDD,good,ASUS,1.3,2266.14,2036.3,88.0,69.0,0.84
+synthetic_demo,demo-00409,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XT,64,DDR4,1024,SATA SSD,excellent,Alienware,1.8,2182.55,1990.25,100.0,84.0,0.9
+synthetic_demo,demo-00410,Intel Core i7-12700K,AMD Radeon RX 6800 XT,32,DDR5,2048,NVMe SSD,excellent,custom,1.9,1415.41,1535.84,76.0,69.0,0.9
+synthetic_demo,demo-00411,Intel Core i7-13700K,AMD Radeon RX 6700 XT,32,DDR5,1024,SATA SSD,like_new,MSI,2.9,1496.11,1557.24,87.0,57.0,0.95
+synthetic_demo,demo-00412,Intel Core i5-13600K,NVIDIA GeForce RTX 4060,16,DDR5,1024,HDD,good,custom,2.8,1306.18,1185.47,79.0,54.0,0.84
+synthetic_demo,demo-00413,Intel Core i9-14900K,AMD Radeon RX 7900 XTX,32,DDR5,2048,NVMe SSD,excellent,Dell,5.4,1734.91,1845.9,100.0,92.0,0.9
+synthetic_demo,demo-00414,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,16,DDR5,512,NVMe SSD,good,Lenovo,5.7,987.75,863.05,87.0,44.0,0.84
+synthetic_demo,demo-00415,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070,64,DDR5,2048,NVMe SSD,good,MSI,2.9,1457.92,1696.78,95.0,72.0,0.84
+synthetic_demo,demo-00416,AMD Ryzen 5 7600X,AMD Radeon RX 6800 XT,16,DDR5,1024,HDD,good,HP,2.5,1167.46,1027.04,74.0,69.0,0.84
+synthetic_demo,demo-00417,AMD Ryzen 5 7600X,AMD Radeon RX 7700 XT,32,DDR4,1024,NVMe SSD,fair,MSI,5.4,929.65,868.67,74.0,64.0,0.72
+synthetic_demo,demo-00418,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4070 Ti,64,DDR4,1024,HDD,good,Alienware,1.6,1672.3,1496.53,82.0,80.0,0.84
+synthetic_demo,demo-00419,AMD Ryzen 9 7950X,AMD Radeon RX 7900 XT,16,DDR5,2048,NVMe SSD,like_new,Lenovo,2.7,2231.74,2250.24,95.0,84.0,0.95
+synthetic_demo,demo-00420,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3060,64,DDR4,2048,SATA SSD,good,Lenovo,4.5,1198.68,1070.66,58.0,48.0,0.84
+synthetic_demo,demo-00421,Intel Core i9-13900K,NVIDIA GeForce RTX 3080,32,DDR5,2048,NVMe SSD,good,MSI,2.0,1819.47,1769.14,95.0,72.0,0.84
+synthetic_demo,demo-00422,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,512,NVMe SSD,fair,custom,1.4,1649.55,1492.77,76.0,80.0,0.72
+synthetic_demo,demo-00423,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3070,64,DDR5,2048,NVMe SSD,good,Lenovo,3.8,2073.52,1749.91,96.0,60.0,0.84
+synthetic_demo,demo-00424,Intel Core i5-13600K,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,excellent,HP,2.2,1799.77,1840.93,79.0,90.0,0.9
+synthetic_demo,demo-00425,Intel Core i9-13900K,NVIDIA GeForce RTX 3090,16,DDR5,1024,NVMe SSD,excellent,MSI,2.8,1990.26,1655.78,95.0,82.0,0.9
+synthetic_demo,demo-00426,Intel Core i9-14900K,NVIDIA GeForce RTX 3070,16,DDR5,1024,SATA SSD,good,Alienware,3.4,1489.71,1284.94,100.0,60.0,0.84
+synthetic_demo,demo-00427,Intel Core i9-14900K,AMD Radeon RX 7800 XT,64,DDR5,1024,NVMe SSD,like_new,HP,0.0,2014.06,1798.94,100.0,73.0,0.95
+synthetic_demo,demo-00428,AMD Ryzen 7 5800X,AMD Radeon RX 7900 XT,32,DDR5,2048,NVMe SSD,good,Alienware,2.9,1579.11,1740.34,70.0,84.0,0.84
+synthetic_demo,demo-00429,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3070,32,DDR4,1024,NVMe SSD,good,Alienware,2.8,1890.42,1684.23,88.0,60.0,0.84
+synthetic_demo,demo-00430,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3090,8,DDR5,512,NVMe SSD,excellent,HP,3.1,1514.32,1513.5,95.0,82.0,0.9
+synthetic_demo,demo-00431,Intel Core i5-12600K,AMD Radeon RX 7900 XTX,32,DDR4,512,NVMe SSD,good,HP,0.0,2034.04,1808.76,68.0,92.0,0.84
+synthetic_demo,demo-00432,AMD Ryzen 7 5800X3D,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,good,ASUS,0.1,1476.7,1597.72,78.0,64.0,0.84
+synthetic_demo,demo-00433,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3070,8,DDR4,512,NVMe SSD,good,ASUS,1.2,1166.14,1402.35,88.0,60.0,0.84
+synthetic_demo,demo-00434,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3080,32,DDR4,1024,NVMe SSD,like_new,Alienware,3.8,1649.83,1625.63,70.0,72.0,0.95
+synthetic_demo,demo-00435,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3090,16,DDR5,2048,HDD,good,HP,0.0,1914.96,1646.16,100.0,82.0,0.84
+synthetic_demo,demo-00436,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,32,DDR5,1024,NVMe SSD,good,Lenovo,0.0,1299.36,1409.28,87.0,44.0,0.84
+synthetic_demo,demo-00437,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,good,Dell,4.2,1732.18,1603.28,96.0,100.0,0.84
+synthetic_demo,demo-00438,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,excellent,ASUS,3.8,2046.81,2007.25,100.0,80.0,0.9
+synthetic_demo,demo-00439,Intel Core i9-14900K,NVIDIA GeForce RTX 4060,16,DDR5,2048,NVMe SSD,good,ASUS,3.4,1395.81,1204.28,100.0,54.0,0.84
+synthetic_demo,demo-00440,AMD Ryzen 9 7950X3D,Intel Arc A750,32,DDR5,1024,NVMe SSD,new,ASUS,1.5,1697.12,1635.34,100.0,43.0,1.0
+synthetic_demo,demo-00441,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,good,Lenovo,0.1,1660.22,1460.5,70.0,48.0,0.84
+synthetic_demo,demo-00442,Intel Core i9-14900K,NVIDIA GeForce RTX 4060 Ti,64,DDR5,2048,SATA SSD,like_new,Dell,3.3,1469.26,1429.77,100.0,62.0,0.95
+synthetic_demo,demo-00443,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,64,DDR4,2048,NVMe SSD,excellent,MSI,4.1,1064.09,1141.08,56.0,62.0,0.9
+synthetic_demo,demo-00444,Intel Core i9-14900K,AMD Radeon RX 7900 XT,64,DDR5,1024,NVMe SSD,good,HP,4.3,1759.47,1627.33,100.0,84.0,0.84
+synthetic_demo,demo-00445,AMD Ryzen 9 7950X,Intel Arc A750,32,DDR5,4096,NVMe SSD,good,MSI,6.0,1483.3,1341.4,95.0,43.0,0.84
+synthetic_demo,demo-00446,Intel Core i7-13700K,AMD Radeon RX 7600,32,DDR4,512,HDD,excellent,Lenovo,7.4,711.92,741.42,87.0,50.0,0.9
+synthetic_demo,demo-00447,Intel Core i5-14600K,NVIDIA GeForce RTX 4070,32,DDR5,2048,NVMe SSD,fair,Dell,3.5,1344.06,1361.31,84.0,72.0,0.72
+synthetic_demo,demo-00448,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4090,32,DDR4,1024,NVMe SSD,good,custom,1.0,2514.43,2344.05,95.0,100.0,0.84
+synthetic_demo,demo-00449,AMD Ryzen 7 7700X,Intel Arc A770,32,DDR5,1024,NVMe SSD,new,Lenovo,1.6,1817.79,1766.41,82.0,48.0,1.0
+synthetic_demo,demo-00450,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 2080,64,DDR4,2048,SATA SSD,new,ASUS,2.4,1485.69,1631.18,70.0,44.0,1.0
+synthetic_demo,demo-00451,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3090,32,DDR4,1024,SATA SSD,good,Dell,3.4,1755.09,1615.19,74.0,82.0,0.84
+synthetic_demo,demo-00452,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,1024,NVMe SSD,good,Dell,2.2,1646.1,1647.8,78.0,84.0,0.84
+synthetic_demo,demo-00453,Intel Core i7-12700K,NVIDIA GeForce RTX 4070,32,DDR5,2048,NVMe SSD,fair,MSI,2.4,1544.22,1364.6,76.0,72.0,0.72
+synthetic_demo,demo-00454,Intel Core i7-13700K,NVIDIA GeForce RTX 4090,16,DDR5,2048,NVMe SSD,good,Alienware,0.0,2398.68,2393.82,87.0,100.0,0.84
+synthetic_demo,demo-00455,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 2080,32,DDR5,2048,NVMe SSD,good,Lenovo,3.4,1344.22,1146.1,96.0,44.0,0.84
+synthetic_demo,demo-00456,AMD Ryzen 9 7950X,Intel Arc A770,128,DDR5,2048,SATA SSD,good,HP,4.9,1348.6,1517.79,95.0,48.0,0.84
+synthetic_demo,demo-00457,Intel Core i5-14600K,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,good,custom,4.2,1361.4,1547.97,84.0,92.0,0.84
+synthetic_demo,demo-00458,Intel Core i9-14900K,AMD Radeon RX 7900 XT,32,DDR5,2048,NVMe SSD,like_new,MSI,2.8,2334.18,2130.49,100.0,84.0,0.95
+synthetic_demo,demo-00459,AMD Ryzen 7 7800X3D,AMD Radeon RX 7600,32,DDR5,512,SATA SSD,like_new,Alienware,3.1,1712.48,1442.26,96.0,50.0,0.95
+synthetic_demo,demo-00460,AMD Ryzen 5 5600X,AMD Radeon RX 7600,64,DDR5,1024,NVMe SSD,new,HP,4.9,893.22,885.91,58.0,50.0,1.0
+synthetic_demo,demo-00461,AMD Ryzen 7 5800X,AMD Radeon RX 7700 XT,32,DDR4,256,NVMe SSD,good,ASUS,2.5,1093.98,1042.47,70.0,64.0,0.84
+synthetic_demo,demo-00462,Intel Core i5-13600K,NVIDIA GeForce RTX 4070,64,DDR5,2048,NVMe SSD,fair,ASUS,4.9,1196.51,1114.44,79.0,72.0,0.72
+synthetic_demo,demo-00463,AMD Ryzen 5 7600X,AMD Radeon RX 7800 XT,128,DDR5,1024,SATA SSD,good,MSI,1.2,2100.19,1768.22,74.0,73.0,0.84
+synthetic_demo,demo-00464,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3070,32,DDR5,2048,SATA SSD,good,custom,1.9,1352.7,1586.05,95.0,60.0,0.84
+synthetic_demo,demo-00465,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4070,32,DDR5,1024,NVMe SSD,good,ASUS,6.0,1396.55,1366.82,100.0,72.0,0.84
+synthetic_demo,demo-00466,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 2080,64,DDR5,1024,HDD,excellent,HP,3.8,1143.45,987.22,88.0,44.0,0.9
+synthetic_demo,demo-00467,Intel Core i5-13600K,AMD Radeon RX 7900 XT,32,DDR5,2048,NVMe SSD,new,MSI,2.2,2095.03,2114.41,79.0,84.0,1.0
+synthetic_demo,demo-00468,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,excellent,Dell,1.8,2005.51,1882.06,78.0,80.0,0.9
+synthetic_demo,demo-00469,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4070,32,DDR5,1024,SATA SSD,excellent,Dell,3.9,1588.97,1456.01,100.0,72.0,0.9
+synthetic_demo,demo-00470,AMD Ryzen 9 7950X3D,AMD Radeon RX 7600,64,DDR5,1024,HDD,good,Dell,2.1,1483.83,1680.05,100.0,50.0,0.84
+synthetic_demo,demo-00471,Intel Core i5-12600K,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,excellent,Dell,4.9,1260.75,1320.46,68.0,50.0,0.9
+synthetic_demo,demo-00472,Intel Core i7-13700K,NVIDIA GeForce RTX 4070,64,DDR4,1024,SATA SSD,fair,Lenovo,6.6,1190.46,1046.91,87.0,72.0,0.72
+synthetic_demo,demo-00473,Intel Core i5-13600K,AMD Radeon RX 7700 XT,64,DDR5,512,NVMe SSD,fair,custom,2.8,1225.75,1202.82,79.0,64.0,0.72
+synthetic_demo,demo-00474,Intel Core i5-12600K,NVIDIA GeForce RTX 3090,32,DDR4,1024,SATA SSD,good,Lenovo,3.5,1592.95,1505.44,68.0,82.0,0.84
+synthetic_demo,demo-00475,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,1024,NVMe SSD,good,custom,1.3,2273.67,2008.34,84.0,84.0,0.84
+synthetic_demo,demo-00476,Intel Core i7-13700K,AMD Radeon RX 7900 XT,8,DDR5,1024,NVMe SSD,good,ASUS,3.9,1634.37,1613.54,87.0,84.0,0.84
+synthetic_demo,demo-00477,Intel Core i5-14600K,NVIDIA GeForce RTX 3060,32,DDR5,512,NVMe SSD,good,Lenovo,1.2,1063.52,1213.44,84.0,48.0,0.84
+synthetic_demo,demo-00478,Intel Core i5-13600K,NVIDIA GeForce RTX 2080,32,DDR4,512,SATA SSD,excellent,ASUS,3.2,1092.22,1096.61,79.0,44.0,0.9
+synthetic_demo,demo-00479,Intel Core i9-14900K,AMD Radeon RX 6800 XT,32,DDR5,2048,NVMe SSD,like_new,ASUS,0.0,2294.18,1991.33,100.0,69.0,0.95
+synthetic_demo,demo-00480,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,1024,NVMe SSD,excellent,MSI,1.7,1664.21,1847.21,76.0,80.0,0.9
+synthetic_demo,demo-00481,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3060,16,DDR4,1024,NVMe SSD,good,ASUS,5.2,1020.0,954.16,70.0,48.0,0.84
+synthetic_demo,demo-00482,Intel Core i5-12600K,NVIDIA GeForce RTX 4070,64,DDR4,256,NVMe SSD,good,Lenovo,6.8,1224.74,1213.41,68.0,72.0,0.84
+synthetic_demo,demo-00483,Intel Core i5-13600K,AMD Radeon RX 7600,64,DDR5,2048,NVMe SSD,good,custom,1.8,1627.44,1491.71,79.0,50.0,0.84
+synthetic_demo,demo-00484,Intel Core i7-13700K,Intel Arc A770,32,DDR5,1024,HDD,fair,MSI,2.6,1165.19,981.86,87.0,48.0,0.72
+synthetic_demo,demo-00485,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,like_new,HP,2.6,2155.26,2054.44,74.0,72.0,0.95
+synthetic_demo,demo-00486,Intel Core i5-12600K,NVIDIA GeForce RTX 3070,64,DDR5,1024,NVMe SSD,fair,ASUS,5.8,1207.31,1062.5,68.0,60.0,0.72
+synthetic_demo,demo-00487,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4060,16,DDR5,2048,NVMe SSD,like_new,ASUS,1.6,1670.52,1538.27,70.0,54.0,0.95
+synthetic_demo,demo-00488,AMD Ryzen 7 5800X3D,AMD Radeon RX 7600,32,DDR5,2048,NVMe SSD,good,Lenovo,4.5,1104.16,1211.55,78.0,50.0,0.84
+synthetic_demo,demo-00489,Intel Core i7-12700K,AMD Radeon RX 6800 XT,16,DDR4,2048,SATA SSD,like_new,ASUS,0.5,1331.28,1542.19,76.0,69.0,0.95
+synthetic_demo,demo-00490,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4060,16,DDR5,2048,SATA SSD,new,MSI,3.0,1893.21,1822.74,95.0,54.0,1.0
+synthetic_demo,demo-00491,Intel Core i9-14900K,NVIDIA GeForce RTX 4060,64,DDR4,512,NVMe SSD,good,Lenovo,0.0,1597.54,1560.53,100.0,54.0,0.84
+synthetic_demo,demo-00492,AMD Ryzen 5 7600X,Intel Arc A750,32,DDR5,1024,NVMe SSD,new,HP,6.4,881.0,880.18,74.0,43.0,1.0
+synthetic_demo,demo-00493,Intel Core i7-13700K,AMD Radeon RX 7900 XT,64,DDR5,4096,NVMe SSD,new,Dell,5.7,2197.54,2004.45,87.0,84.0,1.0
+synthetic_demo,demo-00494,AMD Ryzen 7 5800X,Intel Arc A770,64,DDR5,2048,NVMe SSD,fair,ASUS,3.0,1435.37,1284.15,70.0,48.0,0.72
+synthetic_demo,demo-00495,Intel Core i7-14700K,AMD Radeon RX 6700 XT,32,DDR4,1024,NVMe SSD,like_new,ASUS,1.4,1660.64,1839.64,93.0,57.0,0.95
+synthetic_demo,demo-00496,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4060 Ti,64,DDR5,2048,SATA SSD,excellent,Dell,3.4,1551.26,1585.56,88.0,62.0,0.9
+synthetic_demo,demo-00497,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,like_new,Alienware,2.8,1434.61,1537.92,82.0,62.0,0.95
+synthetic_demo,demo-00498,Intel Core i9-13900K,Intel Arc A770,16,DDR5,2048,NVMe SSD,good,Lenovo,2.2,1327.2,1237.74,95.0,48.0,0.84
+synthetic_demo,demo-00499,Intel Core i5-12400,NVIDIA GeForce RTX 2080,16,DDR4,2048,HDD,good,MSI,0.8,1140.39,1237.06,56.0,44.0,0.84
+synthetic_demo,demo-00500,Intel Core i5-12600K,NVIDIA GeForce RTX 4060 Ti,32,DDR4,1024,NVMe SSD,good,ASUS,1.8,1537.38,1311.19,68.0,62.0,0.84
+synthetic_demo,demo-00501,Intel Core i9-13900K,NVIDIA GeForce RTX 3060,32,DDR5,1024,HDD,good,ASUS,3.4,1246.46,1143.68,95.0,48.0,0.84
+synthetic_demo,demo-00502,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4070 Ti,32,DDR4,1024,HDD,good,Dell,0.0,2039.5,1645.09,100.0,80.0,0.84
+synthetic_demo,demo-00503,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,good,Dell,3.0,1715.52,1566.95,87.0,80.0,0.84
+synthetic_demo,demo-00504,Intel Core i5-12600K,AMD Radeon RX 7600,32,DDR4,512,NVMe SSD,like_new,custom,4.3,737.93,846.47,68.0,50.0,0.95
+synthetic_demo,demo-00505,AMD Ryzen 7 5800X3D,AMD Radeon RX 6800 XT,32,DDR5,2048,NVMe SSD,excellent,ASUS,3.2,1810.54,1545.88,78.0,69.0,0.9
+synthetic_demo,demo-00506,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,2048,NVMe SSD,fair,ASUS,2.3,1053.63,1153.78,76.0,80.0,0.72
+synthetic_demo,demo-00507,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4090,32,DDR5,1024,SATA SSD,good,Lenovo,0.0,1958.64,1918.05,82.0,100.0,0.84
+synthetic_demo,demo-00508,AMD Ryzen 9 7900X,AMD Radeon RX 6700 XT,64,DDR5,2048,NVMe SSD,excellent,Dell,2.1,2231.7,1924.13,88.0,57.0,0.9
+synthetic_demo,demo-00509,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XTX,32,DDR5,1024,NVMe SSD,good,Lenovo,2.5,1537.37,1395.42,100.0,92.0,0.84
+synthetic_demo,demo-00510,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,good,Dell,3.7,1819.0,1598.21,95.0,84.0,0.84
+synthetic_demo,demo-00511,Intel Core i5-14600K,AMD Radeon RX 7900 XTX,32,DDR5,2048,NVMe SSD,like_new,HP,0.8,2528.65,2678.5,84.0,92.0,0.95
+synthetic_demo,demo-00512,Intel Core i5-12400,NVIDIA GeForce RTX 3070,64,DDR5,512,HDD,new,MSI,4.1,1029.42,1087.07,56.0,60.0,1.0
+synthetic_demo,demo-00513,Intel Core i5-12400,NVIDIA GeForce RTX 4070,16,DDR5,256,NVMe SSD,fair,Dell,5.4,978.81,870.83,56.0,72.0,0.72
+synthetic_demo,demo-00514,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 2080,16,DDR4,2048,NVMe SSD,excellent,MSI,3.2,1466.88,1246.94,70.0,44.0,0.9
+synthetic_demo,demo-00515,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060,16,DDR4,2048,NVMe SSD,fair,Lenovo,2.4,780.55,813.35,58.0,54.0,0.72
+synthetic_demo,demo-00516,Intel Core i5-14600K,Intel Arc A750,32,DDR5,1024,SATA SSD,good,HP,3.7,988.78,1119.42,84.0,43.0,0.84
+synthetic_demo,demo-00517,Intel Core i9-13900K,NVIDIA GeForce RTX 2080,16,DDR5,2048,NVMe SSD,fair,Dell,1.6,1138.46,1134.54,95.0,44.0,0.72
+synthetic_demo,demo-00518,Intel Core i5-13600K,AMD Radeon RX 7800 XT,32,DDR5,2048,NVMe SSD,good,MSI,0.5,1711.05,1769.19,79.0,73.0,0.84
+synthetic_demo,demo-00519,Intel Core i9-13900K,AMD Radeon RX 7900 XT,16,DDR5,1024,NVMe SSD,excellent,ASUS,4.1,1811.4,1766.5,95.0,84.0,0.9
+synthetic_demo,demo-00520,Intel Core i9-13900K,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,like_new,Lenovo,2.1,1673.58,1746.33,95.0,64.0,0.95
+synthetic_demo,demo-00521,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3080,64,DDR5,512,NVMe SSD,good,custom,0.9,1539.06,1576.07,88.0,72.0,0.84
+synthetic_demo,demo-00522,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4090,64,DDR5,2048,NVMe SSD,excellent,custom,0.8,2670.32,2399.27,88.0,100.0,0.9
+synthetic_demo,demo-00523,Intel Core i5-12400,NVIDIA GeForce RTX 3080,32,DDR5,4096,NVMe SSD,like_new,HP,0.1,2263.16,2223.13,56.0,72.0,0.95
+synthetic_demo,demo-00524,AMD Ryzen 5 7600X,AMD Radeon RX 6700 XT,32,DDR5,1024,NVMe SSD,like_new,Dell,3.4,1273.55,1423.53,74.0,57.0,0.95
+synthetic_demo,demo-00525,Intel Core i5-12600K,NVIDIA GeForce RTX 4090,32,DDR4,2048,NVMe SSD,like_new,Alienware,0.7,2611.19,2284.75,68.0,100.0,0.95
+synthetic_demo,demo-00526,AMD Ryzen 7 5800X3D,AMD Radeon RX 6700 XT,64,DDR5,2048,NVMe SSD,new,MSI,0.0,2652.0,2288.25,78.0,57.0,1.0
+synthetic_demo,demo-00527,Intel Core i5-13600K,NVIDIA GeForce RTX 3090,16,DDR5,1024,NVMe SSD,fair,Dell,2.5,1367.45,1410.18,79.0,82.0,0.72
+synthetic_demo,demo-00528,Intel Core i7-13700K,AMD Radeon RX 7700 XT,64,DDR5,2048,NVMe SSD,like_new,Lenovo,2.6,1251.49,1553.55,87.0,64.0,0.95
+synthetic_demo,demo-00529,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,excellent,ASUS,4.4,1239.3,1246.22,58.0,72.0,0.9
+synthetic_demo,demo-00530,AMD Ryzen 9 7900X,AMD Radeon RX 7600,16,DDR5,4096,NVMe SSD,good,Dell,0.4,1562.39,1527.83,88.0,50.0,0.84
+synthetic_demo,demo-00531,Intel Core i5-13600K,AMD Radeon RX 7700 XT,64,DDR5,256,NVMe SSD,new,ASUS,1.6,2136.9,1969.03,79.0,64.0,1.0
+synthetic_demo,demo-00532,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060,16,DDR4,1024,NVMe SSD,excellent,Dell,3.3,1404.82,1172.85,58.0,54.0,0.9
+synthetic_demo,demo-00533,AMD Ryzen 7 7800X3D,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,excellent,Alienware,1.0,2092.29,1814.23,96.0,64.0,0.9
+synthetic_demo,demo-00534,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070,32,DDR5,1024,SATA SSD,good,custom,4.9,1051.82,1042.68,95.0,72.0,0.84
+synthetic_demo,demo-00535,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3080,64,DDR5,1024,HDD,good,ASUS,5.1,1405.56,1326.59,78.0,72.0,0.84
+synthetic_demo,demo-00536,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,NVMe SSD,excellent,HP,2.4,1827.84,1710.14,100.0,84.0,0.9
+synthetic_demo,demo-00537,AMD Ryzen 7 7700X,AMD Radeon RX 6700 XT,64,DDR5,1024,NVMe SSD,good,Dell,2.4,1533.29,1463.26,82.0,57.0,0.84
+synthetic_demo,demo-00538,Intel Core i5-14600K,Intel Arc A770,32,DDR5,1024,SATA SSD,excellent,MSI,1.6,2023.02,1519.44,84.0,48.0,0.9
+synthetic_demo,demo-00539,Intel Core i5-12600K,AMD Radeon RX 7900 XT,64,DDR4,1024,NVMe SSD,good,custom,0.0,1828.29,1896.61,68.0,84.0,0.84
+synthetic_demo,demo-00540,Intel Core i5-12400,AMD Radeon RX 7600,64,DDR4,512,NVMe SSD,good,custom,3.8,1200.53,1075.57,56.0,50.0,0.84
+synthetic_demo,demo-00541,Intel Core i7-12700K,AMD Radeon RX 7600,32,DDR5,2048,NVMe SSD,fair,HP,4.8,1188.21,1030.36,76.0,50.0,0.72
+synthetic_demo,demo-00542,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,32,DDR4,2048,NVMe SSD,excellent,MSI,0.0,2091.73,1941.27,87.0,44.0,0.9
+synthetic_demo,demo-00543,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,2048,NVMe SSD,new,ASUS,4.6,1482.61,1549.35,74.0,84.0,1.0
+synthetic_demo,demo-00544,AMD Ryzen 9 7950X3D,AMD Radeon RX 6700 XT,32,DDR5,1024,NVMe SSD,good,HP,3.0,1483.48,1388.63,100.0,57.0,0.84
+synthetic_demo,demo-00545,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,2048,NVMe SSD,good,Dell,4.6,1339.29,1177.52,93.0,80.0,0.84
+synthetic_demo,demo-00546,AMD Ryzen 5 5600X,AMD Radeon RX 7900 XTX,64,DDR5,1024,NVMe SSD,good,HP,2.8,1460.74,1635.97,58.0,92.0,0.84
+synthetic_demo,demo-00547,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3070,32,DDR5,2048,NVMe SSD,good,ASUS,3.7,1092.51,988.84,58.0,60.0,0.84
+synthetic_demo,demo-00548,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3090,32,DDR5,2048,NVMe SSD,excellent,Dell,0.3,2218.1,2157.51,96.0,82.0,0.9
+synthetic_demo,demo-00549,Intel Core i5-12400,Intel Arc A770,32,DDR4,2048,NVMe SSD,good,MSI,4.8,1023.52,1054.54,56.0,48.0,0.84
+synthetic_demo,demo-00550,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070,32,DDR5,1024,NVMe SSD,excellent,Lenovo,1.9,2106.77,1926.4,88.0,72.0,0.9
+synthetic_demo,demo-00551,AMD Ryzen 9 7950X,AMD Radeon RX 7900 XTX,64,DDR5,1024,NVMe SSD,fair,custom,2.1,1397.78,1582.48,95.0,92.0,0.72
+synthetic_demo,demo-00552,AMD Ryzen 7 5800X3D,Intel Arc A750,32,DDR5,256,NVMe SSD,good,Lenovo,3.5,933.13,836.75,78.0,43.0,0.84
+synthetic_demo,demo-00553,Intel Core i5-12600K,NVIDIA GeForce RTX 3090,32,DDR5,2048,NVMe SSD,new,Alienware,3.0,2256.73,2426.63,68.0,82.0,1.0
+synthetic_demo,demo-00554,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3080,64,DDR5,1024,NVMe SSD,good,ASUS,2.6,2305.41,1988.9,88.0,72.0,0.84
+synthetic_demo,demo-00555,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,NVMe SSD,excellent,MSI,1.6,2179.0,2094.79,88.0,84.0,0.9
+synthetic_demo,demo-00556,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,excellent,HP,3.3,1471.13,1426.8,58.0,82.0,0.9
+synthetic_demo,demo-00557,Intel Core i5-12600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,good,Dell,0.1,1945.12,1792.73,68.0,80.0,0.84
+synthetic_demo,demo-00558,Intel Core i5-12400,AMD Radeon RX 6700 XT,16,DDR5,1024,NVMe SSD,good,MSI,2.4,1203.3,1056.59,56.0,57.0,0.84
+synthetic_demo,demo-00559,Intel Core i9-13900K,AMD Radeon RX 7800 XT,32,DDR5,2048,SATA SSD,new,ASUS,3.4,1735.82,1715.34,95.0,73.0,1.0
+synthetic_demo,demo-00560,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3090,64,DDR5,1024,NVMe SSD,new,MSI,0.2,2120.33,2149.96,74.0,82.0,1.0
+synthetic_demo,demo-00561,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3090,16,DDR5,1024,SATA SSD,fair,HP,4.9,1015.38,919.71,58.0,82.0,0.72
+synthetic_demo,demo-00562,Intel Core i9-13900K,NVIDIA GeForce RTX 2080,16,DDR5,1024,NVMe SSD,fair,Alienware,1.9,1233.76,1202.66,95.0,44.0,0.72
+synthetic_demo,demo-00563,Intel Core i5-13600K,NVIDIA GeForce RTX 4060,16,DDR5,1024,NVMe SSD,good,MSI,4.3,985.43,1116.32,79.0,54.0,0.84
+synthetic_demo,demo-00564,Intel Core i7-14700K,NVIDIA GeForce RTX 4070,64,DDR5,512,HDD,good,custom,0.5,1410.3,1541.16,93.0,72.0,0.84
+synthetic_demo,demo-00565,Intel Core i5-12400,NVIDIA GeForce RTX 4080,64,DDR5,1024,NVMe SSD,fair,Lenovo,3.5,1628.91,1275.11,56.0,90.0,0.72
+synthetic_demo,demo-00566,AMD Ryzen 5 5600X,AMD Radeon RX 7700 XT,16,DDR5,2048,NVMe SSD,good,Alienware,0.0,1599.76,1725.36,58.0,64.0,0.84
+synthetic_demo,demo-00567,AMD Ryzen 9 7950X,AMD Radeon RX 7600,64,DDR5,1024,NVMe SSD,excellent,ASUS,2.0,1366.42,1692.23,95.0,50.0,0.9
+synthetic_demo,demo-00568,AMD Ryzen 7 5800X3D,AMD Radeon RX 7800 XT,128,DDR5,2048,NVMe SSD,new,Alienware,3.2,2584.58,2598.47,78.0,73.0,1.0
+synthetic_demo,demo-00569,Intel Core i7-13700K,AMD Radeon RX 6700 XT,16,DDR4,1024,NVMe SSD,excellent,HP,3.2,1476.01,1441.97,87.0,57.0,0.9
+synthetic_demo,demo-00570,Intel Core i9-13900K,NVIDIA GeForce RTX 2080,16,DDR5,1024,NVMe SSD,excellent,HP,1.8,1154.88,1046.0,95.0,44.0,0.9
+synthetic_demo,demo-00571,AMD Ryzen 5 5600X,AMD Radeon RX 7800 XT,16,DDR4,512,NVMe SSD,good,MSI,2.6,1221.86,1160.74,58.0,73.0,0.84
+synthetic_demo,demo-00572,AMD Ryzen 5 7600X,AMD Radeon RX 6800 XT,32,DDR4,1024,NVMe SSD,good,HP,1.8,1487.07,1351.1,74.0,69.0,0.84
+synthetic_demo,demo-00573,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4060 Ti,32,DDR5,512,NVMe SSD,excellent,Lenovo,0.5,1726.61,1917.96,100.0,62.0,0.9
+synthetic_demo,demo-00574,AMD Ryzen 9 7950X,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,good,custom,1.7,2460.81,2134.76,95.0,92.0,0.84
+synthetic_demo,demo-00575,Intel Core i5-14600K,NVIDIA GeForce RTX 3060,16,DDR5,1024,NVMe SSD,excellent,HP,3.0,1136.03,1150.91,84.0,48.0,0.9
+synthetic_demo,demo-00576,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 2080,64,DDR5,4096,NVMe SSD,good,Alienware,2.9,1759.36,1706.61,96.0,44.0,0.84
+synthetic_demo,demo-00577,Intel Core i9-14900K,NVIDIA GeForce RTX 2080,32,DDR5,1024,NVMe SSD,excellent,Dell,2.7,1214.44,1355.7,100.0,44.0,0.9
+synthetic_demo,demo-00578,Intel Core i5-14600K,Intel Arc A750,64,DDR5,2048,NVMe SSD,good,Lenovo,1.9,1473.26,1631.22,84.0,43.0,0.84
+synthetic_demo,demo-00579,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,NVMe SSD,good,Lenovo,2.5,1537.77,1462.96,87.0,84.0,0.84
+synthetic_demo,demo-00580,Intel Core i7-13700K,NVIDIA GeForce RTX 3080,64,DDR5,2048,NVMe SSD,like_new,custom,2.1,2481.05,2274.82,87.0,72.0,0.95
+synthetic_demo,demo-00581,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3090,32,DDR5,4096,SATA SSD,like_new,custom,0.6,2342.52,2433.7,82.0,82.0,0.95
+synthetic_demo,demo-00582,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,1024,NVMe SSD,good,custom,1.8,1891.1,1908.61,96.0,84.0,0.84
+synthetic_demo,demo-00583,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3080,32,DDR5,512,NVMe SSD,excellent,Dell,4.3,1288.8,1317.65,96.0,72.0,0.9
+synthetic_demo,demo-00584,Intel Core i5-14600K,Intel Arc A750,16,DDR5,1024,SATA SSD,excellent,Dell,1.7,1341.07,1166.23,84.0,43.0,0.9
+synthetic_demo,demo-00585,Intel Core i5-13600K,AMD Radeon RX 7800 XT,128,DDR5,1024,NVMe SSD,fair,ASUS,3.9,2171.82,1714.46,79.0,73.0,0.72
+synthetic_demo,demo-00586,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,good,Dell,1.0,1340.05,1452.82,56.0,62.0,0.84
+synthetic_demo,demo-00587,Intel Core i7-14700K,AMD Radeon RX 7700 XT,32,DDR5,2048,NVMe SSD,excellent,Dell,1.5,1571.07,1681.57,93.0,64.0,0.9
+synthetic_demo,demo-00588,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,good,ASUS,1.0,1995.55,2173.03,100.0,100.0,0.84
+synthetic_demo,demo-00589,Intel Core i5-13600K,AMD Radeon RX 7700 XT,32,DDR4,2048,NVMe SSD,good,Alienware,4.2,1590.42,1203.99,79.0,64.0,0.84
+synthetic_demo,demo-00590,Intel Core i7-12700K,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,good,Alienware,2.0,1443.39,1585.33,76.0,69.0,0.84
+synthetic_demo,demo-00591,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,good,MSI,5.7,1536.87,1436.74,58.0,84.0,0.84
+synthetic_demo,demo-00592,AMD Ryzen 5 5600X,AMD Radeon RX 7900 XT,16,DDR4,512,NVMe SSD,good,Lenovo,0.5,1454.18,1567.25,58.0,84.0,0.84
+synthetic_demo,demo-00593,Intel Core i5-14600K,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,fair,custom,5.3,1236.52,1178.15,84.0,72.0,0.72
+synthetic_demo,demo-00594,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti,16,DDR5,512,SATA SSD,like_new,custom,0.0,1826.71,1647.5,78.0,80.0,0.95
+synthetic_demo,demo-00595,Intel Core i5-13600K,NVIDIA GeForce RTX 4060,32,DDR5,1024,NVMe SSD,good,Dell,4.9,1124.79,1277.01,79.0,54.0,0.84
+synthetic_demo,demo-00596,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070,16,DDR5,2048,NVMe SSD,like_new,MSI,3.3,1704.22,1949.54,88.0,72.0,0.95
+synthetic_demo,demo-00597,AMD Ryzen 5 5600X,AMD Radeon RX 7900 XTX,64,DDR4,512,NVMe SSD,fair,Alienware,2.8,1435.2,1421.1,58.0,92.0,0.72
+synthetic_demo,demo-00598,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4060,32,DDR5,2048,HDD,good,ASUS,0.0,1578.56,1567.16,95.0,54.0,0.84
+synthetic_demo,demo-00599,Intel Core i9-14900K,NVIDIA GeForce RTX 3060,16,DDR5,2048,NVMe SSD,like_new,HP,2.5,1485.11,1491.53,100.0,48.0,0.95
+synthetic_demo,demo-00600,Intel Core i9-14900K,NVIDIA GeForce RTX 4060,32,DDR5,512,HDD,excellent,HP,2.7,1355.51,1342.67,100.0,54.0,0.9
+synthetic_demo,demo-00601,Intel Core i9-13900K,NVIDIA GeForce RTX 4090,16,DDR5,1024,NVMe SSD,new,custom,2.1,1861.11,2194.94,95.0,100.0,1.0
+synthetic_demo,demo-00602,Intel Core i5-13600K,Intel Arc A770,16,DDR5,2048,NVMe SSD,good,Dell,3.6,1281.71,1227.73,79.0,48.0,0.84
+synthetic_demo,demo-00603,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4080,32,DDR5,512,SATA SSD,good,Dell,4.4,929.71,1103.36,95.0,90.0,0.84
+synthetic_demo,demo-00604,Intel Core i5-12400,Intel Arc A750,64,DDR5,2048,NVMe SSD,new,HP,3.3,1579.15,1493.97,56.0,43.0,1.0
+synthetic_demo,demo-00605,Intel Core i7-14700K,NVIDIA GeForce RTX 4070,16,DDR5,512,NVMe SSD,good,HP,2.0,1826.91,1612.08,93.0,72.0,0.84
+synthetic_demo,demo-00606,AMD Ryzen 7 5800X,AMD Radeon RX 6700 XT,16,DDR5,1024,NVMe SSD,good,MSI,3.6,1002.45,1208.89,70.0,57.0,0.84
+synthetic_demo,demo-00607,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,16,DDR5,512,NVMe SSD,good,HP,4.1,1394.53,1262.64,56.0,62.0,0.84
+synthetic_demo,demo-00608,AMD Ryzen 9 7950X3D,Intel Arc A750,32,DDR5,2048,NVMe SSD,excellent,ASUS,1.3,2032.55,1805.02,100.0,43.0,0.9
+synthetic_demo,demo-00609,AMD Ryzen 9 7900X,AMD Radeon RX 6800 XT,64,DDR5,1024,NVMe SSD,like_new,Dell,5.4,1357.87,1334.71,88.0,69.0,0.95
+synthetic_demo,demo-00610,Intel Core i9-13900K,AMD Radeon RX 7900 XT,32,DDR5,512,SATA SSD,good,Alienware,4.1,1347.13,1451.23,95.0,84.0,0.84
+synthetic_demo,demo-00611,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,good,ASUS,3.5,1756.5,1674.78,78.0,90.0,0.84
+synthetic_demo,demo-00612,Intel Core i5-13600K,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,good,custom,3.2,1419.08,1194.69,79.0,50.0,0.84
+synthetic_demo,demo-00613,AMD Ryzen 7 5800X,Intel Arc A750,32,DDR4,2048,NVMe SSD,good,Dell,1.3,1259.83,1210.1,70.0,43.0,0.84
+synthetic_demo,demo-00614,Intel Core i5-12400,AMD Radeon RX 7900 XT,64,DDR4,2048,NVMe SSD,excellent,custom,4.3,1188.27,1307.27,56.0,84.0,0.9
+synthetic_demo,demo-00615,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3070,16,DDR5,1024,SATA SSD,excellent,HP,0.0,1488.22,1603.39,88.0,60.0,0.9
+synthetic_demo,demo-00616,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4060,32,DDR4,1024,NVMe SSD,good,ASUS,2.1,1375.58,1409.63,70.0,54.0,0.84
+synthetic_demo,demo-00617,AMD Ryzen 7 7800X3D,Intel Arc A750,32,DDR5,2048,NVMe SSD,like_new,MSI,3.2,1679.66,1517.02,96.0,43.0,0.95
+synthetic_demo,demo-00618,AMD Ryzen 7 5800X3D,AMD Radeon RX 6800 XT,32,DDR5,1024,HDD,good,Dell,3.6,1149.74,1123.74,78.0,69.0,0.84
+synthetic_demo,demo-00619,Intel Core i9-13900K,AMD Radeon RX 6800 XT,128,DDR5,1024,NVMe SSD,good,ASUS,4.6,1522.14,1690.7,95.0,69.0,0.84
+synthetic_demo,demo-00620,Intel Core i9-13900K,Intel Arc A770,16,DDR5,1024,NVMe SSD,good,Dell,3.9,1203.18,1018.56,95.0,48.0,0.84
+synthetic_demo,demo-00621,Intel Core i5-14600K,AMD Radeon RX 7800 XT,64,DDR5,256,NVMe SSD,new,Alienware,4.5,1822.27,1726.08,84.0,73.0,1.0
+synthetic_demo,demo-00622,Intel Core i9-14900K,NVIDIA GeForce RTX 4090,32,DDR4,1024,NVMe SSD,fair,MSI,2.4,1698.69,1693.74,100.0,100.0,0.72
+synthetic_demo,demo-00623,AMD Ryzen 5 5600X,AMD Radeon RX 6800 XT,32,DDR4,1024,SATA SSD,good,Alienware,3.2,1335.08,1357.04,58.0,69.0,0.84
+synthetic_demo,demo-00624,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,like_new,HP,1.8,1469.46,1574.05,82.0,72.0,0.95
+synthetic_demo,demo-00625,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR4,2048,NVMe SSD,good,ASUS,0.0,2518.04,2062.46,70.0,84.0,0.84
+synthetic_demo,demo-00626,AMD Ryzen 7 7800X3D,Intel Arc A770,32,DDR5,512,SATA SSD,new,MSI,5.2,1125.62,1011.81,96.0,48.0,1.0
+synthetic_demo,demo-00627,Intel Core i9-13900K,NVIDIA GeForce RTX 2080,64,DDR4,1024,NVMe SSD,excellent,ASUS,5.2,1209.12,1151.39,95.0,44.0,0.9
+synthetic_demo,demo-00628,AMD Ryzen 9 7950X3D,Intel Arc A750,64,DDR5,1024,SATA SSD,good,Alienware,0.0,1528.76,1637.41,100.0,43.0,0.84
+synthetic_demo,demo-00629,Intel Core i9-13900K,AMD Radeon RX 7600,32,DDR5,512,HDD,fair,MSI,3.1,874.38,799.04,95.0,50.0,0.72
+synthetic_demo,demo-00630,Intel Core i5-12600K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,SATA SSD,excellent,HP,4.5,1136.76,1227.2,68.0,84.0,0.9
+synthetic_demo,demo-00631,AMD Ryzen 9 7950X,AMD Radeon RX 6800 XT,32,DDR5,512,NVMe SSD,like_new,Alienware,0.0,1944.82,1980.79,95.0,69.0,0.95
+synthetic_demo,demo-00632,Intel Core i5-13600K,AMD Radeon RX 6800 XT,16,DDR5,1024,NVMe SSD,fair,Lenovo,0.2,1462.82,1470.17,79.0,69.0,0.72
+synthetic_demo,demo-00633,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3090,16,DDR5,2048,NVMe SSD,good,custom,1.0,1931.58,1683.84,74.0,82.0,0.84
+synthetic_demo,demo-00634,Intel Core i7-12700K,AMD Radeon RX 7900 XT,32,DDR5,1024,NVMe SSD,good,Alienware,3.8,1662.76,1508.98,76.0,84.0,0.84
+synthetic_demo,demo-00635,Intel Core i7-14700K,Intel Arc A770,64,DDR5,2048,NVMe SSD,fair,Alienware,0.8,1587.21,1504.85,93.0,48.0,0.72
+synthetic_demo,demo-00636,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 2080,16,DDR4,2048,SATA SSD,new,Lenovo,2.0,1340.09,1393.09,70.0,44.0,1.0
+synthetic_demo,demo-00637,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3070,8,DDR5,2048,NVMe SSD,new,Alienware,3.7,1294.16,1729.5,82.0,60.0,1.0
+synthetic_demo,demo-00638,Intel Core i5-12400,NVIDIA GeForce RTX 4060,16,DDR5,1024,NVMe SSD,good,Alienware,4.8,649.69,664.04,56.0,54.0,0.84
+synthetic_demo,demo-00639,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XTX,32,DDR5,2048,NVMe SSD,excellent,MSI,4.5,1564.06,1750.72,100.0,92.0,0.9
+synthetic_demo,demo-00640,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4080,32,DDR4,4096,NVMe SSD,excellent,MSI,0.9,2044.33,2411.19,58.0,90.0,0.9
+synthetic_demo,demo-00641,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti,8,DDR5,2048,NVMe SSD,excellent,ASUS,4.7,1452.3,1577.28,93.0,80.0,0.9
+synthetic_demo,demo-00642,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,fair,Lenovo,1.8,1184.9,1051.73,96.0,48.0,0.72
+synthetic_demo,demo-00643,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,like_new,Dell,4.0,1444.27,1444.79,100.0,90.0,0.95
+synthetic_demo,demo-00644,Intel Core i7-14700K,NVIDIA GeForce RTX 2080,32,DDR5,1024,NVMe SSD,good,HP,1.3,1431.9,1582.23,93.0,44.0,0.84
+synthetic_demo,demo-00645,AMD Ryzen 9 7950X3D,AMD Radeon RX 6800 XT,64,DDR5,1024,NVMe SSD,like_new,ASUS,5.5,1439.56,1558.29,100.0,69.0,0.95
+synthetic_demo,demo-00646,Intel Core i7-13700K,AMD Radeon RX 7600,64,DDR5,1024,NVMe SSD,excellent,Alienware,1.6,1403.44,1537.96,87.0,50.0,0.9
+synthetic_demo,demo-00647,Intel Core i7-12700K,NVIDIA GeForce RTX 3070,64,DDR5,1024,NVMe SSD,like_new,Lenovo,3.0,1151.77,1401.24,76.0,60.0,0.95
+synthetic_demo,demo-00648,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070,32,DDR4,2048,NVMe SSD,fair,MSI,2.2,1041.19,1079.2,70.0,72.0,0.72
+synthetic_demo,demo-00649,AMD Ryzen 7 7700X,Intel Arc A750,64,DDR5,2048,NVMe SSD,fair,custom,1.3,1467.82,1183.63,82.0,43.0,0.72
+synthetic_demo,demo-00650,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3060,64,DDR5,512,NVMe SSD,fair,HP,2.9,973.06,1128.37,78.0,48.0,0.72
+synthetic_demo,demo-00651,Intel Core i9-14900K,AMD Radeon RX 7800 XT,64,DDR5,2048,NVMe SSD,like_new,Alienware,1.7,2096.17,2235.81,100.0,73.0,0.95
+synthetic_demo,demo-00652,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070,16,DDR5,2048,NVMe SSD,good,Alienware,4.3,1310.74,1296.02,96.0,72.0,0.84
+synthetic_demo,demo-00653,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3090,32,DDR5,1024,SATA SSD,good,HP,1.8,1544.63,1582.69,74.0,82.0,0.84
+synthetic_demo,demo-00654,Intel Core i7-14700K,NVIDIA GeForce RTX 4060 Ti,64,DDR5,1024,NVMe SSD,new,MSI,2.3,1840.47,1904.14,93.0,62.0,1.0
+synthetic_demo,demo-00655,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3080,64,DDR5,1024,NVMe SSD,excellent,Alienware,3.6,1828.66,1773.43,100.0,72.0,0.9
+synthetic_demo,demo-00656,Intel Core i5-14600K,Intel Arc A770,32,DDR5,1024,NVMe SSD,excellent,custom,2.1,1565.67,1540.38,84.0,48.0,0.9
+synthetic_demo,demo-00657,Intel Core i7-13700K,NVIDIA GeForce RTX 3060,32,DDR5,4096,NVMe SSD,good,ASUS,2.3,2049.87,1694.59,87.0,48.0,0.84
+synthetic_demo,demo-00658,AMD Ryzen 9 7950X,AMD Radeon RX 7600,16,DDR4,1024,NVMe SSD,excellent,ASUS,0.5,1432.86,1684.37,95.0,50.0,0.9
+synthetic_demo,demo-00659,AMD Ryzen 9 7950X,AMD Radeon RX 6800 XT,32,DDR4,2048,NVMe SSD,excellent,Dell,3.2,2010.13,1846.08,95.0,69.0,0.9
+synthetic_demo,demo-00660,Intel Core i9-14900K,AMD Radeon RX 7800 XT,16,DDR4,1024,NVMe SSD,good,custom,3.1,1378.38,1321.42,100.0,73.0,0.84
+synthetic_demo,demo-00661,Intel Core i5-12600K,NVIDIA GeForce RTX 4070 Ti,16,DDR4,1024,NVMe SSD,excellent,custom,2.4,1406.99,1391.66,68.0,80.0,0.9
+synthetic_demo,demo-00662,AMD Ryzen 7 5800X3D,AMD Radeon RX 7800 XT,32,DDR5,2048,NVMe SSD,excellent,ASUS,3.1,1520.8,1585.2,78.0,73.0,0.9
+synthetic_demo,demo-00663,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti,16,DDR5,2048,SATA SSD,good,ASUS,0.5,2051.94,1874.72,78.0,80.0,0.84
+synthetic_demo,demo-00664,Intel Core i5-12600K,Intel Arc A770,64,DDR5,1024,SATA SSD,like_new,Dell,3.2,1550.08,1477.97,68.0,48.0,0.95
+synthetic_demo,demo-00665,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060 Ti,64,DDR5,1024,NVMe SSD,excellent,MSI,3.5,1678.87,1628.63,82.0,62.0,0.9
+synthetic_demo,demo-00666,Intel Core i5-14600K,NVIDIA GeForce RTX 3070,32,DDR5,512,NVMe SSD,good,Dell,1.9,1740.92,1750.01,84.0,60.0,0.84
+synthetic_demo,demo-00667,AMD Ryzen 9 7950X3D,AMD Radeon RX 7800 XT,32,DDR5,1024,NVMe SSD,good,HP,1.7,1858.85,1745.09,100.0,73.0,0.84
+synthetic_demo,demo-00668,Intel Core i5-14600K,AMD Radeon RX 7900 XT,32,DDR5,1024,NVMe SSD,excellent,ASUS,0.4,2351.59,2281.81,84.0,84.0,0.9
+synthetic_demo,demo-00669,Intel Core i5-12400,NVIDIA GeForce RTX 4060,16,DDR5,512,SATA SSD,good,ASUS,0.9,1553.71,1409.17,56.0,54.0,0.84
+synthetic_demo,demo-00670,Intel Core i9-14900K,NVIDIA GeForce RTX 3060,64,DDR5,512,NVMe SSD,good,Lenovo,0.7,2041.42,1845.97,100.0,48.0,0.84
+synthetic_demo,demo-00671,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,64,DDR5,2048,NVMe SSD,like_new,Dell,2.8,2048.78,1940.26,56.0,62.0,0.95
+synthetic_demo,demo-00672,Intel Core i9-13900K,NVIDIA GeForce RTX 2080,64,DDR4,2048,NVMe SSD,like_new,ASUS,2.8,1667.03,1517.98,95.0,44.0,0.95
+synthetic_demo,demo-00673,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3060,32,DDR4,1024,NVMe SSD,like_new,ASUS,3.6,1189.73,1238.01,58.0,48.0,0.95
+synthetic_demo,demo-00674,Intel Core i5-12600K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,NVMe SSD,good,Dell,3.0,1454.25,1603.98,68.0,84.0,0.84
+synthetic_demo,demo-00675,Intel Core i5-12600K,AMD Radeon RX 6700 XT,128,DDR4,1024,NVMe SSD,good,ASUS,0.3,1481.52,1899.84,68.0,57.0,0.84
+synthetic_demo,demo-00676,Intel Core i5-13600K,AMD Radeon RX 7700 XT,64,DDR5,2048,NVMe SSD,like_new,custom,3.1,1955.47,1670.16,79.0,64.0,0.95
+synthetic_demo,demo-00677,AMD Ryzen 9 7950X3D,AMD Radeon RX 7800 XT,32,DDR5,512,NVMe SSD,excellent,Lenovo,2.0,1818.83,1818.27,100.0,73.0,0.9
+synthetic_demo,demo-00678,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,excellent,Lenovo,3.0,2020.48,2033.19,70.0,100.0,0.9
+synthetic_demo,demo-00679,Intel Core i5-12400,NVIDIA GeForce RTX 3060,64,DDR5,512,NVMe SSD,good,Lenovo,4.5,1001.83,936.76,56.0,48.0,0.84
+synthetic_demo,demo-00680,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4060 Ti,16,DDR5,2048,NVMe SSD,good,ASUS,4.4,1857.54,1508.18,100.0,62.0,0.84
+synthetic_demo,demo-00681,AMD Ryzen 7 7700X,AMD Radeon RX 7700 XT,16,DDR5,1024,NVMe SSD,good,ASUS,1.5,1243.35,1321.92,82.0,64.0,0.84
+synthetic_demo,demo-00682,AMD Ryzen 9 7950X,AMD Radeon RX 7600,32,DDR5,2048,NVMe SSD,excellent,ASUS,3.9,1632.97,1554.88,95.0,50.0,0.9
+synthetic_demo,demo-00683,Intel Core i9-13900K,NVIDIA GeForce RTX 2080,16,DDR5,512,HDD,good,MSI,0.9,1225.39,1335.53,95.0,44.0,0.84
+synthetic_demo,demo-00684,AMD Ryzen 7 5800X3D,AMD Radeon RX 6700 XT,32,DDR5,1024,NVMe SSD,excellent,MSI,4.8,1850.24,1718.52,78.0,57.0,0.9
+synthetic_demo,demo-00685,Intel Core i9-13900K,NVIDIA GeForce RTX 4080,16,DDR5,512,NVMe SSD,fair,Alienware,3.8,1086.98,1265.43,95.0,90.0,0.72
+synthetic_demo,demo-00686,Intel Core i5-12600K,NVIDIA GeForce RTX 3070,16,DDR4,1024,NVMe SSD,fair,HP,1.8,843.01,941.59,68.0,60.0,0.72
+synthetic_demo,demo-00687,Intel Core i5-12600K,NVIDIA GeForce RTX 4090,64,DDR4,2048,NVMe SSD,fair,ASUS,5.7,1440.86,1336.64,68.0,100.0,0.72
+synthetic_demo,demo-00688,Intel Core i5-12600K,NVIDIA GeForce RTX 3070,64,DDR4,512,NVMe SSD,fair,ASUS,2.3,1326.6,1167.32,68.0,60.0,0.72
+synthetic_demo,demo-00689,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060,32,DDR5,1024,NVMe SSD,new,custom,2.7,1695.17,1661.28,82.0,54.0,1.0
+synthetic_demo,demo-00690,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3060,32,DDR5,512,NVMe SSD,excellent,Lenovo,2.2,975.21,1157.89,88.0,48.0,0.9
+synthetic_demo,demo-00691,Intel Core i9-14900K,Intel Arc A750,64,DDR5,1024,NVMe SSD,excellent,HP,2.4,1380.03,1514.21,100.0,43.0,0.9
+synthetic_demo,demo-00692,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3080,16,DDR5,1024,NVMe SSD,good,Alienware,2.7,1296.44,1572.59,96.0,72.0,0.84
+synthetic_demo,demo-00693,Intel Core i5-12400,NVIDIA GeForce RTX 2080,32,DDR5,1024,NVMe SSD,like_new,Dell,1.2,1578.73,1463.54,56.0,44.0,0.95
+synthetic_demo,demo-00694,Intel Core i9-13900K,AMD Radeon RX 6800 XT,32,DDR5,512,NVMe SSD,like_new,custom,0.8,2158.33,1889.56,95.0,69.0,0.95
+synthetic_demo,demo-00695,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XT,32,DDR5,2048,NVMe SSD,excellent,MSI,4.1,1713.87,1725.6,88.0,84.0,0.9
+synthetic_demo,demo-00696,AMD Ryzen 7 5800X,AMD Radeon RX 6800 XT,16,DDR5,2048,NVMe SSD,like_new,MSI,1.7,2044.0,1929.2,70.0,69.0,0.95
+synthetic_demo,demo-00697,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,2048,NVMe SSD,excellent,Alienware,3.9,1949.22,1737.46,84.0,80.0,0.9
+synthetic_demo,demo-00698,AMD Ryzen 7 7700X,Intel Arc A770,16,DDR5,1024,NVMe SSD,excellent,MSI,3.0,1654.14,1467.63,82.0,48.0,0.9
+synthetic_demo,demo-00699,Intel Core i9-13900K,AMD Radeon RX 7800 XT,32,DDR5,512,NVMe SSD,good,Dell,1.4,1583.84,1326.11,95.0,73.0,0.84
+synthetic_demo,demo-00700,Intel Core i7-14700K,Intel Arc A770,32,DDR5,1024,NVMe SSD,like_new,Lenovo,3.2,1126.96,1163.48,93.0,48.0,0.95
+synthetic_demo,demo-00701,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3070,32,DDR5,1024,NVMe SSD,good,HP,4.1,1220.03,1233.85,88.0,60.0,0.84
+synthetic_demo,demo-00702,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,2048,NVMe SSD,good,MSI,5.2,1275.68,1328.58,87.0,84.0,0.84
+synthetic_demo,demo-00703,Intel Core i9-13900K,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,good,MSI,3.2,1732.08,1589.6,95.0,69.0,0.84
+synthetic_demo,demo-00704,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,like_new,HP,4.3,1754.15,1610.88,79.0,80.0,0.95
+synthetic_demo,demo-00705,AMD Ryzen 9 7900X,Intel Arc A770,16,DDR5,2048,NVMe SSD,good,custom,2.4,1442.84,1373.15,88.0,48.0,0.84
+synthetic_demo,demo-00706,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4060,64,DDR4,2048,NVMe SSD,good,HP,3.2,1671.03,1525.33,88.0,54.0,0.84
+synthetic_demo,demo-00707,Intel Core i5-12400,NVIDIA GeForce RTX 3070,32,DDR4,1024,NVMe SSD,good,Dell,2.9,1121.96,1071.84,56.0,60.0,0.84
+synthetic_demo,demo-00708,Intel Core i9-14900K,AMD Radeon RX 7900 XT,32,DDR4,2048,NVMe SSD,good,MSI,2.8,2240.12,1776.96,100.0,84.0,0.84
+synthetic_demo,demo-00709,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3070,16,DDR4,2048,NVMe SSD,good,Dell,1.9,1702.88,1484.84,82.0,60.0,0.84
+synthetic_demo,demo-00710,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3070,64,DDR5,1024,NVMe SSD,excellent,HP,3.0,1993.17,1988.81,96.0,60.0,0.9
+synthetic_demo,demo-00711,Intel Core i7-13700K,AMD Radeon RX 7900 XTX,32,DDR5,1024,SATA SSD,good,MSI,3.4,1476.95,1469.83,87.0,92.0,0.84
+synthetic_demo,demo-00712,Intel Core i7-14700K,AMD Radeon RX 7900 XT,16,DDR5,4096,SATA SSD,new,custom,3.2,2400.63,2239.59,93.0,84.0,1.0
+synthetic_demo,demo-00713,AMD Ryzen 7 7700X,AMD Radeon RX 7700 XT,32,DDR5,4096,SATA SSD,good,MSI,4.9,1436.75,1427.07,82.0,64.0,0.84
+synthetic_demo,demo-00714,Intel Core i5-14600K,Intel Arc A770,64,DDR5,2048,NVMe SSD,good,HP,7.4,1034.2,1068.33,84.0,48.0,0.84
+synthetic_demo,demo-00715,Intel Core i7-14700K,NVIDIA GeForce RTX 3090,16,DDR5,1024,NVMe SSD,excellent,Lenovo,1.6,1867.42,1647.25,93.0,82.0,0.9
+synthetic_demo,demo-00716,AMD Ryzen 5 5600X,AMD Radeon RX 7900 XT,64,DDR4,1024,HDD,good,ASUS,2.2,1559.07,1508.32,58.0,84.0,0.84
+synthetic_demo,demo-00717,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,4096,NVMe SSD,good,MSI,4.0,1533.29,1644.38,93.0,80.0,0.84
+synthetic_demo,demo-00718,AMD Ryzen 5 5600X,AMD Radeon RX 7800 XT,32,DDR4,1024,NVMe SSD,good,ASUS,3.2,1547.6,1441.97,58.0,73.0,0.84
+synthetic_demo,demo-00719,AMD Ryzen 9 7900X,Intel Arc A750,32,DDR5,1024,NVMe SSD,good,custom,1.4,1397.61,1447.38,88.0,43.0,0.84
+synthetic_demo,demo-00720,Intel Core i5-13600K,AMD Radeon RX 7800 XT,32,DDR5,1024,NVMe SSD,fair,MSI,1.9,1469.54,1255.89,79.0,73.0,0.72
+synthetic_demo,demo-00721,Intel Core i9-14900K,NVIDIA GeForce RTX 3070,16,DDR5,2048,NVMe SSD,good,Dell,3.9,1715.59,1472.96,100.0,60.0,0.84
+synthetic_demo,demo-00722,AMD Ryzen 9 7950X,Intel Arc A750,32,DDR5,1024,HDD,good,Lenovo,7.6,546.62,565.77,95.0,43.0,0.84
+synthetic_demo,demo-00723,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3070,32,DDR5,512,NVMe SSD,excellent,Lenovo,1.8,1348.04,1446.02,100.0,60.0,0.9
+synthetic_demo,demo-00724,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3080,64,DDR4,256,NVMe SSD,fair,ASUS,2.3,1139.7,1061.67,58.0,72.0,0.72
+synthetic_demo,demo-00725,AMD Ryzen 7 7700X,AMD Radeon RX 7800 XT,32,DDR4,1024,NVMe SSD,good,MSI,2.9,1684.24,1544.08,82.0,73.0,0.84
+synthetic_demo,demo-00726,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3060,128,DDR5,4096,NVMe SSD,good,MSI,3.8,2172.64,1735.18,95.0,48.0,0.84
+synthetic_demo,demo-00727,Intel Core i7-12700K,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,good,Dell,3.2,1179.97,1255.61,76.0,92.0,0.84
+synthetic_demo,demo-00728,AMD Ryzen 9 7950X,Intel Arc A750,16,DDR5,2048,NVMe SSD,good,HP,0.0,1592.66,1549.55,95.0,43.0,0.84
+synthetic_demo,demo-00729,Intel Core i5-12400,NVIDIA GeForce RTX 3090,32,DDR5,2048,NVMe SSD,good,HP,2.0,2184.53,1995.19,56.0,82.0,0.84
+synthetic_demo,demo-00730,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3070,64,DDR5,1024,HDD,good,custom,4.0,1067.56,1135.6,100.0,60.0,0.84
+synthetic_demo,demo-00731,AMD Ryzen 7 7800X3D,AMD Radeon RX 6800 XT,32,DDR5,4096,NVMe SSD,good,Dell,2.9,1546.24,1809.81,96.0,69.0,0.84
+synthetic_demo,demo-00732,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3080,64,DDR5,1024,NVMe SSD,good,Alienware,2.5,1608.69,1579.5,58.0,72.0,0.84
+synthetic_demo,demo-00733,AMD Ryzen 7 5800X,AMD Radeon RX 7600,32,DDR4,2048,NVMe SSD,new,custom,1.4,1564.01,1529.87,70.0,50.0,1.0
+synthetic_demo,demo-00734,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4090,32,DDR5,1024,NVMe SSD,good,Dell,3.0,2124.41,1850.39,88.0,100.0,0.84
+synthetic_demo,demo-00735,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4080,8,DDR4,512,HDD,good,ASUS,2.3,1409.84,1300.87,70.0,90.0,0.84
+synthetic_demo,demo-00736,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,512,NVMe SSD,good,Alienware,3.8,1754.79,1568.12,96.0,84.0,0.84
+synthetic_demo,demo-00737,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060 Ti,16,DDR5,1024,NVMe SSD,excellent,HP,4.5,1855.8,1523.86,96.0,62.0,0.9
+synthetic_demo,demo-00738,Intel Core i9-13900K,NVIDIA GeForce RTX 3080,16,DDR5,512,NVMe SSD,fair,Dell,1.3,1411.24,1355.49,95.0,72.0,0.72
+synthetic_demo,demo-00739,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060 Ti,32,DDR4,1024,NVMe SSD,like_new,HP,2.6,1157.03,1297.93,58.0,62.0,0.95
+synthetic_demo,demo-00740,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070,32,DDR5,1024,SATA SSD,good,Dell,3.0,1375.05,1311.32,96.0,72.0,0.84
+synthetic_demo,demo-00741,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,good,Alienware,1.5,1773.68,1667.88,96.0,90.0,0.84
+synthetic_demo,demo-00742,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4080,32,DDR5,1024,NVMe SSD,good,Lenovo,3.1,2246.24,1784.73,100.0,90.0,0.84
+synthetic_demo,demo-00743,Intel Core i5-13600K,AMD Radeon RX 7700 XT,32,DDR4,2048,NVMe SSD,new,ASUS,3.3,1663.2,1784.08,79.0,64.0,1.0
+synthetic_demo,demo-00744,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,4096,NVMe SSD,excellent,ASUS,0.6,2511.83,2650.59,79.0,80.0,0.9
+synthetic_demo,demo-00745,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 2080,32,DDR5,4096,NVMe SSD,good,ASUS,1.0,1824.18,1769.37,88.0,44.0,0.84
+synthetic_demo,demo-00746,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4060 Ti,32,DDR4,4096,NVMe SSD,excellent,custom,1.3,2054.84,1766.94,70.0,62.0,0.9
+synthetic_demo,demo-00747,Intel Core i7-14700K,AMD Radeon RX 7700 XT,16,DDR5,2048,SATA SSD,like_new,ASUS,1.4,1783.2,1572.12,93.0,64.0,0.95
+synthetic_demo,demo-00748,AMD Ryzen 5 7600X,AMD Radeon RX 7700 XT,32,DDR5,2048,NVMe SSD,fair,MSI,3.6,1021.18,1158.09,74.0,64.0,0.72
+synthetic_demo,demo-00749,Intel Core i5-14600K,NVIDIA GeForce RTX 4090,8,DDR4,512,NVMe SSD,excellent,ASUS,1.5,2169.48,1875.8,84.0,100.0,0.9
+synthetic_demo,demo-00750,Intel Core i5-12600K,AMD Radeon RX 7800 XT,64,DDR4,2048,NVMe SSD,excellent,custom,1.0,2032.94,1835.59,68.0,73.0,0.9
+synthetic_demo,demo-00751,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070,32,DDR4,256,NVMe SSD,good,custom,0.0,1666.22,1807.67,95.0,72.0,0.84
+synthetic_demo,demo-00752,AMD Ryzen 7 5800X3D,Intel Arc A750,16,DDR5,1024,NVMe SSD,good,custom,3.4,1307.72,1138.67,78.0,43.0,0.84
+synthetic_demo,demo-00753,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070 Ti,32,DDR5,2048,NVMe SSD,good,MSI,3.7,1212.84,1261.37,96.0,80.0,0.84
+synthetic_demo,demo-00754,Intel Core i7-13700K,NVIDIA GeForce RTX 3060,16,DDR5,2048,NVMe SSD,fair,Alienware,3.0,1248.65,1147.91,87.0,48.0,0.72
+synthetic_demo,demo-00755,AMD Ryzen 9 7950X,AMD Radeon RX 6700 XT,16,DDR5,512,NVMe SSD,like_new,Dell,4.1,1462.18,1435.52,95.0,57.0,0.95
+synthetic_demo,demo-00756,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,32,DDR4,2048,SATA SSD,good,ASUS,0.0,1564.6,1446.51,56.0,62.0,0.84
+synthetic_demo,demo-00757,Intel Core i7-13700K,NVIDIA GeForce RTX 4060 Ti,8,DDR5,1024,NVMe SSD,like_new,ASUS,0.9,2142.67,1894.76,87.0,62.0,0.95
+synthetic_demo,demo-00758,Intel Core i9-14900K,AMD Radeon RX 7900 XT,32,DDR5,2048,SATA SSD,like_new,Dell,3.0,1194.02,1308.96,100.0,84.0,0.95
+synthetic_demo,demo-00759,Intel Core i5-12600K,AMD Radeon RX 7800 XT,32,DDR4,4096,NVMe SSD,good,Lenovo,6.0,1028.1,1221.62,68.0,73.0,0.84
+synthetic_demo,demo-00760,AMD Ryzen 9 7900X,Intel Arc A750,64,DDR5,1024,NVMe SSD,like_new,Lenovo,4.9,1489.81,1294.93,88.0,43.0,0.95
+synthetic_demo,demo-00761,AMD Ryzen 7 7800X3D,Intel Arc A770,32,DDR5,2048,NVMe SSD,good,ASUS,3.3,1605.94,1492.09,96.0,48.0,0.84
+synthetic_demo,demo-00762,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3080,16,DDR4,512,NVMe SSD,fair,HP,4.0,1474.73,1296.92,70.0,72.0,0.72
+synthetic_demo,demo-00763,Intel Core i5-13600K,NVIDIA GeForce RTX 4060 Ti,16,DDR5,2048,NVMe SSD,excellent,Dell,0.1,2165.28,1876.09,79.0,62.0,0.9
+synthetic_demo,demo-00764,Intel Core i9-13900K,Intel Arc A770,64,DDR5,2048,NVMe SSD,fair,Alienware,4.8,1272.86,1100.62,95.0,48.0,0.72
+synthetic_demo,demo-00765,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4090,32,DDR5,512,NVMe SSD,excellent,Alienware,4.4,2041.67,2115.72,78.0,100.0,0.9
+synthetic_demo,demo-00766,Intel Core i9-13900K,NVIDIA GeForce RTX 3090,64,DDR5,1024,NVMe SSD,good,HP,1.9,1745.94,1761.83,95.0,82.0,0.84
+synthetic_demo,demo-00767,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,SATA SSD,fair,HP,1.3,964.46,967.82,74.0,84.0,0.72
+synthetic_demo,demo-00768,AMD Ryzen 7 5800X3D,AMD Radeon RX 7900 XTX,32,DDR5,1024,NVMe SSD,excellent,Dell,3.4,1997.24,1619.12,78.0,92.0,0.9
+synthetic_demo,demo-00769,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4080,32,DDR5,512,NVMe SSD,good,Alienware,2.8,2012.41,1887.56,82.0,90.0,0.84
+synthetic_demo,demo-00770,Intel Core i9-13900K,NVIDIA GeForce RTX 3090,64,DDR4,1024,NVMe SSD,good,Alienware,4.2,1874.24,1592.55,95.0,82.0,0.84
+synthetic_demo,demo-00771,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XT,64,DDR5,1024,NVMe SSD,excellent,ASUS,2.9,2129.28,1977.72,88.0,84.0,0.9
+synthetic_demo,demo-00772,Intel Core i7-12700K,NVIDIA GeForce RTX 3090,16,DDR5,1024,NVMe SSD,fair,Lenovo,2.3,1763.19,1395.55,76.0,82.0,0.72
+synthetic_demo,demo-00773,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XT,128,DDR5,512,NVMe SSD,new,Lenovo,2.3,2808.34,2408.99,100.0,84.0,1.0
+synthetic_demo,demo-00774,Intel Core i7-13700K,AMD Radeon RX 7700 XT,64,DDR5,2048,NVMe SSD,like_new,MSI,4.7,1333.26,1663.12,87.0,64.0,0.95
+synthetic_demo,demo-00775,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XT,64,DDR5,512,NVMe SSD,like_new,HP,3.7,1685.19,1419.71,100.0,84.0,0.95
+synthetic_demo,demo-00776,Intel Core i9-14900K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,SATA SSD,good,MSI,3.1,1576.52,1659.86,100.0,62.0,0.84
+synthetic_demo,demo-00777,AMD Ryzen 7 7700X,AMD Radeon RX 7900 XTX,16,DDR5,2048,NVMe SSD,new,ASUS,0.2,2631.73,2538.72,82.0,92.0,1.0
+synthetic_demo,demo-00778,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XTX,64,DDR5,1024,NVMe SSD,excellent,Lenovo,2.0,2668.49,2026.58,88.0,92.0,0.9
+synthetic_demo,demo-00779,Intel Core i5-12400,AMD Radeon RX 6700 XT,64,DDR4,2048,NVMe SSD,excellent,custom,4.2,1655.47,1472.32,56.0,57.0,0.9
+synthetic_demo,demo-00780,Intel Core i5-12600K,NVIDIA GeForce RTX 2080,64,DDR5,512,NVMe SSD,new,Dell,5.3,984.77,1180.04,68.0,44.0,1.0
+synthetic_demo,demo-00781,AMD Ryzen 7 5800X3D,Intel Arc A750,32,DDR5,512,NVMe SSD,fair,Alienware,2.5,1101.03,1167.56,78.0,43.0,0.72
+synthetic_demo,demo-00782,Intel Core i5-12400,NVIDIA GeForce RTX 4070 Ti,32,DDR4,2048,NVMe SSD,good,Dell,2.5,1659.06,1393.93,56.0,80.0,0.84
+synthetic_demo,demo-00783,Intel Core i7-14700K,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,good,Lenovo,4.1,1648.02,1495.26,93.0,72.0,0.84
+synthetic_demo,demo-00784,Intel Core i5-12600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,excellent,ASUS,2.7,1590.12,1725.61,68.0,80.0,0.9
+synthetic_demo,demo-00785,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4060,64,DDR5,1024,NVMe SSD,excellent,custom,0.0,1967.07,1834.27,88.0,54.0,0.9
+synthetic_demo,demo-00786,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060 Ti,16,DDR5,2048,NVMe SSD,good,ASUS,4.9,1889.82,1578.8,96.0,62.0,0.84
+synthetic_demo,demo-00787,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3070,32,DDR5,2048,NVMe SSD,good,ASUS,1.1,1861.15,1710.56,100.0,60.0,0.84
+synthetic_demo,demo-00788,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3070,16,DDR5,256,NVMe SSD,excellent,ASUS,7.1,1460.48,1267.84,100.0,60.0,0.9
+synthetic_demo,demo-00789,Intel Core i9-13900K,AMD Radeon RX 7700 XT,32,DDR5,2048,NVMe SSD,good,MSI,2.1,1719.91,1537.15,95.0,64.0,0.84
+synthetic_demo,demo-00790,Intel Core i9-14900K,NVIDIA GeForce RTX 4060 Ti,64,DDR5,1024,NVMe SSD,good,Alienware,0.9,1818.27,1767.84,100.0,62.0,0.84
+synthetic_demo,demo-00791,Intel Core i7-14700K,NVIDIA GeForce RTX 3070,32,DDR5,1024,NVMe SSD,like_new,ASUS,5.5,1052.03,1321.52,93.0,60.0,0.95
+synthetic_demo,demo-00792,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060 Ti,16,DDR5,512,SATA SSD,excellent,Alienware,3.7,1235.21,1182.86,82.0,62.0,0.9
+synthetic_demo,demo-00793,AMD Ryzen 7 5800X,AMD Radeon RX 6800 XT,32,DDR5,2048,SATA SSD,good,Alienware,2.7,1620.81,1448.4,70.0,69.0,0.84
+synthetic_demo,demo-00794,Intel Core i5-12400,NVIDIA GeForce RTX 3070,16,DDR5,512,NVMe SSD,fair,Dell,0.2,1228.94,1108.75,56.0,60.0,0.72
+synthetic_demo,demo-00795,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4090,64,DDR5,1024,NVMe SSD,excellent,Dell,1.8,1970.51,1780.28,82.0,100.0,0.9
+synthetic_demo,demo-00796,AMD Ryzen 7 7700X,AMD Radeon RX 6700 XT,32,DDR5,2048,SATA SSD,good,custom,4.7,994.01,1177.86,82.0,57.0,0.84
+synthetic_demo,demo-00797,AMD Ryzen 7 7700X,AMD Radeon RX 6800 XT,16,DDR5,512,NVMe SSD,excellent,Dell,4.0,1172.46,1094.86,82.0,69.0,0.9
+synthetic_demo,demo-00798,AMD Ryzen 9 7950X,Intel Arc A770,32,DDR5,1024,NVMe SSD,excellent,custom,1.3,1342.37,1348.02,95.0,48.0,0.9
+synthetic_demo,demo-00799,AMD Ryzen 9 7900X,AMD Radeon RX 6800 XT,64,DDR5,2048,NVMe SSD,excellent,Lenovo,2.5,1868.85,1700.7,88.0,69.0,0.9
+synthetic_demo,demo-00800,Intel Core i5-12600K,NVIDIA GeForce RTX 4080,64,DDR4,1024,NVMe SSD,good,HP,2.0,1990.45,1863.51,68.0,90.0,0.84
+synthetic_demo,demo-00801,Intel Core i7-14700K,NVIDIA GeForce RTX 4090,16,DDR4,1024,NVMe SSD,good,ASUS,1.6,1491.65,1704.25,93.0,100.0,0.84
+synthetic_demo,demo-00802,Intel Core i7-12700K,AMD Radeon RX 7800 XT,16,DDR5,2048,NVMe SSD,excellent,MSI,3.3,1268.82,1580.54,76.0,73.0,0.9
+synthetic_demo,demo-00803,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070,16,DDR5,1024,SATA SSD,fair,MSI,1.9,1402.74,1171.32,88.0,72.0,0.72
+synthetic_demo,demo-00804,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti SUPER,8,DDR5,2048,NVMe SSD,good,Lenovo,0.0,1922.48,1670.27,87.0,84.0,0.84
+synthetic_demo,demo-00805,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060,16,DDR5,1024,SATA SSD,good,MSI,5.1,938.55,960.85,82.0,54.0,0.84
+synthetic_demo,demo-00806,Intel Core i9-14900K,AMD Radeon RX 7700 XT,32,DDR5,1024,SATA SSD,excellent,ASUS,3.8,930.93,1090.23,100.0,64.0,0.9
+synthetic_demo,demo-00807,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,2048,NVMe SSD,good,Alienware,2.3,2025.12,2032.38,79.0,80.0,0.84
+synthetic_demo,demo-00808,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4070 Ti,64,DDR5,1024,NVMe SSD,good,MSI,3.0,2446.33,1955.99,100.0,80.0,0.84
+synthetic_demo,demo-00809,AMD Ryzen 5 5600X,Intel Arc A750,32,DDR4,4096,NVMe SSD,good,custom,1.8,1722.41,1409.27,58.0,43.0,0.84
+synthetic_demo,demo-00810,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060 Ti,32,DDR5,512,NVMe SSD,like_new,Alienware,0.2,1799.05,1917.62,58.0,62.0,0.95
+synthetic_demo,demo-00811,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3080,32,DDR4,2048,NVMe SSD,good,custom,3.0,1405.46,1488.52,95.0,72.0,0.84
+synthetic_demo,demo-00812,Intel Core i5-12600K,NVIDIA GeForce RTX 4060,64,DDR4,1024,NVMe SSD,like_new,Dell,1.1,1875.22,1645.57,68.0,54.0,0.95
+synthetic_demo,demo-00813,Intel Core i9-13900K,NVIDIA GeForce RTX 3070,16,DDR5,2048,NVMe SSD,excellent,Alienware,2.6,1837.26,1674.62,95.0,60.0,0.9
+synthetic_demo,demo-00814,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4070,32,DDR5,1024,NVMe SSD,fair,custom,1.1,1787.17,1592.94,100.0,72.0,0.72
+synthetic_demo,demo-00815,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070,32,DDR4,2048,NVMe SSD,fair,custom,7.2,838.31,843.21,70.0,72.0,0.72
+synthetic_demo,demo-00816,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4090,32,DDR5,1024,NVMe SSD,good,Lenovo,4.1,1710.08,1733.5,82.0,100.0,0.84
+synthetic_demo,demo-00817,Intel Core i5-12600K,NVIDIA GeForce RTX 3060,16,DDR4,1024,NVMe SSD,good,Alienware,2.1,1219.31,1273.77,68.0,48.0,0.84
+synthetic_demo,demo-00818,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3070,16,DDR4,512,NVMe SSD,good,custom,2.1,1407.24,1234.86,74.0,60.0,0.84
+synthetic_demo,demo-00819,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4090,64,DDR5,2048,SATA SSD,good,Lenovo,1.8,1391.76,1640.57,88.0,100.0,0.84
+synthetic_demo,demo-00820,AMD Ryzen 9 7950X,AMD Radeon RX 7700 XT,16,DDR5,1024,NVMe SSD,good,MSI,0.7,1487.88,1452.24,95.0,64.0,0.84
+synthetic_demo,demo-00821,AMD Ryzen 7 7800X3D,Intel Arc A770,16,DDR5,2048,NVMe SSD,like_new,MSI,0.8,1629.59,1692.91,96.0,48.0,0.95
+synthetic_demo,demo-00822,AMD Ryzen 5 5600X,AMD Radeon RX 6700 XT,32,DDR4,1024,NVMe SSD,new,MSI,2.1,1940.94,1754.61,58.0,57.0,1.0
+synthetic_demo,demo-00823,AMD Ryzen 9 7950X3D,AMD Radeon RX 7600,16,DDR5,1024,NVMe SSD,good,ASUS,2.8,1288.13,1292.42,100.0,50.0,0.84
+synthetic_demo,demo-00824,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060,64,DDR5,2048,NVMe SSD,like_new,ASUS,3.4,1764.3,1858.65,96.0,54.0,0.95
+synthetic_demo,demo-00825,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060 Ti,64,DDR5,4096,NVMe SSD,excellent,MSI,2.9,1713.96,1615.16,96.0,62.0,0.9
+synthetic_demo,demo-00826,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,excellent,ASUS,4.1,1944.09,1591.36,95.0,80.0,0.9
+synthetic_demo,demo-00827,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,512,NVMe SSD,excellent,MSI,1.3,2066.09,1993.49,95.0,84.0,0.9
+synthetic_demo,demo-00828,Intel Core i5-14600K,NVIDIA GeForce RTX 3090,32,DDR4,1024,NVMe SSD,good,MSI,2.6,1650.78,1571.1,84.0,82.0,0.84
+synthetic_demo,demo-00829,Intel Core i5-13600K,NVIDIA GeForce RTX 2080,16,DDR5,4096,SATA SSD,good,ASUS,4.2,1558.98,1499.34,79.0,44.0,0.84
+synthetic_demo,demo-00830,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070 Ti,16,DDR5,1024,SATA SSD,fair,Alienware,4.2,1206.26,1080.3,88.0,80.0,0.72
+synthetic_demo,demo-00831,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 2080,128,DDR5,1024,HDD,like_new,MSI,1.5,2452.91,1945.11,88.0,44.0,0.95
+synthetic_demo,demo-00832,Intel Core i7-12700K,AMD Radeon RX 7700 XT,16,DDR5,2048,NVMe SSD,good,ASUS,2.6,1147.06,1164.3,76.0,64.0,0.84
+synthetic_demo,demo-00833,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,32,DDR5,1024,NVMe SSD,excellent,MSI,4.9,1367.13,1283.83,87.0,44.0,0.9
+synthetic_demo,demo-00834,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,1024,NVMe SSD,new,ASUS,4.5,2044.1,1759.46,84.0,80.0,1.0
+synthetic_demo,demo-00835,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,512,NVMe SSD,excellent,Dell,4.4,1914.29,1779.28,95.0,84.0,0.9
+synthetic_demo,demo-00836,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,1024,NVMe SSD,excellent,HP,4.3,1511.37,1542.45,96.0,84.0,0.9
+synthetic_demo,demo-00837,Intel Core i5-13600K,AMD Radeon RX 7600,16,DDR4,1024,HDD,new,HP,5.7,1104.57,985.8,79.0,50.0,1.0
+synthetic_demo,demo-00838,AMD Ryzen 7 7800X3D,AMD Radeon RX 7900 XTX,32,DDR5,2048,SATA SSD,like_new,ASUS,3.0,1971.09,1893.28,96.0,92.0,0.95
+synthetic_demo,demo-00839,Intel Core i9-14900K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,512,NVMe SSD,like_new,ASUS,5.2,1296.15,1491.8,100.0,62.0,0.95
+synthetic_demo,demo-00840,Intel Core i5-13600K,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,good,HP,2.4,1796.49,1763.65,79.0,69.0,0.84
+synthetic_demo,demo-00841,AMD Ryzen 5 5600X,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,excellent,custom,0.0,2205.35,1989.96,58.0,64.0,0.9
+synthetic_demo,demo-00842,AMD Ryzen 9 7950X3D,AMD Radeon RX 6700 XT,16,DDR5,2048,NVMe SSD,new,ASUS,2.7,2018.37,1757.8,100.0,57.0,1.0
+synthetic_demo,demo-00843,Intel Core i9-13900K,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,good,Alienware,1.9,2239.08,2046.28,95.0,92.0,0.84
+synthetic_demo,demo-00844,AMD Ryzen 5 7600X,Intel Arc A750,32,DDR4,512,NVMe SSD,like_new,Alienware,3.2,1281.56,1253.36,74.0,43.0,0.95
+synthetic_demo,demo-00845,AMD Ryzen 9 7950X3D,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,good,Lenovo,4.6,1065.36,1213.66,100.0,69.0,0.84
+synthetic_demo,demo-00846,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,like_new,ASUS,3.8,1706.78,1568.69,100.0,48.0,0.95
+synthetic_demo,demo-00847,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3060,32,DDR5,2048,NVMe SSD,excellent,HP,3.5,1441.21,1288.24,70.0,48.0,0.9
+synthetic_demo,demo-00848,AMD Ryzen 7 5800X,AMD Radeon RX 7700 XT,32,DDR4,4096,NVMe SSD,good,Dell,2.7,1511.04,1497.84,70.0,64.0,0.84
+synthetic_demo,demo-00849,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4080,32,DDR4,1024,NVMe SSD,fair,ASUS,6.2,876.08,803.76,58.0,90.0,0.72
+synthetic_demo,demo-00850,AMD Ryzen 7 7800X3D,AMD Radeon RX 6700 XT,32,DDR5,512,NVMe SSD,excellent,custom,0.0,1681.85,1687.53,96.0,57.0,0.9
+synthetic_demo,demo-00851,Intel Core i9-14900K,AMD Radeon RX 7600,64,DDR5,1024,NVMe SSD,excellent,Lenovo,0.0,1890.62,1886.86,100.0,50.0,0.9
+synthetic_demo,demo-00852,Intel Core i5-12600K,AMD Radeon RX 7800 XT,32,DDR4,1024,NVMe SSD,good,Alienware,0.0,2163.34,1827.92,68.0,73.0,0.84
+synthetic_demo,demo-00853,Intel Core i5-13600K,NVIDIA GeForce RTX 4060,32,DDR5,2048,NVMe SSD,good,Lenovo,5.3,1274.64,1220.21,79.0,54.0,0.84
+synthetic_demo,demo-00854,Intel Core i7-12700K,AMD Radeon RX 6700 XT,32,DDR5,512,NVMe SSD,excellent,ASUS,5.1,1681.45,1457.88,76.0,57.0,0.9
+synthetic_demo,demo-00855,Intel Core i9-14900K,AMD Radeon RX 7900 XT,32,DDR4,2048,NVMe SSD,excellent,Dell,1.2,2194.42,2024.46,100.0,84.0,0.9
+synthetic_demo,demo-00856,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3080,32,DDR5,1024,SATA SSD,new,MSI,0.0,2693.11,2125.08,78.0,72.0,1.0
+synthetic_demo,demo-00857,Intel Core i9-14900K,AMD Radeon RX 7800 XT,32,DDR5,4096,NVMe SSD,excellent,Dell,3.9,2221.51,2099.15,100.0,73.0,0.9
+synthetic_demo,demo-00858,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4090,16,DDR5,2048,NVMe SSD,good,ASUS,2.7,1859.1,1939.76,82.0,100.0,0.84
+synthetic_demo,demo-00859,Intel Core i5-13600K,NVIDIA GeForce RTX 4090,16,DDR5,2048,NVMe SSD,new,HP,1.2,3072.62,2610.03,79.0,100.0,1.0
+synthetic_demo,demo-00860,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR4,2048,SATA SSD,good,custom,1.1,1969.54,1909.75,93.0,84.0,0.84
+synthetic_demo,demo-00861,Intel Core i5-12600K,AMD Radeon RX 6700 XT,64,DDR5,2048,NVMe SSD,like_new,Lenovo,3.4,1913.26,1679.13,68.0,57.0,0.95
+synthetic_demo,demo-00862,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3060,32,DDR5,1024,NVMe SSD,excellent,HP,2.9,1725.54,1611.23,96.0,48.0,0.9
+synthetic_demo,demo-00863,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070,16,DDR5,1024,NVMe SSD,excellent,Lenovo,3.9,1578.65,1257.02,70.0,72.0,0.9
+synthetic_demo,demo-00864,AMD Ryzen 9 7950X,AMD Radeon RX 7700 XT,32,DDR5,2048,NVMe SSD,good,Alienware,3.6,1447.46,1646.37,95.0,64.0,0.84
+synthetic_demo,demo-00865,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070,32,DDR5,2048,SATA SSD,fair,Lenovo,1.4,1597.19,1494.53,58.0,72.0,0.72
+synthetic_demo,demo-00866,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4080,32,DDR5,2048,NVMe SSD,excellent,ASUS,0.0,2536.5,2573.5,95.0,90.0,0.9
+synthetic_demo,demo-00867,Intel Core i7-14700K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,SATA SSD,fair,Dell,5.2,1148.58,1083.08,93.0,80.0,0.72
+synthetic_demo,demo-00868,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,2048,NVMe SSD,like_new,HP,4.8,1559.6,1657.89,100.0,84.0,0.95
+synthetic_demo,demo-00869,Intel Core i9-13900K,Intel Arc A750,32,DDR5,512,NVMe SSD,excellent,MSI,2.5,1379.38,1520.96,95.0,43.0,0.9
+synthetic_demo,demo-00870,Intel Core i9-13900K,AMD Radeon RX 7900 XT,64,DDR5,2048,NVMe SSD,excellent,Lenovo,0.0,2438.74,2489.26,95.0,84.0,0.9
+synthetic_demo,demo-00871,Intel Core i5-12400,NVIDIA GeForce RTX 3060,32,DDR4,512,NVMe SSD,like_new,HP,2.1,929.7,956.39,56.0,48.0,0.95
+synthetic_demo,demo-00872,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4090,32,DDR5,2048,SATA SSD,like_new,Lenovo,2.8,2079.91,2160.1,82.0,100.0,0.95
+synthetic_demo,demo-00873,AMD Ryzen 7 7700X,Intel Arc A770,32,DDR5,2048,NVMe SSD,good,Dell,5.6,983.85,1012.51,82.0,48.0,0.84
+synthetic_demo,demo-00874,AMD Ryzen 7 5800X3D,AMD Radeon RX 6700 XT,64,DDR5,2048,NVMe SSD,like_new,HP,5.4,1431.94,1454.05,78.0,57.0,0.95
+synthetic_demo,demo-00875,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4090,64,DDR4,2048,NVMe SSD,fair,Alienware,2.5,2227.22,1876.95,74.0,100.0,0.72
+synthetic_demo,demo-00876,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060 Ti,16,DDR5,1024,SATA SSD,fair,Alienware,1.4,1201.89,1145.73,58.0,62.0,0.72
+synthetic_demo,demo-00877,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4090,32,DDR5,1024,NVMe SSD,good,Alienware,1.1,2140.15,2056.78,96.0,100.0,0.84
+synthetic_demo,demo-00878,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4060,64,DDR5,2048,NVMe SSD,good,Alienware,4.7,1522.06,1511.36,70.0,54.0,0.84
+synthetic_demo,demo-00879,Intel Core i7-12700K,NVIDIA GeForce RTX 4060,32,DDR5,4096,NVMe SSD,excellent,HP,2.4,1812.5,1846.7,76.0,54.0,0.9
+synthetic_demo,demo-00880,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4090,16,DDR5,1024,NVMe SSD,excellent,ASUS,3.8,1651.55,1751.26,82.0,100.0,0.9
+synthetic_demo,demo-00881,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti SUPER,8,DDR5,512,NVMe SSD,good,ASUS,1.2,2010.11,1962.32,84.0,84.0,0.84
+synthetic_demo,demo-00882,Intel Core i7-13700K,AMD Radeon RX 7900 XT,32,DDR5,1024,SATA SSD,excellent,Alienware,5.6,1407.75,1316.74,87.0,84.0,0.9
+synthetic_demo,demo-00883,Intel Core i5-13600K,NVIDIA GeForce RTX 2080,128,DDR4,4096,SATA SSD,good,HP,6.9,872.55,1026.27,79.0,44.0,0.84
+synthetic_demo,demo-00884,Intel Core i9-14900K,AMD Radeon RX 7900 XTX,32,DDR4,512,NVMe SSD,excellent,Lenovo,5.0,1400.35,1349.17,100.0,92.0,0.9
+synthetic_demo,demo-00885,Intel Core i5-13600K,NVIDIA GeForce RTX 3060,64,DDR5,512,NVMe SSD,like_new,custom,1.8,1509.26,1597.2,79.0,48.0,0.95
+synthetic_demo,demo-00886,Intel Core i9-13900K,NVIDIA GeForce RTX 4080,128,DDR5,1024,NVMe SSD,fair,Dell,2.5,1692.67,1802.3,95.0,90.0,0.72
+synthetic_demo,demo-00887,AMD Ryzen 5 5600X,Intel Arc A770,64,DDR5,2048,NVMe SSD,like_new,ASUS,1.6,1495.17,1666.63,58.0,48.0,0.95
+synthetic_demo,demo-00888,Intel Core i5-13600K,NVIDIA GeForce RTX 4070,32,DDR5,2048,NVMe SSD,like_new,custom,2.1,1873.01,1872.92,79.0,72.0,0.95
+synthetic_demo,demo-00889,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4060 Ti,8,DDR5,1024,NVMe SSD,fair,HP,2.3,1110.05,1139.19,74.0,62.0,0.72
+synthetic_demo,demo-00890,AMD Ryzen 9 7950X,AMD Radeon RX 7800 XT,32,DDR5,2048,NVMe SSD,good,MSI,4.0,1790.71,1802.32,95.0,73.0,0.84
+synthetic_demo,demo-00891,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,good,MSI,3.6,1612.97,1498.28,82.0,80.0,0.84
+synthetic_demo,demo-00892,AMD Ryzen 5 5600X,AMD Radeon RX 6700 XT,64,DDR4,1024,NVMe SSD,good,HP,5.5,957.28,1109.69,58.0,57.0,0.84
+synthetic_demo,demo-00893,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3090,64,DDR4,2048,NVMe SSD,fair,custom,3.6,1603.42,1575.32,88.0,82.0,0.72
+synthetic_demo,demo-00894,Intel Core i7-13700K,NVIDIA GeForce RTX 2080,32,DDR4,4096,SATA SSD,good,ASUS,4.5,1038.52,1164.99,87.0,44.0,0.84
+synthetic_demo,demo-00895,Intel Core i5-13600K,AMD Radeon RX 7800 XT,32,DDR5,1024,NVMe SSD,new,Lenovo,3.0,1456.33,1433.36,79.0,73.0,1.0
+synthetic_demo,demo-00896,Intel Core i5-14600K,NVIDIA GeForce RTX 3060,64,DDR4,4096,NVMe SSD,new,ASUS,5.0,1217.2,1334.58,84.0,48.0,1.0
+synthetic_demo,demo-00897,Intel Core i9-14900K,NVIDIA GeForce RTX 3060,64,DDR5,2048,NVMe SSD,like_new,Dell,1.0,1903.29,1896.79,100.0,48.0,0.95
+synthetic_demo,demo-00898,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3090,64,DDR5,2048,NVMe SSD,like_new,MSI,5.2,2063.68,1894.11,78.0,82.0,0.95
+synthetic_demo,demo-00899,Intel Core i7-13700K,NVIDIA GeForce RTX 3070,32,DDR5,4096,NVMe SSD,good,ASUS,3.0,1699.57,1781.89,87.0,60.0,0.84
+synthetic_demo,demo-00900,Intel Core i9-14900K,Intel Arc A770,16,DDR4,2048,NVMe SSD,good,HP,4.3,1139.06,1013.81,100.0,48.0,0.84
+synthetic_demo,demo-00901,AMD Ryzen 5 5600X,AMD Radeon RX 6700 XT,32,DDR5,512,NVMe SSD,good,HP,4.8,1099.6,1075.53,58.0,57.0,0.84
+synthetic_demo,demo-00902,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,NVMe SSD,good,Alienware,3.5,1131.76,1057.5,76.0,84.0,0.84
+synthetic_demo,demo-00903,Intel Core i5-13600K,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,fair,HP,2.6,1212.1,1091.34,79.0,50.0,0.72
+synthetic_demo,demo-00904,Intel Core i9-14900K,NVIDIA GeForce RTX 4070,128,DDR5,2048,NVMe SSD,good,Lenovo,2.7,1762.8,1718.36,100.0,72.0,0.84
+synthetic_demo,demo-00905,AMD Ryzen 9 7950X,AMD Radeon RX 6800 XT,16,DDR5,512,NVMe SSD,like_new,ASUS,2.9,1770.38,1676.19,95.0,69.0,0.95
+synthetic_demo,demo-00906,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 2080,16,DDR4,512,SATA SSD,good,Alienware,4.6,737.71,697.55,58.0,44.0,0.84
+synthetic_demo,demo-00907,AMD Ryzen 7 5800X3D,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,good,MSI,5.0,1230.9,1163.46,78.0,92.0,0.84
+synthetic_demo,demo-00908,Intel Core i5-14600K,Intel Arc A770,64,DDR4,1024,NVMe SSD,new,Lenovo,1.8,1479.3,1557.94,84.0,48.0,1.0
+synthetic_demo,demo-00909,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070 Ti,32,DDR5,256,SATA SSD,like_new,HP,2.5,1651.12,1807.35,58.0,80.0,0.95
+synthetic_demo,demo-00910,Intel Core i5-14600K,AMD Radeon RX 7900 XTX,64,DDR5,4096,NVMe SSD,good,Lenovo,0.8,2482.41,2046.94,84.0,92.0,0.84
+synthetic_demo,demo-00911,Intel Core i7-14700K,AMD Radeon RX 7900 XTX,64,DDR5,512,NVMe SSD,good,ASUS,2.0,1908.48,1909.01,93.0,92.0,0.84
+synthetic_demo,demo-00912,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4090,16,DDR4,2048,NVMe SSD,good,MSI,1.2,2406.83,1871.82,70.0,100.0,0.84
+synthetic_demo,demo-00913,Intel Core i5-12400,NVIDIA GeForce RTX 4060,16,DDR4,2048,NVMe SSD,new,Alienware,5.2,1251.16,1132.52,56.0,54.0,1.0
+synthetic_demo,demo-00914,AMD Ryzen 7 7700X,AMD Radeon RX 7800 XT,64,DDR4,1024,NVMe SSD,good,MSI,1.4,1604.02,1404.63,82.0,73.0,0.84
+synthetic_demo,demo-00915,Intel Core i7-13700K,NVIDIA GeForce RTX 4080,32,DDR5,512,HDD,good,ASUS,4.8,1484.4,1494.84,87.0,90.0,0.84
+synthetic_demo,demo-00916,Intel Core i5-12400,NVIDIA GeForce RTX 3070,8,DDR5,1024,NVMe SSD,new,custom,2.5,1704.21,1579.21,56.0,60.0,1.0
+synthetic_demo,demo-00917,Intel Core i7-12700K,AMD Radeon RX 6700 XT,32,DDR5,512,NVMe SSD,like_new,Lenovo,2.1,1308.41,1244.46,76.0,57.0,0.95
+synthetic_demo,demo-00918,Intel Core i7-14700K,AMD Radeon RX 7800 XT,32,DDR5,256,NVMe SSD,excellent,Alienware,4.6,1386.87,1256.37,93.0,73.0,0.9
+synthetic_demo,demo-00919,Intel Core i5-12600K,NVIDIA GeForce RTX 3090,32,DDR5,2048,SATA SSD,excellent,ASUS,3.4,1995.9,1770.67,68.0,82.0,0.9
+synthetic_demo,demo-00920,Intel Core i7-13700K,AMD Radeon RX 7900 XT,64,DDR5,2048,NVMe SSD,good,MSI,1.6,1677.99,1700.7,87.0,84.0,0.84
+synthetic_demo,demo-00921,AMD Ryzen 7 5800X3D,Intel Arc A770,16,DDR5,2048,NVMe SSD,like_new,Alienware,4.3,1262.2,1300.44,78.0,48.0,0.95
+synthetic_demo,demo-00922,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti,64,DDR5,4096,NVMe SSD,good,custom,0.0,2954.76,2632.14,79.0,80.0,0.84
+synthetic_demo,demo-00923,Intel Core i7-14700K,NVIDIA GeForce RTX 3080,32,DDR4,1024,NVMe SSD,excellent,custom,4.1,1721.34,1568.17,93.0,72.0,0.9
+synthetic_demo,demo-00924,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,good,MSI,2.4,1600.8,1605.23,74.0,80.0,0.84
+synthetic_demo,demo-00925,Intel Core i5-12400,NVIDIA GeForce RTX 3080,64,DDR4,2048,NVMe SSD,fair,HP,7.3,967.57,973.78,56.0,72.0,0.72
+synthetic_demo,demo-00926,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti,128,DDR5,2048,NVMe SSD,like_new,Lenovo,3.6,2232.71,1875.51,84.0,80.0,0.95
+synthetic_demo,demo-00927,AMD Ryzen 9 7950X,AMD Radeon RX 7600,16,DDR5,2048,NVMe SSD,excellent,HP,1.7,1903.52,1660.15,95.0,50.0,0.9
+synthetic_demo,demo-00928,Intel Core i5-12600K,AMD Radeon RX 7700 XT,32,DDR5,512,NVMe SSD,like_new,MSI,3.5,1556.8,1495.37,68.0,64.0,0.95
+synthetic_demo,demo-00929,AMD Ryzen 7 5800X,AMD Radeon RX 7800 XT,64,DDR4,2048,NVMe SSD,good,Dell,2.7,1462.39,1469.67,70.0,73.0,0.84
+synthetic_demo,demo-00930,Intel Core i9-14900K,AMD Radeon RX 7600,16,DDR5,1024,NVMe SSD,good,Alienware,5.3,1082.49,1125.93,100.0,50.0,0.84
+synthetic_demo,demo-00931,AMD Ryzen 7 7700X,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,good,MSI,1.9,1760.08,1589.15,82.0,50.0,0.84
+synthetic_demo,demo-00932,Intel Core i5-12600K,NVIDIA GeForce RTX 2080,64,DDR4,1024,NVMe SSD,good,custom,3.8,1172.08,1068.11,68.0,44.0,0.84
+synthetic_demo,demo-00933,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3060,32,DDR5,4096,SATA SSD,good,ASUS,1.7,1829.19,1608.82,88.0,48.0,0.84
+synthetic_demo,demo-00934,AMD Ryzen 7 7700X,AMD Radeon RX 6700 XT,16,DDR5,2048,NVMe SSD,good,Dell,4.3,1061.89,1112.57,82.0,57.0,0.84
+synthetic_demo,demo-00935,Intel Core i7-12700K,AMD Radeon RX 7900 XTX,64,DDR5,2048,NVMe SSD,new,Dell,3.0,2119.18,2497.73,76.0,92.0,1.0
+synthetic_demo,demo-00936,Intel Core i5-12600K,Intel Arc A770,64,DDR5,2048,NVMe SSD,good,Lenovo,3.3,1110.97,1137.62,68.0,48.0,0.84
+synthetic_demo,demo-00937,Intel Core i5-14600K,NVIDIA GeForce RTX 2080,64,DDR5,2048,NVMe SSD,excellent,custom,2.2,1483.66,1503.78,84.0,44.0,0.9
+synthetic_demo,demo-00938,Intel Core i5-12400,NVIDIA GeForce RTX 3060,32,DDR4,2048,NVMe SSD,good,Alienware,2.8,1039.01,1162.53,56.0,48.0,0.84
+synthetic_demo,demo-00939,AMD Ryzen 9 7900X,AMD Radeon RX 7600,32,DDR4,1024,SATA SSD,good,Lenovo,4.1,1280.56,1138.96,88.0,50.0,0.84
+synthetic_demo,demo-00940,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3090,64,DDR5,1024,HDD,like_new,custom,0.2,2151.24,1942.26,58.0,82.0,0.95
+synthetic_demo,demo-00941,Intel Core i7-14700K,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,like_new,Dell,1.0,1981.53,1926.85,93.0,72.0,0.95
+synthetic_demo,demo-00942,AMD Ryzen 9 7950X3D,AMD Radeon RX 7800 XT,32,DDR5,1024,NVMe SSD,good,ASUS,5.9,1380.93,1580.81,100.0,73.0,0.84
+synthetic_demo,demo-00943,Intel Core i5-12400,Intel Arc A770,16,DDR4,1024,NVMe SSD,good,Alienware,7.0,786.95,691.48,56.0,48.0,0.84
+synthetic_demo,demo-00944,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3060,32,DDR5,1024,SATA SSD,good,MSI,4.4,1106.78,1016.02,96.0,48.0,0.84
+synthetic_demo,demo-00945,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,NVMe SSD,new,ASUS,2.6,2148.67,2021.2,76.0,84.0,1.0
+synthetic_demo,demo-00946,Intel Core i5-12600K,AMD Radeon RX 7900 XTX,32,DDR5,1024,NVMe SSD,good,ASUS,4.8,1508.83,1474.6,68.0,92.0,0.84
+synthetic_demo,demo-00947,Intel Core i7-12700K,AMD Radeon RX 7800 XT,32,DDR5,4096,NVMe SSD,like_new,Lenovo,4.7,2047.0,1838.87,76.0,73.0,0.95
+synthetic_demo,demo-00948,AMD Ryzen 7 7700X,AMD Radeon RX 7700 XT,32,DDR5,512,NVMe SSD,like_new,Alienware,1.7,1518.46,1544.36,82.0,64.0,0.95
+synthetic_demo,demo-00949,Intel Core i5-14600K,AMD Radeon RX 7700 XT,8,DDR5,1024,NVMe SSD,like_new,MSI,1.7,2099.11,1845.21,84.0,64.0,0.95
+synthetic_demo,demo-00950,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti,16,DDR5,1024,NVMe SSD,excellent,Dell,2.5,2196.94,1866.8,76.0,80.0,0.9
+synthetic_demo,demo-00951,Intel Core i9-14900K,NVIDIA GeForce RTX 3070,32,DDR5,2048,NVMe SSD,new,Dell,3.2,1953.89,1631.59,100.0,60.0,1.0
+synthetic_demo,demo-00952,Intel Core i9-14900K,NVIDIA GeForce RTX 4060,16,DDR5,2048,NVMe SSD,new,custom,2.7,1746.39,1735.91,100.0,54.0,1.0
+synthetic_demo,demo-00953,Intel Core i7-12700K,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,good,Lenovo,1.3,1415.68,1283.15,76.0,64.0,0.84
+synthetic_demo,demo-00954,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4070,32,DDR5,1024,NVMe SSD,good,Dell,1.5,1971.83,2117.08,82.0,72.0,0.84
+synthetic_demo,demo-00955,AMD Ryzen 9 7900X,Intel Arc A770,32,DDR5,1024,NVMe SSD,good,ASUS,0.7,1920.43,1609.84,88.0,48.0,0.84
+synthetic_demo,demo-00956,Intel Core i5-14600K,NVIDIA GeForce RTX 3080,32,DDR5,2048,NVMe SSD,good,ASUS,2.9,1483.81,1734.15,84.0,72.0,0.84
+synthetic_demo,demo-00957,Intel Core i9-14900K,AMD Radeon RX 6800 XT,32,DDR5,2048,HDD,good,MSI,1.6,1249.75,1469.43,100.0,69.0,0.84
+synthetic_demo,demo-00958,AMD Ryzen 9 7950X,AMD Radeon RX 6700 XT,32,DDR5,2048,SATA SSD,good,Lenovo,3.0,943.1,1038.9,95.0,57.0,0.84
+synthetic_demo,demo-00959,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4090,16,DDR5,1024,SATA SSD,good,Dell,1.9,1673.72,1550.26,78.0,100.0,0.84
+synthetic_demo,demo-00960,Intel Core i7-13700K,AMD Radeon RX 6700 XT,16,DDR5,2048,NVMe SSD,excellent,MSI,3.3,1864.8,1672.11,87.0,57.0,0.9
+synthetic_demo,demo-00961,Intel Core i5-12600K,NVIDIA GeForce RTX 3060,32,DDR4,512,NVMe SSD,excellent,Alienware,4.7,1148.71,1073.21,68.0,48.0,0.9
+synthetic_demo,demo-00962,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR4,4096,SATA SSD,fair,Alienware,3.7,1347.84,1347.46,58.0,84.0,0.72
+synthetic_demo,demo-00963,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4080,32,DDR5,512,NVMe SSD,excellent,MSI,2.2,1926.57,1780.29,100.0,90.0,0.9
+synthetic_demo,demo-00964,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4080,16,DDR5,2048,NVMe SSD,good,HP,2.6,1615.38,1658.88,96.0,90.0,0.84
+synthetic_demo,demo-00965,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3080,16,DDR5,1024,NVMe SSD,excellent,Alienware,0.7,2170.71,2071.56,96.0,72.0,0.9
+synthetic_demo,demo-00966,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,good,Alienware,1.3,1883.48,1914.2,100.0,72.0,0.84
+synthetic_demo,demo-00967,Intel Core i9-14900K,AMD Radeon RX 6700 XT,32,DDR5,512,NVMe SSD,fair,Dell,0.4,1483.42,1504.04,100.0,57.0,0.72
+synthetic_demo,demo-00968,Intel Core i5-12400,NVIDIA GeForce RTX 4060 Ti,64,DDR5,1024,HDD,good,custom,2.1,1494.34,1294.63,56.0,62.0,0.84
+synthetic_demo,demo-00969,AMD Ryzen 9 7950X3D,AMD Radeon RX 7800 XT,64,DDR5,1024,NVMe SSD,new,HP,2.8,1903.91,1739.71,100.0,73.0,1.0
+synthetic_demo,demo-00970,AMD Ryzen 5 5600X,Intel Arc A770,16,DDR5,2048,NVMe SSD,excellent,MSI,2.0,1807.72,1738.38,58.0,48.0,0.9
+synthetic_demo,demo-00971,Intel Core i5-12600K,NVIDIA GeForce RTX 3070,16,DDR4,2048,NVMe SSD,excellent,custom,0.0,2087.93,1691.37,68.0,60.0,0.9
+synthetic_demo,demo-00972,AMD Ryzen 7 7700X,AMD Radeon RX 6800 XT,128,DDR5,2048,NVMe SSD,good,ASUS,5.5,1738.85,1853.74,82.0,69.0,0.84
+synthetic_demo,demo-00973,Intel Core i9-13900K,Intel Arc A750,16,DDR5,2048,NVMe SSD,fair,Dell,4.4,967.72,910.86,95.0,43.0,0.72
+synthetic_demo,demo-00974,AMD Ryzen 7 5800X,AMD Radeon RX 7800 XT,64,DDR4,1024,NVMe SSD,new,HP,0.6,1812.55,1864.04,70.0,73.0,1.0
+synthetic_demo,demo-00975,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4090,32,DDR5,1024,NVMe SSD,good,MSI,4.3,1955.23,1831.28,100.0,100.0,0.84
+synthetic_demo,demo-00976,AMD Ryzen 9 7900X,AMD Radeon RX 6800 XT,8,DDR5,2048,NVMe SSD,excellent,MSI,0.5,1807.6,1872.4,88.0,69.0,0.9
+synthetic_demo,demo-00977,Intel Core i7-13700K,Intel Arc A770,32,DDR4,1024,SATA SSD,excellent,Alienware,4.3,1490.13,1300.7,87.0,48.0,0.9
+synthetic_demo,demo-00978,Intel Core i5-14600K,NVIDIA GeForce RTX 4090,16,DDR5,256,NVMe SSD,excellent,custom,1.5,1206.03,1396.99,84.0,100.0,0.9
+synthetic_demo,demo-00979,Intel Core i9-14900K,NVIDIA GeForce RTX 3090,16,DDR5,1024,NVMe SSD,fair,ASUS,5.2,1105.48,1145.66,100.0,82.0,0.72
+synthetic_demo,demo-00980,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4090,16,DDR5,2048,SATA SSD,excellent,Lenovo,5.6,1727.72,1657.37,70.0,100.0,0.9
+synthetic_demo,demo-00981,Intel Core i5-13600K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,NVMe SSD,good,custom,2.3,1592.51,1498.53,79.0,62.0,0.84
+synthetic_demo,demo-00982,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,4096,NVMe SSD,good,ASUS,5.5,1817.44,1633.51,82.0,84.0,0.84
+synthetic_demo,demo-00983,Intel Core i5-12400,Intel Arc A770,16,DDR5,1024,SATA SSD,good,ASUS,4.8,894.58,801.97,56.0,48.0,0.84
+synthetic_demo,demo-00984,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 3060,32,DDR5,4096,NVMe SSD,good,Dell,2.3,1007.36,1217.82,95.0,48.0,0.84
+synthetic_demo,demo-00985,Intel Core i5-12600K,NVIDIA GeForce RTX 4080,64,DDR5,1024,NVMe SSD,good,Dell,1.1,2074.67,1973.28,68.0,90.0,0.84
+synthetic_demo,demo-00986,AMD Ryzen 9 7950X3D,AMD Radeon RX 7900 XTX,16,DDR5,512,SATA SSD,good,ASUS,3.1,1748.61,1915.05,100.0,92.0,0.84
+synthetic_demo,demo-00987,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,1024,SATA SSD,good,custom,2.8,1573.52,1628.27,76.0,84.0,0.84
+synthetic_demo,demo-00988,Intel Core i5-13600K,AMD Radeon RX 7900 XT,64,DDR5,1024,NVMe SSD,excellent,custom,2.8,1783.39,1510.08,79.0,84.0,0.9
+synthetic_demo,demo-00989,Intel Core i5-13600K,NVIDIA GeForce RTX 3090,64,DDR4,2048,NVMe SSD,good,Lenovo,1.6,2244.34,2164.78,79.0,82.0,0.84
+synthetic_demo,demo-00990,Intel Core i5-14600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,SATA SSD,new,Dell,4.5,1615.74,1558.2,84.0,80.0,1.0
+synthetic_demo,demo-00991,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070,16,DDR5,2048,NVMe SSD,good,custom,1.8,1795.7,1675.41,88.0,72.0,0.84
+synthetic_demo,demo-00992,AMD Ryzen 9 7950X,AMD Radeon RX 6800 XT,16,DDR5,2048,NVMe SSD,excellent,MSI,1.5,1816.38,1855.36,95.0,69.0,0.9
+synthetic_demo,demo-00993,AMD Ryzen 9 7950X3D,AMD Radeon RX 7800 XT,32,DDR4,2048,NVMe SSD,fair,MSI,6.7,1239.2,1037.4,100.0,73.0,0.72
+synthetic_demo,demo-00994,AMD Ryzen 9 7950X3D,AMD Radeon RX 7800 XT,32,DDR5,1024,SATA SSD,good,Lenovo,2.5,1402.35,1544.67,100.0,73.0,0.84
+synthetic_demo,demo-00995,AMD Ryzen 7 5800X,AMD Radeon RX 6700 XT,16,DDR5,1024,NVMe SSD,good,HP,2.0,1615.15,1347.53,70.0,57.0,0.84
+synthetic_demo,demo-00996,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3090,16,DDR5,512,NVMe SSD,good,ASUS,3.2,1891.63,1713.32,78.0,82.0,0.84
+synthetic_demo,demo-00997,Intel Core i7-14700K,NVIDIA GeForce RTX 3070,32,DDR5,1024,NVMe SSD,good,Dell,5.6,1466.03,1146.21,93.0,60.0,0.84
+synthetic_demo,demo-00998,Intel Core i7-14700K,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,good,Lenovo,2.0,1685.75,1834.34,93.0,100.0,0.84
+synthetic_demo,demo-00999,AMD Ryzen 9 7950X,AMD Radeon RX 7900 XT,32,DDR5,4096,NVMe SSD,new,Alienware,6.8,1910.67,1898.17,95.0,84.0,1.0
+synthetic_demo,demo-01000,Intel Core i5-13600K,AMD Radeon RX 7800 XT,32,DDR5,1024,HDD,good,HP,4.9,1539.76,1245.14,79.0,73.0,0.84
+synthetic_demo,demo-01001,Intel Core i9-13900K,NVIDIA GeForce RTX 4060 Ti,16,DDR5,2048,NVMe SSD,new,Alienware,0.2,2092.04,2105.2,95.0,62.0,1.0
+synthetic_demo,demo-01002,AMD Ryzen 5 7600X,AMD Radeon RX 7800 XT,32,DDR5,1024,NVMe SSD,excellent,HP,0.0,2069.71,2043.23,74.0,73.0,0.9
+synthetic_demo,demo-01003,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4090,32,DDR5,512,SATA SSD,excellent,Alienware,4.1,2035.07,2025.6,78.0,100.0,0.9
+synthetic_demo,demo-01004,Intel Core i7-14700K,NVIDIA GeForce RTX 4080,128,DDR5,1024,NVMe SSD,excellent,Alienware,2.1,2616.82,2298.03,93.0,90.0,0.9
+synthetic_demo,demo-01005,Intel Core i9-13900K,AMD Radeon RX 6800 XT,16,DDR5,1024,NVMe SSD,like_new,MSI,1.8,1969.94,1719.39,95.0,69.0,0.95
+synthetic_demo,demo-01006,AMD Ryzen 7 7700X,AMD Radeon RX 7900 XTX,32,DDR5,2048,NVMe SSD,good,Dell,3.4,1233.68,1344.67,82.0,92.0,0.84
+synthetic_demo,demo-01007,Intel Core i7-14700K,NVIDIA GeForce RTX 4060 Ti,64,DDR5,4096,NVMe SSD,new,Alienware,5.4,1851.86,1921.45,93.0,62.0,1.0
+synthetic_demo,demo-01008,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060,16,DDR5,1024,NVMe SSD,fair,Alienware,2.5,1298.35,1165.93,82.0,54.0,0.72
+synthetic_demo,demo-01009,AMD Ryzen 9 7950X,Intel Arc A770,32,DDR5,2048,SATA SSD,excellent,ASUS,0.5,1659.17,1554.56,95.0,48.0,0.9
+synthetic_demo,demo-01010,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070,64,DDR5,4096,NVMe SSD,like_new,HP,2.6,1956.7,2133.69,58.0,72.0,0.95
+synthetic_demo,demo-01011,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,NVMe SSD,good,HP,3.4,1761.84,1618.33,88.0,62.0,0.84
+synthetic_demo,demo-01012,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3060,32,DDR5,1024,HDD,good,Lenovo,3.0,1019.57,1065.92,78.0,48.0,0.84
+synthetic_demo,demo-01013,Intel Core i7-13700K,Intel Arc A750,64,DDR5,1024,NVMe SSD,excellent,MSI,2.7,1741.3,1693.71,87.0,43.0,0.9
+synthetic_demo,demo-01014,AMD Ryzen 5 7600X,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,fair,Dell,1.3,1506.61,1421.21,74.0,92.0,0.72
+synthetic_demo,demo-01015,AMD Ryzen 5 5600X,AMD Radeon RX 6800 XT,16,DDR5,2048,NVMe SSD,excellent,Lenovo,2.2,1805.36,1652.83,58.0,69.0,0.9
+synthetic_demo,demo-01016,AMD Ryzen 9 7950X,AMD Radeon RX 7800 XT,32,DDR5,1024,NVMe SSD,excellent,HP,4.3,1956.44,1716.8,95.0,73.0,0.9
+synthetic_demo,demo-01017,Intel Core i9-13900K,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,excellent,custom,1.2,1703.56,1650.06,95.0,72.0,0.9
+synthetic_demo,demo-01018,Intel Core i9-14900K,AMD Radeon RX 7600,32,DDR4,2048,SATA SSD,new,custom,2.0,1402.25,1408.12,100.0,50.0,1.0
+synthetic_demo,demo-01019,Intel Core i5-12400,NVIDIA GeForce RTX 4060,32,DDR5,2048,NVMe SSD,good,ASUS,2.0,1351.72,1340.43,56.0,54.0,0.84
+synthetic_demo,demo-01020,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060,32,DDR5,4096,SATA SSD,excellent,MSI,4.8,1821.83,1415.37,58.0,54.0,0.9
+synthetic_demo,demo-01021,Intel Core i7-14700K,AMD Radeon RX 7900 XTX,64,DDR4,2048,NVMe SSD,good,MSI,3.1,1866.2,1793.71,93.0,92.0,0.84
+synthetic_demo,demo-01022,AMD Ryzen 7 7700X,AMD Radeon RX 7900 XTX,16,DDR5,2048,NVMe SSD,good,Lenovo,3.2,2181.8,1748.7,82.0,92.0,0.84
+synthetic_demo,demo-01023,Intel Core i5-14600K,AMD Radeon RX 7800 XT,32,DDR5,512,NVMe SSD,good,Alienware,1.4,1908.78,1799.42,84.0,73.0,0.84
+synthetic_demo,demo-01024,Intel Core i5-14600K,AMD Radeon RX 7800 XT,64,DDR5,512,NVMe SSD,excellent,ASUS,0.1,2533.71,2171.57,84.0,73.0,0.9
+synthetic_demo,demo-01025,AMD Ryzen 9 7950X3D,AMD Radeon RX 7700 XT,64,DDR5,2048,NVMe SSD,good,HP,1.3,1579.78,1821.15,100.0,64.0,0.84
+synthetic_demo,demo-01026,Intel Core i5-12400,NVIDIA GeForce RTX 3070,32,DDR4,512,NVMe SSD,like_new,Dell,0.7,1628.82,1639.71,56.0,60.0,0.95
+synthetic_demo,demo-01027,Intel Core i7-13700K,AMD Radeon RX 7900 XTX,16,DDR5,1024,NVMe SSD,like_new,Lenovo,0.9,2106.94,2133.05,87.0,92.0,0.95
+synthetic_demo,demo-01028,Intel Core i5-14600K,Intel Arc A750,64,DDR5,512,NVMe SSD,new,ASUS,2.0,1649.56,1785.57,84.0,43.0,1.0
+synthetic_demo,demo-01029,Intel Core i5-13600K,NVIDIA GeForce RTX 4090,16,DDR5,512,NVMe SSD,excellent,Lenovo,1.3,2226.54,1958.36,79.0,100.0,0.9
+synthetic_demo,demo-01030,AMD Ryzen 9 7900X,AMD Radeon RX 7800 XT,16,DDR5,1024,NVMe SSD,excellent,Alienware,4.9,1490.92,1315.05,88.0,73.0,0.9
+synthetic_demo,demo-01031,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070,32,DDR5,1024,HDD,good,Alienware,1.5,1735.2,1872.61,96.0,72.0,0.84
+synthetic_demo,demo-01032,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3070,32,DDR5,2048,NVMe SSD,good,Dell,5.1,1382.33,1113.59,70.0,60.0,0.84
+synthetic_demo,demo-01033,AMD Ryzen 7 5800X,AMD Radeon RX 7600,32,DDR4,1024,SATA SSD,like_new,custom,3.8,976.75,988.84,70.0,50.0,0.95
+synthetic_demo,demo-01034,Intel Core i7-13700K,Intel Arc A770,64,DDR5,1024,NVMe SSD,good,ASUS,4.1,1514.88,1466.58,87.0,48.0,0.84
+synthetic_demo,demo-01035,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 3070,32,DDR5,2048,NVMe SSD,good,HP,2.9,1682.72,1597.76,88.0,60.0,0.84
+synthetic_demo,demo-01036,AMD Ryzen 7 5800X3D,AMD Radeon RX 7900 XT,16,DDR5,2048,NVMe SSD,fair,Alienware,0.6,1617.53,1520.93,78.0,84.0,0.72
+synthetic_demo,demo-01037,AMD Ryzen 7 7800X3D,AMD Radeon RX 7900 XTX,32,DDR4,512,NVMe SSD,good,Dell,4.9,1817.93,1626.12,96.0,92.0,0.84
+synthetic_demo,demo-01038,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4060,64,DDR4,1024,HDD,new,custom,3.3,1456.48,1496.39,88.0,54.0,1.0
+synthetic_demo,demo-01039,Intel Core i5-12600K,NVIDIA GeForce RTX 3060,32,DDR4,1024,NVMe SSD,good,custom,2.5,946.19,1033.94,68.0,48.0,0.84
+synthetic_demo,demo-01040,Intel Core i5-14600K,AMD Radeon RX 7900 XTX,32,DDR5,1024,SATA SSD,excellent,ASUS,3.4,1926.32,1737.36,84.0,92.0,0.9
+synthetic_demo,demo-01041,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3060,32,DDR5,1024,SATA SSD,good,ASUS,3.7,1312.2,1197.64,82.0,48.0,0.84
+synthetic_demo,demo-01042,Intel Core i5-14600K,NVIDIA GeForce RTX 4070,32,DDR5,1024,NVMe SSD,good,Alienware,2.7,1578.51,1631.72,84.0,72.0,0.84
+synthetic_demo,demo-01043,Intel Core i9-14900K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,1024,NVMe SSD,good,Alienware,3.4,1688.48,1735.28,100.0,80.0,0.84
+synthetic_demo,demo-01044,Intel Core i5-14600K,NVIDIA GeForce RTX 2080,16,DDR4,2048,NVMe SSD,new,ASUS,2.9,1375.79,1393.42,84.0,44.0,1.0
+synthetic_demo,demo-01045,Intel Core i5-12600K,Intel Arc A750,32,DDR4,2048,NVMe SSD,excellent,custom,0.9,1845.24,1609.36,68.0,43.0,0.9
+synthetic_demo,demo-01046,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4080,64,DDR5,2048,NVMe SSD,like_new,custom,3.7,2456.82,2406.11,100.0,90.0,0.95
+synthetic_demo,demo-01047,Intel Core i7-12700K,NVIDIA GeForce RTX 4090,128,DDR5,1024,NVMe SSD,excellent,custom,8.0,1470.36,1379.94,76.0,100.0,0.9
+synthetic_demo,demo-01048,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4060 Ti,16,DDR5,1024,NVMe SSD,like_new,Alienware,2.1,1920.02,1708.87,78.0,62.0,0.95
+synthetic_demo,demo-01049,Intel Core i5-12400,AMD Radeon RX 7900 XTX,64,DDR4,512,SATA SSD,excellent,custom,2.6,1988.21,1868.77,56.0,92.0,0.9
+synthetic_demo,demo-01050,Intel Core i7-13700K,Intel Arc A750,32,DDR5,1024,SATA SSD,good,ASUS,3.3,1126.56,1041.32,87.0,43.0,0.84
+synthetic_demo,demo-01051,Intel Core i7-14700K,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,fair,custom,2.6,1285.26,1335.54,93.0,90.0,0.72
+synthetic_demo,demo-01052,Intel Core i5-12400,AMD Radeon RX 6700 XT,16,DDR5,4096,HDD,good,ASUS,7.3,853.31,954.16,56.0,57.0,0.84
+synthetic_demo,demo-01053,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3060,16,DDR5,2048,HDD,good,custom,1.6,1357.44,1240.05,82.0,48.0,0.84
+synthetic_demo,demo-01054,Intel Core i9-13900K,NVIDIA GeForce RTX 4090,32,DDR5,1024,NVMe SSD,excellent,Lenovo,3.7,1883.34,1930.61,95.0,100.0,0.9
+synthetic_demo,demo-01055,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3090,8,DDR5,2048,NVMe SSD,good,Alienware,3.4,1484.49,1517.83,100.0,82.0,0.84
+synthetic_demo,demo-01056,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,good,Alienware,1.2,1893.92,1652.03,88.0,90.0,0.84
+synthetic_demo,demo-01057,Intel Core i5-14600K,NVIDIA GeForce RTX 3060,16,DDR4,1024,NVMe SSD,fair,ASUS,4.0,1123.9,1076.61,84.0,48.0,0.72
+synthetic_demo,demo-01058,Intel Core i9-14900K,NVIDIA GeForce RTX 4090,16,DDR5,2048,NVMe SSD,new,ASUS,4.1,1975.51,1753.97,100.0,100.0,1.0
+synthetic_demo,demo-01059,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,good,custom,3.1,1743.06,1616.94,74.0,82.0,0.84
+synthetic_demo,demo-01060,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR4,512,SATA SSD,like_new,Lenovo,1.1,1519.58,1568.53,79.0,84.0,0.95
+synthetic_demo,demo-01061,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,good,Alienware,3.8,1446.4,1601.41,70.0,82.0,0.84
+synthetic_demo,demo-01062,Intel Core i7-12700K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,HDD,excellent,MSI,1.1,1413.2,1407.19,76.0,62.0,0.9
+synthetic_demo,demo-01063,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti SUPER,64,DDR5,1024,NVMe SSD,good,Lenovo,0.5,1591.24,1661.32,79.0,84.0,0.84
+synthetic_demo,demo-01064,Intel Core i7-12700K,NVIDIA GeForce RTX 4070,64,DDR5,2048,NVMe SSD,good,MSI,2.9,1537.84,1495.35,76.0,72.0,0.84
+synthetic_demo,demo-01065,Intel Core i9-14900K,Intel Arc A770,32,DDR5,1024,NVMe SSD,excellent,Dell,4.6,1085.21,1064.61,100.0,48.0,0.9
+synthetic_demo,demo-01066,Intel Core i7-13700K,AMD Radeon RX 6800 XT,32,DDR5,512,NVMe SSD,like_new,Alienware,4.5,1406.95,1431.82,87.0,69.0,0.95
+synthetic_demo,demo-01067,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4090,64,DDR5,2048,NVMe SSD,excellent,HP,4.8,2079.06,1807.17,100.0,100.0,0.9
+synthetic_demo,demo-01068,Intel Core i7-14700K,AMD Radeon RX 7900 XTX,32,DDR5,2048,NVMe SSD,new,custom,3.5,2160.79,1986.08,93.0,92.0,1.0
+synthetic_demo,demo-01069,Intel Core i7-13700K,AMD Radeon RX 6700 XT,16,DDR5,2048,NVMe SSD,good,ASUS,3.3,1561.07,1584.57,87.0,57.0,0.84
+synthetic_demo,demo-01070,Intel Core i7-14700K,NVIDIA GeForce RTX 4080,32,DDR5,2048,NVMe SSD,new,MSI,2.9,2417.63,2177.23,93.0,90.0,1.0
+synthetic_demo,demo-01071,Intel Core i7-14700K,Intel Arc A750,32,DDR5,512,SATA SSD,good,ASUS,1.1,1592.35,1465.4,93.0,43.0,0.84
+synthetic_demo,demo-01072,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3080,16,DDR5,1024,NVMe SSD,like_new,custom,0.6,2623.94,2076.87,82.0,72.0,0.95
+synthetic_demo,demo-01073,Intel Core i7-13700K,AMD Radeon RX 7900 XTX,32,DDR5,4096,NVMe SSD,good,Alienware,4.5,2166.89,2066.58,87.0,92.0,0.84
+synthetic_demo,demo-01074,Intel Core i7-12700K,NVIDIA GeForce RTX 3080,32,DDR5,1024,NVMe SSD,good,ASUS,0.0,1569.32,1472.84,76.0,72.0,0.84
+synthetic_demo,demo-01075,Intel Core i7-12700K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR4,1024,NVMe SSD,excellent,ASUS,1.8,1620.3,1567.44,76.0,84.0,0.9
+synthetic_demo,demo-01076,Intel Core i7-13700K,NVIDIA GeForce RTX 3070,8,DDR5,1024,SATA SSD,good,HP,3.8,947.92,952.58,87.0,60.0,0.84
+synthetic_demo,demo-01077,Intel Core i5-12600K,AMD Radeon RX 7900 XT,32,DDR4,2048,NVMe SSD,like_new,Alienware,5.4,1522.92,1351.34,68.0,84.0,0.95
+synthetic_demo,demo-01078,AMD Ryzen 7 5800X,AMD Radeon RX 7700 XT,16,DDR5,4096,NVMe SSD,excellent,Alienware,2.0,2271.66,1975.81,70.0,64.0,0.9
+synthetic_demo,demo-01079,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4060 Ti,64,DDR5,1024,NVMe SSD,fair,custom,4.1,1228.71,1328.57,95.0,62.0,0.72
+synthetic_demo,demo-01080,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,NVMe SSD,good,HP,4.7,1296.69,1216.46,78.0,84.0,0.84
+synthetic_demo,demo-01081,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti,8,DDR4,1024,SATA SSD,good,custom,3.2,1451.21,1351.6,79.0,80.0,0.84
+synthetic_demo,demo-01082,Intel Core i7-13700K,Intel Arc A770,32,DDR5,4096,NVMe SSD,good,Lenovo,1.4,1656.62,1469.63,87.0,48.0,0.84
+synthetic_demo,demo-01083,Intel Core i7-12700K,NVIDIA GeForce RTX 3060,32,DDR4,2048,NVMe SSD,good,HP,3.1,1441.28,1391.84,76.0,48.0,0.84
+synthetic_demo,demo-01084,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 2080,64,DDR5,2048,NVMe SSD,excellent,MSI,0.4,2063.32,2057.22,95.0,44.0,0.9
+synthetic_demo,demo-01085,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,good,Dell,3.4,1992.09,1653.97,82.0,100.0,0.84
+synthetic_demo,demo-01086,Intel Core i5-14600K,Intel Arc A770,32,DDR5,2048,NVMe SSD,new,ASUS,1.3,1889.82,1798.55,84.0,48.0,1.0
+synthetic_demo,demo-01087,Intel Core i9-13900K,NVIDIA GeForce RTX 4090,32,DDR5,2048,NVMe SSD,excellent,HP,0.9,2812.93,2341.79,95.0,100.0,0.9
+synthetic_demo,demo-01088,Intel Core i7-13700K,Intel Arc A770,64,DDR5,1024,HDD,good,custom,2.0,1024.63,1339.29,87.0,48.0,0.84
+synthetic_demo,demo-01089,Intel Core i7-13700K,NVIDIA GeForce RTX 3070,32,DDR4,2048,SATA SSD,good,Dell,2.7,1227.98,1281.62,87.0,60.0,0.84
+synthetic_demo,demo-01090,Intel Core i5-12400,AMD Radeon RX 7800 XT,16,DDR4,1024,NVMe SSD,good,Alienware,4.6,1157.4,1132.21,56.0,73.0,0.84
+synthetic_demo,demo-01091,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4060 Ti,64,DDR4,2048,SATA SSD,fair,custom,2.2,873.16,942.12,70.0,62.0,0.72
+synthetic_demo,demo-01092,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3060,64,DDR5,2048,NVMe SSD,good,ASUS,4.4,982.36,1019.72,78.0,48.0,0.84
+synthetic_demo,demo-01093,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070,64,DDR5,2048,NVMe SSD,excellent,Alienware,2.1,2602.78,2330.44,96.0,72.0,0.9
+synthetic_demo,demo-01094,AMD Ryzen 9 7900X,Intel Arc A750,32,DDR5,2048,NVMe SSD,good,MSI,1.9,1622.44,1679.64,88.0,43.0,0.84
+synthetic_demo,demo-01095,Intel Core i5-12400,AMD Radeon RX 7900 XT,64,DDR4,1024,NVMe SSD,like_new,Dell,4.5,1491.46,1299.95,56.0,84.0,0.95
+synthetic_demo,demo-01096,AMD Ryzen 7 5800X,NVIDIA GeForce RTX 4070 Ti,32,DDR5,512,HDD,good,custom,2.1,1241.07,1218.78,70.0,80.0,0.84
+synthetic_demo,demo-01097,Intel Core i9-14900K,NVIDIA GeForce RTX 4080,32,DDR5,1024,NVMe SSD,good,MSI,3.3,1795.66,1639.28,100.0,90.0,0.84
+synthetic_demo,demo-01098,AMD Ryzen 7 7700X,AMD Radeon RX 7600,32,DDR5,1024,SATA SSD,good,Dell,1.8,1473.33,1358.89,82.0,50.0,0.84
+synthetic_demo,demo-01099,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3070,64,DDR5,1024,NVMe SSD,like_new,ASUS,2.7,1750.36,1658.86,82.0,60.0,0.95
+synthetic_demo,demo-01100,AMD Ryzen 9 7950X,Intel Arc A770,32,DDR5,1024,NVMe SSD,good,Lenovo,3.7,1730.79,1526.35,95.0,48.0,0.84
+synthetic_demo,demo-01101,Intel Core i5-13600K,Intel Arc A750,64,DDR5,1024,NVMe SSD,fair,Dell,4.5,1508.65,1382.06,79.0,43.0,0.72
+synthetic_demo,demo-01102,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 4060,64,DDR5,4096,NVMe SSD,fair,MSI,3.6,1439.95,1533.33,82.0,54.0,0.72
+synthetic_demo,demo-01103,AMD Ryzen 7 5800X3D,AMD Radeon RX 7700 XT,32,DDR4,1024,HDD,good,Dell,2.0,1273.68,1152.9,78.0,64.0,0.84
+synthetic_demo,demo-01104,Intel Core i7-12700K,AMD Radeon RX 7700 XT,128,DDR5,2048,NVMe SSD,excellent,ASUS,2.5,2309.09,2010.1,76.0,64.0,0.9
+synthetic_demo,demo-01105,AMD Ryzen 7 5800X,AMD Radeon RX 6800 XT,32,DDR4,512,NVMe SSD,good,HP,4.3,1105.26,1135.93,70.0,69.0,0.84
+synthetic_demo,demo-01106,AMD Ryzen 7 5800X3D,AMD Radeon RX 6700 XT,16,DDR5,2048,SATA SSD,excellent,ASUS,4.7,1218.14,1385.23,78.0,57.0,0.9
+synthetic_demo,demo-01107,AMD Ryzen 7 5800X,Intel Arc A750,8,DDR4,2048,NVMe SSD,fair,Alienware,2.3,1189.38,1063.95,70.0,43.0,0.72
+synthetic_demo,demo-01108,Intel Core i7-13700K,AMD Radeon RX 7900 XT,32,DDR5,1024,NVMe SSD,good,custom,4.3,1649.08,1501.18,87.0,84.0,0.84
+synthetic_demo,demo-01109,AMD Ryzen 7 7800X3D,AMD Radeon RX 7600,32,DDR5,1024,NVMe SSD,like_new,HP,2.9,1404.77,1385.55,96.0,50.0,0.95
+synthetic_demo,demo-01110,Intel Core i5-13600K,NVIDIA GeForce RTX 3070,32,DDR5,4096,NVMe SSD,good,MSI,2.8,1447.79,1700.4,79.0,60.0,0.84
+synthetic_demo,demo-01111,AMD Ryzen 9 7900X,AMD Radeon RX 7800 XT,64,DDR5,2048,NVMe SSD,excellent,custom,2.1,1937.41,1914.7,88.0,73.0,0.9
+synthetic_demo,demo-01112,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR4,2048,SATA SSD,good,Lenovo,2.4,1541.28,1653.55,96.0,84.0,0.84
+synthetic_demo,demo-01113,Intel Core i5-13600K,NVIDIA GeForce RTX 3080,32,DDR5,512,NVMe SSD,fair,ASUS,0.0,1620.55,1451.57,79.0,72.0,0.72
+synthetic_demo,demo-01114,Intel Core i7-12700K,NVIDIA GeForce RTX 3070,32,DDR5,512,NVMe SSD,good,Alienware,5.7,1083.87,1213.51,76.0,60.0,0.84
+synthetic_demo,demo-01115,Intel Core i7-13700K,NVIDIA GeForce RTX 4090,32,DDR5,2048,SATA SSD,good,Lenovo,2.4,1973.12,1865.38,87.0,100.0,0.84
+synthetic_demo,demo-01116,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4060,64,DDR5,2048,NVMe SSD,like_new,Lenovo,3.7,1566.96,1497.34,96.0,54.0,0.95
+synthetic_demo,demo-01117,Intel Core i5-14600K,NVIDIA GeForce RTX 3060,16,DDR5,512,NVMe SSD,good,MSI,3.5,1243.47,1296.05,84.0,48.0,0.84
+synthetic_demo,demo-01118,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070 Ti SUPER,128,DDR5,1024,NVMe SSD,good,ASUS,2.2,1500.97,1534.97,95.0,84.0,0.84
+synthetic_demo,demo-01119,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3090,32,DDR5,4096,NVMe SSD,good,HP,1.9,1948.8,1844.47,100.0,82.0,0.84
+synthetic_demo,demo-01120,AMD Ryzen 7 7700X,AMD Radeon RX 6700 XT,32,DDR5,1024,NVMe SSD,good,ASUS,2.7,1130.48,1064.94,82.0,57.0,0.84
+synthetic_demo,demo-01121,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,fair,Lenovo,1.2,1503.81,1649.25,96.0,90.0,0.72
+synthetic_demo,demo-01122,Intel Core i5-12400,NVIDIA GeForce RTX 4060,32,DDR5,1024,SATA SSD,excellent,HP,2.9,1244.81,1163.03,56.0,54.0,0.9
+synthetic_demo,demo-01123,AMD Ryzen 7 5800X3D,AMD Radeon RX 7900 XTX,32,DDR5,4096,NVMe SSD,like_new,Alienware,3.0,1935.41,2183.51,78.0,92.0,0.95
+synthetic_demo,demo-01124,AMD Ryzen 9 7900X,Intel Arc A750,32,DDR5,4096,NVMe SSD,excellent,ASUS,0.3,1931.97,1859.15,88.0,43.0,0.9
+synthetic_demo,demo-01125,Intel Core i5-12600K,Intel Arc A770,16,DDR5,2048,HDD,good,custom,1.8,1279.47,1264.2,68.0,48.0,0.84
+synthetic_demo,demo-01126,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,SATA SSD,good,Dell,1.2,1633.67,1537.45,74.0,84.0,0.84
+synthetic_demo,demo-01127,Intel Core i9-13900K,NVIDIA GeForce RTX 3080,16,DDR5,2048,SATA SSD,fair,Alienware,3.4,1518.63,1560.6,95.0,72.0,0.72
+synthetic_demo,demo-01128,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti,64,DDR5,512,NVMe SSD,good,MSI,2.7,1834.67,1768.09,87.0,80.0,0.84
+synthetic_demo,demo-01129,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,2048,NVMe SSD,good,Alienware,1.9,1511.4,1528.34,79.0,80.0,0.84
+synthetic_demo,demo-01130,Intel Core i9-13900K,AMD Radeon RX 7900 XTX,16,DDR5,2048,NVMe SSD,good,MSI,1.0,1645.85,1713.65,95.0,92.0,0.84
+synthetic_demo,demo-01131,Intel Core i7-13700K,AMD Radeon RX 7700 XT,32,DDR5,1024,NVMe SSD,good,Alienware,1.0,1940.36,1763.79,87.0,64.0,0.84
+synthetic_demo,demo-01132,Intel Core i7-13700K,AMD Radeon RX 6700 XT,32,DDR5,512,HDD,good,Alienware,1.3,1117.71,1308.52,87.0,57.0,0.84
+synthetic_demo,demo-01133,Intel Core i7-12700K,AMD Radeon RX 7800 XT,16,DDR5,4096,NVMe SSD,good,ASUS,2.0,2173.4,1936.22,76.0,73.0,0.84
+synthetic_demo,demo-01134,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 3070,32,DDR5,512,NVMe SSD,excellent,custom,1.6,1475.4,1660.68,74.0,60.0,0.9
+synthetic_demo,demo-01135,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4070 Ti SUPER,32,DDR5,4096,SATA SSD,good,Lenovo,0.7,2657.68,2201.69,88.0,84.0,0.84
+synthetic_demo,demo-01136,Intel Core i5-13600K,NVIDIA GeForce RTX 4090,64,DDR5,1024,NVMe SSD,good,Lenovo,3.6,1413.59,1722.88,79.0,100.0,0.84
+synthetic_demo,demo-01137,Intel Core i5-12400,NVIDIA GeForce RTX 4070 Ti,32,DDR4,1024,NVMe SSD,good,ASUS,0.0,1738.08,1730.82,56.0,80.0,0.84
+synthetic_demo,demo-01138,Intel Core i7-14700K,NVIDIA GeForce RTX 3090,128,DDR4,2048,NVMe SSD,fair,ASUS,0.9,2008.55,1910.15,93.0,82.0,0.72
+synthetic_demo,demo-01139,Intel Core i5-12600K,NVIDIA GeForce RTX 3090,16,DDR4,1024,NVMe SSD,fair,HP,4.4,1271.54,1093.48,68.0,82.0,0.72
+synthetic_demo,demo-01140,Intel Core i5-13600K,AMD Radeon RX 7900 XTX,16,DDR5,4096,NVMe SSD,good,MSI,2.8,2223.42,1939.42,79.0,92.0,0.84
+synthetic_demo,demo-01141,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 3070,32,DDR5,1024,NVMe SSD,good,Alienware,1.1,2291.57,2126.7,96.0,60.0,0.84
+synthetic_demo,demo-01142,Intel Core i9-14900K,Intel Arc A750,32,DDR5,2048,SATA SSD,new,HP,3.4,1910.56,1556.19,100.0,43.0,1.0
+synthetic_demo,demo-01143,Intel Core i9-13900K,NVIDIA GeForce RTX 3070,32,DDR4,256,NVMe SSD,new,HP,4.1,1343.51,1138.24,95.0,60.0,1.0
+synthetic_demo,demo-01144,Intel Core i5-13600K,NVIDIA GeForce RTX 4060,16,DDR5,1024,SATA SSD,good,Alienware,2.2,1185.22,1299.48,79.0,54.0,0.84
+synthetic_demo,demo-01145,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,like_new,MSI,3.7,1617.19,1540.16,58.0,82.0,0.95
+synthetic_demo,demo-01146,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4070 Ti,128,DDR5,2048,NVMe SSD,excellent,HP,2.3,2970.16,2398.72,58.0,80.0,0.9
+synthetic_demo,demo-01147,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 2080,64,DDR5,2048,NVMe SSD,like_new,HP,2.9,1670.53,1666.1,100.0,44.0,0.95
+synthetic_demo,demo-01148,Intel Core i9-13900K,NVIDIA GeForce RTX 4080,16,DDR5,1024,NVMe SSD,excellent,HP,4.7,1497.11,1500.31,95.0,90.0,0.9
+synthetic_demo,demo-01149,Intel Core i5-13600K,AMD Radeon RX 6800 XT,32,DDR5,2048,NVMe SSD,good,HP,4.5,1332.42,1285.85,79.0,69.0,0.84
+synthetic_demo,demo-01150,Intel Core i5-12600K,AMD Radeon RX 7900 XTX,16,DDR4,4096,SATA SSD,excellent,custom,0.1,2802.25,2270.71,68.0,92.0,0.9
+synthetic_demo,demo-01151,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4080,32,DDR4,1024,NVMe SSD,excellent,HP,4.0,1681.76,1760.28,74.0,90.0,0.9
+synthetic_demo,demo-01152,AMD Ryzen 9 7900X,AMD Radeon RX 7900 XT,16,DDR5,512,NVMe SSD,good,MSI,3.2,1417.92,1393.91,88.0,84.0,0.84
+synthetic_demo,demo-01153,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,good,ASUS,4.1,1289.38,1434.66,58.0,82.0,0.84
+synthetic_demo,demo-01154,Intel Core i5-12600K,Intel Arc A770,16,DDR4,4096,NVMe SSD,like_new,custom,0.6,1656.99,1521.36,68.0,48.0,0.95
+synthetic_demo,demo-01155,AMD Ryzen 5 5600X,NVIDIA GeForce RTX 4060,64,DDR4,1024,SATA SSD,new,HP,6.3,1054.59,1240.1,58.0,54.0,1.0
+synthetic_demo,demo-01156,Intel Core i5-12600K,NVIDIA GeForce RTX 3070,32,DDR4,4096,NVMe SSD,good,Lenovo,5.2,1260.0,1422.97,68.0,60.0,0.84
+synthetic_demo,demo-01157,Intel Core i7-12700K,Intel Arc A750,16,DDR5,512,NVMe SSD,good,Alienware,2.3,1480.55,1352.05,76.0,43.0,0.84
+synthetic_demo,demo-01158,Intel Core i9-13900K,NVIDIA GeForce RTX 4080,16,DDR5,256,NVMe SSD,excellent,Dell,0.6,1696.74,2053.54,95.0,90.0,0.9
+synthetic_demo,demo-01159,AMD Ryzen 7 7800X3D,AMD Radeon RX 7900 XT,16,DDR5,4096,NVMe SSD,like_new,custom,2.4,2518.79,2417.64,96.0,84.0,0.95
+synthetic_demo,demo-01160,Intel Core i5-12400,NVIDIA GeForce RTX 4070,32,DDR5,2048,NVMe SSD,good,Lenovo,2.0,1935.27,1701.37,56.0,72.0,0.84
+synthetic_demo,demo-01161,Intel Core i7-14700K,NVIDIA GeForce RTX 3090,32,DDR5,1024,NVMe SSD,like_new,ASUS,5.0,2039.76,1776.58,93.0,82.0,0.95
+synthetic_demo,demo-01162,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4080,32,DDR5,2048,NVMe SSD,good,custom,4.0,1786.72,1703.34,96.0,90.0,0.84
+synthetic_demo,demo-01163,AMD Ryzen 9 7900X,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,good,Alienware,2.4,1304.4,1381.1,88.0,69.0,0.84
+synthetic_demo,demo-01164,AMD Ryzen 9 7950X,NVIDIA GeForce RTX 4070,16,DDR5,1024,NVMe SSD,good,Lenovo,2.3,1863.03,1573.39,95.0,72.0,0.84
+synthetic_demo,demo-01165,Intel Core i7-14700K,NVIDIA GeForce RTX 2080,32,DDR4,2048,NVMe SSD,good,Lenovo,2.7,1645.75,1433.67,93.0,44.0,0.84
+synthetic_demo,demo-01166,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 4060 Ti,32,DDR5,2048,SATA SSD,good,MSI,2.4,1693.25,1667.16,100.0,62.0,0.84
+synthetic_demo,demo-01167,AMD Ryzen 7 5800X,AMD Radeon RX 7900 XTX,32,DDR4,1024,NVMe SSD,good,HP,5.0,1308.28,1420.58,70.0,92.0,0.84
+synthetic_demo,demo-01168,Intel Core i5-12400,AMD Radeon RX 7900 XTX,32,DDR4,1024,SATA SSD,good,Lenovo,3.1,1668.92,1633.2,56.0,92.0,0.84
+synthetic_demo,demo-01169,AMD Ryzen 9 7950X3D,AMD Radeon RX 7600,32,DDR5,2048,NVMe SSD,excellent,ASUS,3.6,1511.49,1614.25,100.0,50.0,0.9
+synthetic_demo,demo-01170,AMD Ryzen 5 5600X,AMD Radeon RX 6800 XT,16,DDR4,1024,NVMe SSD,good,Dell,3.7,950.56,972.5,58.0,69.0,0.84
+synthetic_demo,demo-01171,AMD Ryzen 7 7700X,NVIDIA GeForce RTX 3080,64,DDR4,512,NVMe SSD,new,Dell,4.6,1594.7,1579.61,82.0,72.0,1.0
+synthetic_demo,demo-01172,Intel Core i7-14700K,NVIDIA GeForce RTX 3060,16,DDR5,2048,NVMe SSD,excellent,Lenovo,3.6,1416.03,1359.92,93.0,48.0,0.9
+synthetic_demo,demo-01173,Intel Core i9-14900K,NVIDIA GeForce RTX 3060,128,DDR5,2048,NVMe SSD,good,Dell,3.9,1516.02,1452.08,100.0,48.0,0.84
+synthetic_demo,demo-01174,AMD Ryzen 7 5800X3D,NVIDIA GeForce RTX 3080,64,DDR4,1024,NVMe SSD,good,ASUS,2.3,1262.38,1331.68,78.0,72.0,0.84
+synthetic_demo,demo-01175,AMD Ryzen 5 5600X,Intel Arc A750,32,DDR5,1024,NVMe SSD,excellent,Lenovo,5.5,943.2,1039.18,58.0,43.0,0.9
+synthetic_demo,demo-01176,Intel Core i7-13700K,NVIDIA GeForce RTX 4070,32,DDR5,2048,SATA SSD,good,HP,0.2,2088.71,1746.24,87.0,72.0,0.84
+synthetic_demo,demo-01177,AMD Ryzen 7 5800X3D,AMD Radeon RX 7800 XT,16,DDR5,2048,NVMe SSD,good,ASUS,2.5,1977.8,1839.48,78.0,73.0,0.84
+synthetic_demo,demo-01178,Intel Core i9-14900K,NVIDIA GeForce RTX 4090,32,DDR4,2048,SATA SSD,new,Alienware,3.6,2021.99,1783.45,100.0,100.0,1.0
+synthetic_demo,demo-01179,Intel Core i5-14600K,Intel Arc A750,64,DDR5,512,NVMe SSD,good,Lenovo,2.2,1379.55,1439.15,84.0,43.0,0.84
+synthetic_demo,demo-01180,AMD Ryzen 7 7800X3D,AMD Radeon RX 7900 XTX,32,DDR5,512,NVMe SSD,fair,Alienware,3.1,1554.74,1517.42,96.0,92.0,0.72
+synthetic_demo,demo-01181,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR4,4096,NVMe SSD,new,MSI,3.5,1932.37,1981.72,74.0,84.0,1.0
+synthetic_demo,demo-01182,AMD Ryzen 7 7800X3D,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,good,Lenovo,5.5,1343.85,1394.16,96.0,69.0,0.84
+synthetic_demo,demo-01183,Intel Core i5-14600K,NVIDIA GeForce RTX 4060 Ti,32,DDR5,1024,NVMe SSD,excellent,Lenovo,3.8,1183.59,1284.37,84.0,62.0,0.9
+synthetic_demo,demo-01184,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4090,64,DDR5,512,NVMe SSD,good,Alienware,4.6,1575.77,1391.18,96.0,100.0,0.84
+synthetic_demo,demo-01185,AMD Ryzen 9 7950X3D,NVIDIA GeForce RTX 3090,8,DDR5,1024,NVMe SSD,excellent,ASUS,2.4,1907.86,1764.95,100.0,82.0,0.9
+synthetic_demo,demo-01186,Intel Core i7-13700K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,4096,HDD,excellent,custom,3.8,1746.74,1571.13,87.0,80.0,0.9
+synthetic_demo,demo-01187,Intel Core i9-13900K,NVIDIA GeForce RTX 4070 Ti,32,DDR5,2048,SATA SSD,like_new,HP,3.0,1616.15,1579.79,95.0,80.0,0.95
+synthetic_demo,demo-01188,Intel Core i5-12600K,NVIDIA GeForce RTX 3060,32,DDR4,2048,NVMe SSD,good,Lenovo,5.1,1401.12,1260.3,68.0,48.0,0.84
+synthetic_demo,demo-01189,Intel Core i9-14900K,NVIDIA GeForce RTX 2080,64,DDR5,1024,NVMe SSD,excellent,ASUS,0.8,2061.49,1832.3,100.0,44.0,0.9
+synthetic_demo,demo-01190,AMD Ryzen 9 7900X,NVIDIA GeForce RTX 4090,64,DDR4,4096,NVMe SSD,excellent,ASUS,4.0,2428.59,2256.37,88.0,100.0,0.9
+synthetic_demo,demo-01191,Intel Core i5-13600K,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR5,1024,SATA SSD,excellent,Alienware,2.7,1303.85,1533.57,79.0,84.0,0.9
+synthetic_demo,demo-01192,AMD Ryzen 7 5800X3D,AMD Radeon RX 7900 XTX,32,DDR5,1024,HDD,good,ASUS,3.4,1685.69,1538.38,78.0,92.0,0.84
+synthetic_demo,demo-01193,Intel Core i9-13900K,NVIDIA GeForce RTX 4070,64,DDR5,2048,NVMe SSD,good,Lenovo,0.5,2609.58,2095.28,95.0,72.0,0.84
+synthetic_demo,demo-01194,Intel Core i5-13600K,AMD Radeon RX 6800 XT,32,DDR5,1024,NVMe SSD,good,MSI,2.9,1592.8,1487.34,79.0,69.0,0.84
+synthetic_demo,demo-01195,AMD Ryzen 5 7600X,NVIDIA GeForce RTX 4070 Ti SUPER,16,DDR4,256,NVMe SSD,good,Alienware,6.3,1026.62,968.21,74.0,84.0,0.84
+synthetic_demo,demo-01196,AMD Ryzen 7 7800X3D,NVIDIA GeForce RTX 4080,64,DDR4,1024,NVMe SSD,like_new,MSI,1.4,2160.04,2086.91,96.0,90.0,0.95
+synthetic_demo,demo-01197,Intel Core i5-12400,AMD Radeon RX 7900 XT,16,DDR4,2048,NVMe SSD,like_new,ASUS,5.1,1908.05,1758.87,56.0,84.0,0.95
+synthetic_demo,demo-01198,AMD Ryzen 7 7700X,AMD Radeon RX 7900 XTX,32,DDR5,2048,SATA SSD,like_new,Lenovo,2.2,2436.34,2443.07,82.0,92.0,0.95
+synthetic_demo,demo-01199,AMD Ryzen 9 7900X,AMD Radeon RX 7700 XT,64,DDR5,2048,NVMe SSD,new,custom,1.8,2012.39,1705.98,88.0,64.0,1.0

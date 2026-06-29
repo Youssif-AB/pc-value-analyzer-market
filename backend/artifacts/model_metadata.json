@@ -1,0 +1,26 @@
+{
+  "model_version": "demo-20260820-v1",
+  "selected_model": "linear_regression",
+  "selection_rule": "lowest 5-fold cross-validation MAE on training split",
+  "validation_mae": 138.27440674882945,
+  "validation_rmse": 174.024745969986,
+  "validation_r2": 0.7575327412119002,
+  "cv_mae_mean": 134.3715945103638,
+  "residual_std": 173.5797840601281,
+  "feature_contract": [
+    "cpu",
+    "gpu",
+    "ram_type",
+    "storage_type",
+    "condition",
+    "brand",
+    "ram_gb",
+    "storage_gb",
+    "system_age_years",
+    "cpu_score",
+    "gpu_score",
+    "condition_score"
+  ],
+  "target": "sold_price",
+  "data_disclaimer": "Metrics are from the included synthetic demo market dataset, not production market evidence."
+}
