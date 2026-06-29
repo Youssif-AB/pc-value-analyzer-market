@@ -14,7 +14,7 @@ GPU_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(?:geforce\s*)?rtx\s*4080(?:\s*super)?", re.I), "NVIDIA GeForce RTX 4080"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4070\s*ti\s*super", re.I), "NVIDIA GeForce RTX 4070 Ti SUPER"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4070\s*ti", re.I), "NVIDIA GeForce RTX 4070 Ti"),
-    (re.compile(r"(?:geforce\s*)?rtx\s*4070(?:\s*super)?", re.I), "NVIDIA GeForce RTX 4070"),
+    (re.compile(r"(?:(?:nvidia|geforce)\s*)?(?:rtx\s*)?4070(?:\s*super)?", re.I), "NVIDIA GeForce RTX 4070"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4060\s*ti", re.I), "NVIDIA GeForce RTX 4060 Ti"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4060", re.I), "NVIDIA GeForce RTX 4060"),
     (re.compile(r"(?:geforce\s*)?rtx\s*3090(?:\s*ti)?", re.I), "NVIDIA GeForce RTX 3090"),
