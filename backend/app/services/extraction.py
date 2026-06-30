@@ -11,7 +11,7 @@ from backend.app.services.normalization import (
     normalize_storage_type,
 )
 
-PRICE_RE = re.compile(r"(?:\$|CAD\s*|USD\s*)\s*([0-9]{2,5}(?:[,.][0-9]{2})?)", re.I)
+PRICE_RE = re.compile(r"(?:\$|CAD\s*|USD\s*)\s*([0-9]{1,3}(?:,[0-9]{3})+|[0-9]{2,5})(?:\.[0-9]{2})?", re.I)
 RAM_RE = re.compile(r"\b(8|12|16|24|32|48|64|96|128|256)\s*GB\s*(DDR\s*[345])?\b", re.I)
 STORAGE_RE = re.compile(r"\b(256|500|512|1000|1024|2000|2048|4000|4096|8000)\s*(GB|TB)?\s*(NVME|M\.2|SSD|HDD|hard drive)?\b", re.I)
 TB_RE = re.compile(r"\b([1-8](?:\.0)?)\s*TB\s*(NVME|M\.2|SSD|HDD|hard drive)?\b", re.I)
@@ -43,10 +43,14 @@ def _extract_price(text: str) -> float | None:
 
 
 def _extract_ram(text: str) -> tuple[int | None, str | None]:
-    match = RAM_RE.search(text)
-    if not match:
+    matches = list(RAM_RE.finditer(text))
+    if not matches:
         return None, None
-    return int(match.group(1)), normalize_ram_type(match.group(2))
+    # Prefer a capacity explicitly paired with DDR generation; this avoids treating GPU VRAM
+    # such as "RTX 4070 12GB" as system memory.
+    explicit = [match for match in matches if match.group(2)]
+    chosen = explicit[0] if explicit else max(matches, key=lambda match: int(match.group(1)))
+    return int(chosen.group(1)), normalize_ram_type(chosen.group(2))
 
 
 def _extract_storage(text: str) -> tuple[int | None, str | None]:
