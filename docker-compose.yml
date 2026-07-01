@@ -1,0 +1,68 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: pcvalue
+      POSTGRES_USER: pcvalue
+      POSTGRES_PASSWORD: pcvalue
+    ports: ["5432:5432"]
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pcvalue -d pcvalue"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  mlflow:
+    build:
+      context: .
+      dockerfile: infra/mlflow/Dockerfile
+    command: >-
+      mlflow server
+      --backend-store-uri postgresql+psycopg://pcvalue:pcvalue@postgres:5432/mlflow
+      --default-artifact-root /mlartifacts
+      --host 0.0.0.0 --port 5000
+    ports: ["5000:5000"]
+    volumes: ["mlflow_artifacts:/mlartifacts"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  prefect-server:
+    image: prefecthq/prefect:3-python3.11
+    command: prefect server start --host 0.0.0.0
+    environment:
+      PREFECT_SERVER_API_HOST: 0.0.0.0
+    ports: ["4200:4200"]
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://pcvalue:pcvalue@postgres:5432/pcvalue
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      MODEL_ARTIFACT_PATH: /app/backend/artifacts/price_model.joblib
+      MODEL_METADATA_PATH: /app/backend/artifacts/model_metadata.json
+      CORS_ORIGINS: http://localhost:5173,http://localhost:8080
+    ports: ["8000:8000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mlflow:
+        condition: service_started
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    ports: ["8080:80"]
+    depends_on: [backend]
+
+volumes:
+  postgres_data:
+  mlflow_artifacts:
