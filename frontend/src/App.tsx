@@ -1,13 +1,20 @@
 import { useState } from 'react'
-import { extractListing } from './api'
+import { extractListing, predictValue, recordCorrection } from './api'
 import { ListingInput } from './components/ListingInput'
+import { PredictionResult } from './components/PredictionResult'
 import { SpecReview } from './components/SpecReview'
-import type { ExtractedSpecs, Specs } from './types'
+import type { ExtractedSpecs, Prediction, Specs } from './types'
+
+function baseSpecs(extracted: ExtractedSpecs): Specs {
+  const { asking_price: _askingPrice, extraction_warnings: _warnings, normalization_failures: _failures, ...specs } = extracted
+  return specs
+}
 
 export default function App() {
   const [listing, setListing] = useState('')
   const [extracted, setExtracted] = useState<ExtractedSpecs | null>(null)
-  const [reviewed, setReviewed] = useState<{ specs: Specs; price: number } | null>(null)
+  const [reviewed, setReviewed] = useState<Specs | null>(null)
+  const [prediction, setPrediction] = useState<Prediction | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -22,11 +29,23 @@ export default function App() {
   }
 
   async function handleReview(specs: Specs, price: number) {
-    setReviewed({ specs, price })
+    if (!extracted) return
+    setBusy(true); setError(null)
+    try {
+      const original = baseSpecs(extracted)
+      if (JSON.stringify(original) !== JSON.stringify(specs)) {
+        await recordCorrection(original, specs, listing).catch(() => undefined)
+      }
+      const result = await predictValue(specs, price, listing)
+      setReviewed(specs)
+      setPrediction(result)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not estimate this PC.')
+    } finally { setBusy(false) }
   }
 
   function reset() {
-    setExtracted(null); setReviewed(null); setError(null)
+    setListing(''); setExtracted(null); setReviewed(null); setPrediction(null); setError(null)
   }
 
   return (
@@ -37,8 +56,9 @@ export default function App() {
         <p>Paste a messy marketplace listing. Review the hardware we extracted. Get a fair-price estimate with uncertainty and the drivers behind it.</p>
       </header>
       {!extracted && <ListingInput busy={busy} error={error} onSubmit={handleExtract} />}
-      {extracted && !reviewed && <SpecReview extracted={extracted} busy={busy} error={error} onBack={reset} onConfirm={handleReview} />}
-      {reviewed && <pre className="panel">{JSON.stringify({ listing, reviewed }, null, 2)}</pre>}
+      {extracted && !prediction && <SpecReview extracted={extracted} busy={busy} error={error} onBack={reset} onConfirm={handleReview} />}
+      {prediction && reviewed && <PredictionResult prediction={prediction} specs={reviewed} onReset={reset} />}
+      <footer>Demo model included for reproducibility. Production accuracy requires recent licensed market observations.</footer>
     </main>
   )
 }
