@@ -71,6 +71,53 @@ def _maybe_log_mlflow(name: str, model: Pipeline, metrics: dict[str, float], cv_
         print(f"MLflow logging skipped after error: {exc}")
 
 
+
+def register_selected_model(model: Pipeline, metadata: dict[str, object], comparison_path: Path) -> str | None:
+    """Log the evidence-selected model and assign the registry alias used by serving/deployment."""
+    try:
+        import mlflow
+        import mlflow.sklearn
+        from mlflow import MlflowClient
+
+        tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000")
+        experiment_name = os.getenv("MLFLOW_EXPERIMENT_NAME", "pc-value-analyzer")
+        model_name = os.getenv("MODEL_NAME", "pc-value-regressor")
+        alias = os.getenv("MODEL_ALIAS", "champion")
+        mlflow.set_tracking_uri(tracking_uri)
+        mlflow.set_experiment(experiment_name)
+        with mlflow.start_run(run_name=f"selected-{metadata['selected_model']}") as run:
+            mlflow.set_tags({
+                "selection_rule": str(metadata["selection_rule"]),
+                "data_scope": "synthetic_demo",
+                "lifecycle": "selected",
+            })
+            for key in ("validation_mae", "validation_rmse", "validation_r2", "cv_mae_mean", "residual_std"):
+                mlflow.log_metric(key, float(metadata[key]))
+            mlflow.log_param("selected_model", str(metadata["selected_model"]))
+            mlflow.log_artifact(str(comparison_path), artifact_path="evaluation")
+            mlflow.sklearn.log_model(
+                model,
+                name="model",
+                registered_model_name=model_name,
+                input_example=pd.DataFrame([{
+                    "cpu": "AMD Ryzen 7 7800X3D", "gpu": "NVIDIA GeForce RTX 4070",
+                    "ram_type": "DDR5", "storage_type": "NVMe SSD", "condition": "good",
+                    "brand": "custom", "ram_gb": 32, "storage_gb": 2048,
+                    "system_age_years": 1.5, "cpu_score": 96, "gpu_score": 72, "condition_score": 0.84,
+                }]),
+            )
+        client = MlflowClient(tracking_uri=tracking_uri)
+        versions = [v for v in client.search_model_versions(f"name='{model_name}'") if v.run_id == run.info.run_id]
+        if not versions:
+            return None
+        version = max(versions, key=lambda item: int(item.version)).version
+        client.set_registered_model_alias(model_name, alias, version)
+        client.set_model_version_tag(model_name, version, "validation_status", "selected_by_cv")
+        return str(version)
+    except Exception as exc:
+        print(f"Selected-model registry logging skipped after error: {exc}")
+        return None
+
 def train(input_path: Path, output_path: Path, metadata_path: Path, comparison_path: Path, enable_mlflow: bool = False) -> dict[str, object]:
     frame = pd.read_csv(input_path)
     X = frame[FEATURES]
@@ -113,6 +160,11 @@ def train(input_path: Path, output_path: Path, metadata_path: Path, comparison_p
         "target": TARGET,
         "data_disclaimer": "Metrics are from the included synthetic demo market dataset, not production market evidence.",
     }
+    if enable_mlflow:
+        registry_version = register_selected_model(winner, metadata, comparison_path)
+        if registry_version is not None:
+            metadata["mlflow_registered_version"] = registry_version
+            metadata["mlflow_alias"] = os.getenv("MODEL_ALIAS", "champion")
     metadata_path.write_text(json.dumps(metadata, indent=2))
     return metadata
 
