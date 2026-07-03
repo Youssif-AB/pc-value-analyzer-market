@@ -1,0 +1,31 @@
+feature,absolute_coefficient
+numeric__gpu_score,159.56877954436104
+numeric__system_age_years,157.83417051588302
+numeric__condition_score,114.83529717109859
+numeric__storage_gb,90.54694333978472
+categorical__storage_type_NVMe SSD,80.4995660787882
+categorical__storage_type_HDD,71.77690856127253
+numeric__ram_gb,70.90428493487222
+categorical__cpu_Intel Core i7-12700K,51.91523804195941
+categorical__gpu_AMD Radeon RX 7900 XTX,51.72981246397916
+categorical__gpu_AMD Radeon RX 7700 XT,50.6134394690575
+categorical__cpu_AMD Ryzen 9 7950X,49.98267287613737
+categorical__gpu_NVIDIA GeForce RTX 3080,44.72337974748089
+categorical__ram_type_DDR5,44.35294499487479
+categorical__ram_type_DDR4,44.35294499487479
+numeric__cpu_score,44.14728850315871
+categorical__gpu_NVIDIA GeForce RTX 4070 Ti SUPER,44.13558636503362
+categorical__brand_Dell,43.80837463737738
+categorical__brand_Alienware,41.384236216914914
+categorical__brand_ASUS,40.55578808602935
+categorical__gpu_NVIDIA GeForce RTX 3090,38.60182809792296
+categorical__condition_fair,37.98452103009527
+categorical__cpu_Intel Core i5-14600K,36.48611957067361
+categorical__gpu_NVIDIA GeForce RTX 4080,36.079188920185956
+categorical__brand_Lenovo,34.846297775161375
+categorical__condition_excellent,32.12596418423058
+categorical__cpu_Intel Core i5-13600K,28.79197959797518
+categorical__brand_MSI,27.176043047983587
+categorical__gpu_AMD Radeon RX 6800 XT,25.804763503614005
+categorical__cpu_AMD Ryzen 7 5800X3D,21.03913092785622
+categorical__gpu_AMD Radeon RX 6700 XT,19.207761158106834
