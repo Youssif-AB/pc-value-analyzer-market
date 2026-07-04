@@ -267,7 +267,6 @@ Frontend CI runs TypeScript lint/build independently. Dependency installation ti
 - `docs/observability.md` — production telemetry and delayed ground truth
 - `docs/deployment.md` — Linux/Azure/GitHub deployment path
 - `docs/demo.md` — end-to-end walkthrough
-- `docs/development-cadence.md` — June 21–July 8 milestone plan, explicitly not falsified Git history
 
 ## Development history
 
