@@ -24,7 +24,7 @@ services:
       --backend-store-uri postgresql+psycopg://pcvalue:pcvalue@postgres:5432/mlflow
       --default-artifact-root /mlartifacts
       --host 0.0.0.0 --port 5000
-    ports: ["5000:5000"]
+    ports: ["5001:5000"]
     volumes: ["mlflow_artifacts:/mlartifacts"]
     depends_on:
       postgres:
@@ -41,25 +41,60 @@ services:
     build:
       context: .
       dockerfile: backend/Dockerfile
-    environment:
+    environment: &app-environment
+      APP_ENV: ${APP_ENV:-development}
       DATABASE_URL: postgresql+psycopg://pcvalue:pcvalue@postgres:5432/pcvalue
       MLFLOW_TRACKING_URI: http://mlflow:5000
       MODEL_ARTIFACT_PATH: /app/backend/artifacts/price_model.joblib
       MODEL_METADATA_PATH: /app/backend/artifacts/model_metadata.json
-      CORS_ORIGINS: http://localhost:5173,http://localhost:8080
-    ports: ["8000:8000"]
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+      LIVE_MARKET_ENABLED: ${LIVE_MARKET_ENABLED:-true}
+      MARKET_CURRENCY: ${MARKET_CURRENCY:-CAD}
+      LIVE_COMP_MAX_AGE_HOURS: ${LIVE_COMP_MAX_AGE_HOURS:-72}
+      LIVE_COMP_MAX_RESULTS: ${LIVE_COMP_MAX_RESULTS:-12}
+      LIVE_COMP_MIN_SIMILARITY: ${LIVE_COMP_MIN_SIMILARITY:-0.52}
+      LIVE_COMP_BLEND_CAP: ${LIVE_COMP_BLEND_CAP:-0.68}
+      MARKET_CACHE_TTL_HOURS: ${MARKET_CACHE_TTL_HOURS:-24}
+      MARKET_REFRESH_TOKEN: ${MARKET_REFRESH_TOKEN:-}
+      EBAY_CLIENT_ID: ${EBAY_CLIENT_ID:-}
+      EBAY_CLIENT_SECRET: ${EBAY_CLIENT_SECRET:-}
+      EBAY_MARKETPLACE_ID: ${EBAY_MARKETPLACE_ID:-EBAY_CA}
+      EBAY_CATEGORY_ID: ${EBAY_CATEGORY_ID:-179}
+      EBAY_SEARCH_QUERIES: ${EBAY_SEARCH_QUERIES:-gaming desktop,rtx gaming pc,custom gaming pc}
+      EBAY_RESULT_LIMIT: ${EBAY_RESULT_LIMIT:-50}
+      BESTBUY_API_KEY: ${BESTBUY_API_KEY:-}
+      BESTBUY_CATEGORY_ID: ${BESTBUY_CATEGORY_ID:-pcmcat287600050002}
+      BESTBUY_RESULT_LIMIT: ${BESTBUY_RESULT_LIMIT:-100}
+      BANK_OF_CANADA_FX_ENABLED: ${BANK_OF_CANADA_FX_ENABLED:-true}
+      USD_TO_CAD_OVERRIDE: ${USD_TO_CAD_OVERRIDE:-}
+    ports: ["8001:8000"]
     depends_on:
       postgres:
         condition: service_healthy
       mlflow:
         condition: service_started
 
+  market-refresher:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: python -m ml.pipeline.live_market_flow
+    environment:
+      <<: *app-environment
+      PREFECT_API_URL: http://prefect-server:4200/api
+    depends_on:
+      postgres:
+        condition: service_healthy
+      prefect-server:
+        condition: service_started
+    restart: unless-stopped
+
   frontend:
     build:
       context: .
       dockerfile: frontend/Dockerfile
       args:
-        VITE_API_BASE_URL: http://localhost:8000
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8001}
     ports: ["8080:80"]
     depends_on: [backend]
 

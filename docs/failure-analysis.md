@@ -1,29 +1,35 @@
 # Error and failure analysis
 
-## Demo holdout findings
+## Structural-model findings
 
-The current artifact is evaluated on the synthetic demo dataset, so these numbers validate the workflow rather than real-market accuracy.
+The checked-in model is evaluated on synthetic demo data, so its metrics validate the research workflow rather than real-market accuracy. Reports under `reports/modeling/` break error down by price band, condition, and hardware identity and probe sensitivity to unknown hardware.
 
-Price-band reports in `reports/modeling/error_by_price_band.csv` show how absolute error changes across budget, mid-range, high-end, and enthusiast systems. Condition-level reports are stored separately in `reports/modeling/error_by_condition.csv`.
+## Known structural failure modes
 
-The analysis explicitly asks:
+**Rare/new hardware.** Canonical aliases and ordinal tiers can lag new releases. The normalization map now includes current RTX 50, Radeon 9000, Ryzen 9000, and Intel Core Ultra parts, but this remains a maintenance surface.
 
-- whether high-end/enthusiast systems have larger absolute error;
-- whether rare or unknown GPUs/CPUs increase uncertainty;
-- whether condition segments behave differently;
-- how predictions shift when recognized CPU/GPU identity is replaced with an unknown fallback;
-- whether residuals show systematic under/overprediction by predicted-price region.
+**VRAM versus system RAM.** Listings often place GPU VRAM beside system RAM. Regression tests protect the `RTX 4070 12GB` versus `32GB DDR5` ambiguity.
 
-## Known failure modes
+**Bundles and partial systems.** Monitor/peripheral bundles and part-only listings distort the meaning of total price. Live ingestion should reject obvious non-system observations where possible; user review remains necessary for pasted listings.
 
-**Rare or newly released hardware.** Alias normalization and tier mappings can lag hardware releases. The API surfaces missing/unrecognized fields and widens uncertainty when key components are absent.
+**Condition ambiguity.** Seller condition language is subjective. The user can correct it before valuation.
 
-**VRAM versus system RAM.** Messy listings frequently place GPU VRAM beside RAM. A regression test covers this exact failure after the initial parser incorrectly interpreted `RTX 4070 12GB` as 12 GB system RAM.
+## Live-market failure modes
 
-**Bundles and partial systems.** Listings that include monitor/peripherals or sell only a tower/parts can distort price semantics. A real ingestion adapter should classify bundle contents or reject them.
+**Asking-price bias.** Active listings reflect seller intent, not completed transactions. The architecture limits their role to bounded calibration and never reports them as sold-price ground truth.
 
-**Condition ambiguity.** Seller language is subjective. The review UI lets the user correct condition before valuation.
+**Retail/used mismatch.** Best Buy retail/open-box evidence can anchor replacement cost but may be a poor match for used custom PCs. Listing type remains visible, and source diversity does not erase this semantic difference.
 
-**Market drift.** Hardware prices can change quickly after launches, shortages, new generations, or regional supply changes. Unknown-hardware rate and input/prediction distributions should be monitored, and the model should be retrained on recent observations.
+**Sparse comparables.** Brand-new enthusiast builds or unusual workstation configurations may have fewer than three sufficiently similar comps. The system falls back to the structural model rather than forcing a live answer.
 
-**Currency/region.** The demo UI displays CAD, but the model data does not yet encode region or FX. A real public deployment must train and serve a region-specific model or add explicit market/currency features.
+**Provider outage/rate limiting.** Each source refresh fails independently. Cached observations remain usable until TTL expiry; refresh runs expose partial/failure state.
+
+**Cross-source duplicates.** Syndicated/duplicated systems can appear across feeds. Source IDs prevent same-provider duplicates; normalized fingerprints reduce duplicate influence within a refresh. Fingerprinting is heuristic and can still miss near-duplicates.
+
+**FX movement.** USD Best Buy observations depend on USD/CAD conversion. Bank of Canada FX is retrieved at refresh time; a manual override exists for deterministic/test environments.
+
+**Normalization mismatch.** A live feed can be healthy while newly launched hardware normalizes to unknown. Monitor unknown rates and low comparable counts together.
+
+## What would establish real accuracy
+
+A defensible production evaluation requires a recent, region-appropriate completed-sales dataset that was not used for training, with enough coverage across price bands and hardware generations. Measure MAE/RMSE/R² for the structural model and the hybrid estimator separately, then analyze whether live calibration improves or harms each segment.

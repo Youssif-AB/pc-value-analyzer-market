@@ -1,4 +1,5 @@
 import re
+from datetime import UTC, datetime
 
 from backend.app.schemas import ExtractedSpecs
 from backend.app.services.normalization import (
@@ -16,8 +17,9 @@ RAM_RE = re.compile(r"\b(8|12|16|24|32|48|64|96|128|256)\s*GB\s*(DDR\s*[345])?\b
 STORAGE_RE = re.compile(r"\b(256|500|512|1000|1024|2000|2048|4000|4096|8000)\s*(GB|TB)?\s*(NVME|M\.2|SSD|HDD|hard drive)?\b", re.I)
 TB_RE = re.compile(r"\b([1-8](?:\.0)?)\s*TB\s*(NVME|M\.2|SSD|HDD|hard drive)?\b", re.I)
 AGE_RE = re.compile(r"\b([0-9](?:\.[0-9])?)\s*(?:years?|yrs?)\s*old\b", re.I)
+YEAR_RE = re.compile(r"\b(20(?:1[5-9]|2[0-6]))\b")
 
-BRANDS = ["Alienware", "Dell", "HP", "Lenovo", "ASUS", "Acer", "MSI", "CyberPowerPC", "iBUYPOWER"]
+BRANDS = ["Alienware", "Dell", "HP", "Lenovo", "ASUS", "Acer", "MSI", "CyberPowerPC", "iBUYPOWER", "Skytech", "Thermaltake", "NZXT", "Corsair"]
 
 
 def _first_canonical(text: str, patterns: list[tuple[re.Pattern[str], str]]) -> str | None:
@@ -82,7 +84,10 @@ def extract_listing(text: str) -> ExtractedSpecs:
     )
     brand = next((brand for brand in BRANDS if brand.lower() in text.lower()), None)
     age_match = AGE_RE.search(text)
+    year_match = YEAR_RE.search(text)
     system_age = float(age_match.group(1)) if age_match else None
+    if system_age is None and year_match:
+        system_age = float(max(0, datetime.now(UTC).year - int(year_match.group(1))))
 
     warnings: list[str] = []
     failures: list[str] = []

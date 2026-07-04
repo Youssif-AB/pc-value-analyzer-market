@@ -72,3 +72,28 @@ footer { margin-top: 20px; text-align: center; color: #68758b; font-size: .8rem;
   .form-actions.split button { width: 100%; }
   dl div { grid-template-columns: 72px 1fr; }
 }
+.market-status { margin-top: 18px; display: flex; align-items: center; gap: 9px; color: #91a0b6; font-size: .86rem; }
+.status-dot { width: 9px; height: 9px; border-radius: 50%; background: #6f7889; box-shadow: 0 0 0 4px rgba(111,120,137,.12); }
+.status-dot.live { background: #80e9b6; box-shadow: 0 0 0 4px rgba(128,233,182,.12); }
+.market-evidence { margin: 10px 0 30px; border: 1px solid #2b3d58; background: linear-gradient(145deg, rgba(21,34,55,.9), rgba(11,16,24,.95)); border-radius: 18px; padding: 20px; }
+.market-evidence-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
+.market-evidence-heading h3 { margin: 7px 0 0; font-size: 1.2rem; }
+.blend-pill { white-space: nowrap; padding: 7px 10px; border-radius: 999px; border: 1px solid #34547f; color: #a8c8ff; background: #10203a; font-size: .78rem; font-weight: 800; }
+.market-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 18px 0; }
+.market-metrics div { border: 1px solid #28384f; background: #0b121d; border-radius: 12px; padding: 12px; display: grid; gap: 5px; }
+.market-metrics span { color: #8290a6; font-size: .75rem; }
+.market-metrics strong { font-size: 1rem; }
+.comp-list { display: grid; gap: 8px; }
+.comp-row { color: inherit; text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid #26344a; padding: 12px 2px; }
+.comp-row:hover strong { color: #a8c8ff; }
+.comp-row > div { min-width: 0; display: grid; gap: 4px; }
+.comp-row strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .92rem; }
+.comp-row small { color: #8290a6; }
+.comp-row b { white-space: nowrap; }
+.source-tag { width: fit-content; color: #8fb7f7; text-transform: uppercase; letter-spacing: .08em; font-size: .65rem; font-weight: 900; }
+.market-note { margin: 12px 0 0; color: #7f8da4; font-size: .78rem; line-height: 1.5; }
+@media (max-width: 760px) {
+  .market-evidence-heading { flex-direction: column; }
+  .market-metrics { grid-template-columns: repeat(2, 1fr); }
+  .comp-row { align-items: flex-start; }
+}

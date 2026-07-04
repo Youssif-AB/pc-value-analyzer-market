@@ -33,9 +33,20 @@ def test_prediction_api_returns_explanation() -> None:
     assert body["rating"] in {"GREAT DEAL", "GOOD VALUE", "FAIR", "OVERPRICED", "HIGHLY OVERPRICED"}
     assert body["lower_bound"] < body["upper_bound"]
     assert body["drivers"]
+    assert body["live_market"]["valuation_method"] in {"model_only", "hybrid_live_comps"}
+    assert "blend_weight" in body["live_market"]
 
 
 def test_malformed_prediction_rejected() -> None:
     with TestClient(app) as client:
         response = client.post("/api/v1/predict", json={"asking_price": -1, "specs": {}})
     assert response.status_code == 422
+
+
+def test_market_status_api_returns_source_state() -> None:
+    with TestClient(app) as client:
+        response = client.get("/api/v1/market/status")
+    assert response.status_code == 200
+    body = response.json()
+    assert body["target_currency"] == "CAD"
+    assert {source["source"] for source in body["sources"]} == {"ebay", "bestbuy"}

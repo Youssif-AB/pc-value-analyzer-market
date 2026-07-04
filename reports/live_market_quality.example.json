@@ -1,0 +1,14 @@
+{
+  "status": "no_sources_configured",
+  "sources": {},
+  "quality": {
+    "fetched": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "duplicate_fingerprints": 0,
+    "inserted": 0,
+    "updated": 0,
+    "purged": 0
+  },
+  "errors": {}
+}

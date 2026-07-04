@@ -28,26 +28,37 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Provision Container Apps environment and ACR
+      - name: Provision Container Apps environment, ACR, API, web, and market worker
         run: |
           az deployment group create \
             --resource-group "$RESOURCE_GROUP" \
             --template-file infra/azure/main.bicep \
-            --parameters location="$LOCATION" acrName="$ACR_NAME" databaseUrl='${{ secrets.PRODUCTION_DATABASE_URL }}'
+            --parameters \
+              location="$LOCATION" \
+              acrName="$ACR_NAME" \
+              databaseUrl='${{ secrets.PRODUCTION_DATABASE_URL }}' \
+              prefectApiUrl='${{ vars.PREFECT_API_URL }}' \
+              prefectApiKey='${{ secrets.PREFECT_API_KEY }}' \
+              ebayClientId='${{ secrets.EBAY_CLIENT_ID }}' \
+              ebayClientSecret='${{ secrets.EBAY_CLIENT_SECRET }}' \
+              bestbuyApiKey='${{ secrets.BESTBUY_API_KEY }}' \
+              marketRefreshToken='${{ secrets.MARKET_REFRESH_TOKEN }}'
 
       - name: Grant Container Apps permission to pull from ACR
         run: |
           ACR_ID=$(az acr show -n "$ACR_NAME" --query id -o tsv)
-          for APP in pc-value-api pc-value-web; do
+          for APP in pc-value-api pc-value-web pc-value-market-worker; do
             PRINCIPAL=$(az containerapp show -g "$RESOURCE_GROUP" -n "$APP" --query identity.principalId -o tsv)
             az role assignment create --assignee-object-id "$PRINCIPAL" --assignee-principal-type ServicePrincipal --role AcrPull --scope "$ACR_ID" || true
             az containerapp registry set -g "$RESOURCE_GROUP" -n "$APP" --server "${ACR_NAME}.azurecr.io" --identity system
           done
 
-      - name: Build and deploy API
+      - name: Build API/worker image and deploy it
         run: |
           az acr build -r "$ACR_NAME" -t "pc-value-api:${GITHUB_SHA}" -f backend/Dockerfile .
-          az containerapp update -g "$RESOURCE_GROUP" -n pc-value-api --image "${ACR_NAME}.azurecr.io/pc-value-api:${GITHUB_SHA}"
+          IMAGE="${ACR_NAME}.azurecr.io/pc-value-api:${GITHUB_SHA}"
+          az containerapp update -g "$RESOURCE_GROUP" -n pc-value-api --image "$IMAGE"
+          az containerapp update -g "$RESOURCE_GROUP" -n pc-value-market-worker --image "$IMAGE"
           echo "API_FQDN=$(az containerapp show -g "$RESOURCE_GROUP" -n pc-value-api --query properties.configuration.ingress.fqdn -o tsv)" >> "$GITHUB_ENV"
 
       - name: Build and deploy web app against live API
@@ -60,5 +71,7 @@ jobs:
         run: |
           az containerapp update -g "$RESOURCE_GROUP" -n pc-value-api --set-env-vars "CORS_ORIGINS=https://${WEB_FQDN}"
 
-      - name: Smoke test API
-        run: curl --fail --retry 8 --retry-delay 10 "https://${API_FQDN}/health"
+      - name: Smoke test API and live market status
+        run: |
+          curl --fail --retry 8 --retry-delay 10 "https://${API_FQDN}/health"
+          curl --fail --retry 4 --retry-delay 5 "https://${API_FQDN}/api/v1/market/status"

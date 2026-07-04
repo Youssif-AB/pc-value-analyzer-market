@@ -1,9 +1,32 @@
-# Inference observability
+# Inference and live-market observability
 
 The FastAPI service exposes Prometheus-format metrics at `/metrics`.
 
-Tracked signals include prediction latency, missing key extraction fields, normalization failures, prediction counts by value rating/confidence, and API errors. Prediction records in PostgreSQL also retain model version and latency for audit/debugging.
+## Inference signals
 
-For a public deployment, dashboards should additionally aggregate input feature distributions (CPU/GPU tier, RAM/storage, condition, age) and prediction distributions over time. Alerts should focus on shifts that indicate model staleness: rising unknown-hardware rates, sustained latency regressions, large changes in predicted-price distribution, or a sudden increase in low-confidence predictions.
+- prediction latency;
+- extraction failures by missing key field;
+- normalization failures by component;
+- prediction counts by rating and confidence;
+- API errors.
 
-Ground-truth pricing arrives later than inference, so model-error monitoring requires joining eventual observed/sold outcomes back to prediction records. Without that feedback, production monitoring can detect drift and extraction problems but cannot truthfully claim live MAE.
+## Live-market signals
+
+- comparable count per valuation;
+- live-market blend weight per valuation;
+- active market-cache rows by source;
+- source fetch/accept/reject counts in `market_refresh_runs`;
+- duplicate fingerprints;
+- insert/update/purge counts;
+- source failures and partial-refresh status;
+- newest observation timestamp per provider.
+
+These signals answer different operational questions. A low comparable count means the live calibration is weak even if provider ingestion itself is healthy. A high cache count with low match count can indicate normalization lag or a market inventory mismatch.
+
+## Drift and delayed truth
+
+Dashboards should aggregate input distributions (CPU/GPU tier, RAM/storage, condition, age), prediction distributions, unknown-hardware rate, comparable similarity, and live blend weight over time.
+
+True production error still requires an observed outcome later. Without joining eventual sale outcomes back to prior predictions, telemetry can detect drift, stale feeds, provider failures, parsing failures, and unusual prediction distributions—but it cannot truthfully claim live MAE/RMSE.
+
+Active asking prices should not be used as a fake ground-truth shortcut for monitoring accuracy.

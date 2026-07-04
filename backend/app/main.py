@@ -7,7 +7,7 @@ from prometheus_client import make_asgi_app
 from backend.app.config import get_settings
 from backend.app.constants import API_PREFIX, MODEL_CONTRACT_VERSION
 from backend.app.db import Base, engine
-from backend.app.routers import corrections, extraction, health, prediction
+from backend.app.routers import corrections, extraction, health, market, prediction
 
 
 @asynccontextmanager
@@ -34,4 +34,5 @@ app.include_router(health.router)
 app.include_router(extraction.router, prefix=API_PREFIX)
 app.include_router(prediction.router, prefix=API_PREFIX)
 app.include_router(corrections.router, prefix=API_PREFIX)
+app.include_router(market.router, prefix=API_PREFIX)
 app.mount("/metrics", make_asgi_app())

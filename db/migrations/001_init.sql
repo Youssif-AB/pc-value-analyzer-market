@@ -44,3 +44,43 @@ CREATE TABLE IF NOT EXISTS market_observations (
 );
 CREATE INDEX IF NOT EXISTS ix_prediction_results_created_at ON prediction_results(created_at DESC);
 CREATE INDEX IF NOT EXISTS ix_market_observations_observed_at ON market_observations(observed_at DESC);
+
+CREATE TABLE IF NOT EXISTS live_market_listings (
+    id BIGSERIAL PRIMARY KEY,
+    source VARCHAR(64) NOT NULL,
+    source_listing_id VARCHAR(256) NOT NULL,
+    listing_type VARCHAR(32) NOT NULL DEFAULT 'active',
+    title TEXT NOT NULL,
+    summary TEXT,
+    url TEXT,
+    image_url TEXT,
+    price DOUBLE PRECISION NOT NULL CHECK (price > 0),
+    currency VARCHAR(3) NOT NULL,
+    price_cad DOUBLE PRECISION NOT NULL CHECK (price_cad > 0),
+    condition VARCHAR(32) NOT NULL DEFAULT 'good',
+    specs_payload JSONB NOT NULL,
+    extraction_quality DOUBLE PRECISION NOT NULL DEFAULT 0,
+    fingerprint VARCHAR(64) NOT NULL,
+    listed_at TIMESTAMPTZ,
+    first_seen_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    last_seen_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    expires_at TIMESTAMPTZ NOT NULL,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    CONSTRAINT uq_live_market_source_listing UNIQUE (source, source_listing_id)
+);
+CREATE INDEX IF NOT EXISTS ix_live_market_source ON live_market_listings(source);
+CREATE INDEX IF NOT EXISTS ix_live_market_price_cad ON live_market_listings(price_cad);
+CREATE INDEX IF NOT EXISTS ix_live_market_fingerprint ON live_market_listings(fingerprint);
+CREATE INDEX IF NOT EXISTS ix_live_market_last_seen ON live_market_listings(last_seen_at DESC);
+CREATE INDEX IF NOT EXISTS ix_live_market_expires ON live_market_listings(expires_at);
+CREATE INDEX IF NOT EXISTS ix_live_market_active ON live_market_listings(active);
+
+CREATE TABLE IF NOT EXISTS market_refresh_runs (
+    id BIGSERIAL PRIMARY KEY,
+    started_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    finished_at TIMESTAMPTZ,
+    status VARCHAR(32) NOT NULL DEFAULT 'running',
+    source_stats JSONB NOT NULL DEFAULT '{}'::jsonb,
+    quality_stats JSONB NOT NULL DEFAULT '{}'::jsonb,
+    error_message TEXT
+);

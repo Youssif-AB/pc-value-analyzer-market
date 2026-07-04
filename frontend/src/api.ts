@@ -1,8 +1,8 @@
-import type { ExtractedSpecs, Prediction, Specs } from './types'
+import type { ExtractedSpecs, MarketStatus, Prediction, Specs } from './types'
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8001'
 
-async function request<T>(path: string, init: RequestInit): Promise<T> {
+async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
     ...init,
     headers: { 'Content-Type': 'application/json', ...(init.headers ?? {}) },
@@ -33,4 +33,8 @@ export function recordCorrection(originalSpecs: Specs, correctedSpecs: Specs, so
     method: 'POST',
     body: JSON.stringify({ original_specs: originalSpecs, corrected_specs: correctedSpecs, source_listing: sourceListing }),
   })
+}
+
+export function getMarketStatus() {
+  return request<MarketStatus>('/api/v1/market/status')
 }

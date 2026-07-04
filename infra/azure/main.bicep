@@ -7,8 +7,27 @@ param location string = resourceGroup().location
 param acrName string
 
 @secure()
-@description('Production PostgreSQL SQLAlchemy URL. Store this as a GitHub Environment secret.')
+@description('Production PostgreSQL SQLAlchemy URL.')
 param databaseUrl string
+
+@description('Prefect Cloud/server API URL used by the always-on market refresher.')
+param prefectApiUrl string
+
+@secure()
+@description('Prefect API key; blank is acceptable for a self-hosted server that does not require one.')
+param prefectApiKey string = ''
+
+@secure()
+param ebayClientId string = ''
+
+@secure()
+param ebayClientSecret string = ''
+
+@secure()
+param bestbuyApiKey string = ''
+
+@secure()
+param marketRefreshToken string
 
 resource workspace 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
   name: 'pc-value-logs'
@@ -71,7 +90,10 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
   properties: {
     managedEnvironmentId: env.id
     configuration: {
-      secrets: [{ name: 'database-url', value: databaseUrl }]
+      secrets: [
+        { name: 'database-url', value: databaseUrl }
+        { name: 'market-refresh-token', value: marketRefreshToken }
+      ]
       ingress: {
         external: true
         targetPort: 8000
@@ -88,10 +110,56 @@ resource api 'Microsoft.App/containerApps@2024-03-01' = {
           { name: 'APP_ENV', value: 'production' }
           { name: 'MODEL_ARTIFACT_PATH', value: '/app/backend/artifacts/price_model.joblib' }
           { name: 'MODEL_METADATA_PATH', value: '/app/backend/artifacts/model_metadata.json' }
+          { name: 'LIVE_MARKET_ENABLED', value: 'true' }
+          { name: 'MARKET_CURRENCY', value: 'CAD' }
+          { name: 'MARKET_REFRESH_TOKEN', secretRef: 'market-refresh-token' }
         ]
         resources: { cpu: json('0.5'), memory: '1Gi' }
       }]
       scale: { minReplicas: 0, maxReplicas: 5 }
+    }
+  }
+}
+
+resource marketWorker 'Microsoft.App/containerApps@2024-03-01' = {
+  name: 'pc-value-market-worker'
+  location: location
+  identity: { type: 'SystemAssigned' }
+  properties: {
+    managedEnvironmentId: env.id
+    configuration: {
+      secrets: [
+        { name: 'database-url', value: databaseUrl }
+        { name: 'prefect-api-key', value: prefectApiKey }
+        { name: 'ebay-client-id', value: ebayClientId }
+        { name: 'ebay-client-secret', value: ebayClientSecret }
+        { name: 'bestbuy-api-key', value: bestbuyApiKey }
+      ]
+    }
+    template: {
+      containers: [{
+        name: 'market-worker'
+        image: 'mcr.microsoft.com/azuredocs/containerapps-helloworld:latest'
+        command: ['python']
+        args: ['-m', 'ml.pipeline.live_market_flow']
+        env: [
+          { name: 'DATABASE_URL', secretRef: 'database-url' }
+          { name: 'APP_ENV', value: 'production' }
+          { name: 'LIVE_MARKET_ENABLED', value: 'true' }
+          { name: 'MARKET_CURRENCY', value: 'CAD' }
+          { name: 'PREFECT_API_URL', value: prefectApiUrl }
+          { name: 'PREFECT_API_KEY', secretRef: 'prefect-api-key' }
+          { name: 'EBAY_CLIENT_ID', secretRef: 'ebay-client-id' }
+          { name: 'EBAY_CLIENT_SECRET', secretRef: 'ebay-client-secret' }
+          { name: 'EBAY_MARKETPLACE_ID', value: 'EBAY_CA' }
+          { name: 'EBAY_CATEGORY_ID', value: '179' }
+          { name: 'BESTBUY_API_KEY', secretRef: 'bestbuy-api-key' }
+          { name: 'BESTBUY_CATEGORY_ID', value: 'pcmcat287600050002' }
+          { name: 'BANK_OF_CANADA_FX_ENABLED', value: 'true' }
+        ]
+        resources: { cpu: json('0.5'), memory: '1Gi' }
+      }]
+      scale: { minReplicas: 1, maxReplicas: 1 }
     }
   }
 }

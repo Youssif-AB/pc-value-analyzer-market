@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
@@ -40,6 +41,30 @@ class FeatureContribution(BaseModel):
     explanation: str
 
 
+class MarketComparable(BaseModel):
+    source: str
+    title: str
+    price_cad: float
+    condition: str
+    similarity: float = Field(ge=0, le=1)
+    url: str | None = None
+    observed_at: datetime | None = None
+
+
+class LiveMarketEvidence(BaseModel):
+    enabled: bool
+    comp_count: int = 0
+    source_count: int = 0
+    sources: list[str] = Field(default_factory=list)
+    median_asking_price_cad: float | None = None
+    adjusted_market_estimate_cad: float | None = None
+    blend_weight: float = Field(default=0, ge=0, le=1)
+    newest_observation_at: datetime | None = None
+    valuation_method: Literal["model_only", "hybrid_live_comps"] = "model_only"
+    comparables: list[MarketComparable] = Field(default_factory=list)
+    note: str = "Active asking-price comparables are market evidence, not completed-sale ground truth."
+
+
 class PredictionResponse(BaseModel):
     estimated_fair_price: float
     asking_price: float
@@ -51,6 +76,7 @@ class PredictionResponse(BaseModel):
     confidence: Literal["low", "medium", "high"]
     drivers: list[FeatureContribution]
     warnings: list[str]
+    live_market: LiveMarketEvidence
 
 
 class AnalyzeRequest(ExtractRequest):
@@ -73,3 +99,25 @@ class CorrectionRequest(BaseModel):
         if not value.cpu and not value.gpu:
             raise ValueError("At least one of CPU or GPU must be supplied after correction")
         return value
+
+
+class MarketSourceStatus(BaseModel):
+    source: str
+    configured: bool
+    active_observations: int
+    newest_observation_at: datetime | None = None
+
+
+class MarketStatusResponse(BaseModel):
+    live_market_enabled: bool
+    target_currency: str
+    total_active_observations: int
+    sources: list[MarketSourceStatus]
+    last_refresh_status: str | None = None
+    last_refresh_at: datetime | None = None
+
+
+class MarketRefreshResponse(BaseModel):
+    status: str
+    sources: dict[str, int]
+    quality: dict[str, int]

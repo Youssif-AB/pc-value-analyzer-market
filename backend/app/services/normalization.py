@@ -10,11 +10,20 @@ class NormalizationResult:
 
 
 GPU_PATTERNS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"(?:geforce\s*)?rtx\s*5090", re.I), "NVIDIA GeForce RTX 5090"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*5080", re.I), "NVIDIA GeForce RTX 5080"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*5070\s*ti", re.I), "NVIDIA GeForce RTX 5070 Ti"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*5070", re.I), "NVIDIA GeForce RTX 5070"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*5060\s*ti", re.I), "NVIDIA GeForce RTX 5060 Ti"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*5060", re.I), "NVIDIA GeForce RTX 5060"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*5050", re.I), "NVIDIA GeForce RTX 5050"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4090", re.I), "NVIDIA GeForce RTX 4090"),
-    (re.compile(r"(?:geforce\s*)?rtx\s*4080(?:\s*super)?", re.I), "NVIDIA GeForce RTX 4080"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*4080\s*super", re.I), "NVIDIA GeForce RTX 4080 SUPER"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*4080", re.I), "NVIDIA GeForce RTX 4080"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4070\s*ti\s*super", re.I), "NVIDIA GeForce RTX 4070 Ti SUPER"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4070\s*ti", re.I), "NVIDIA GeForce RTX 4070 Ti"),
-    (re.compile(r"(?:(?:nvidia|geforce)\s*)?(?:rtx\s*)?4070(?:\s*super)?", re.I), "NVIDIA GeForce RTX 4070"),
+    (re.compile(r"(?:geforce\s*)?rtx\s*4070\s*super", re.I), "NVIDIA GeForce RTX 4070 SUPER"),
+    (re.compile(r"(?:(?:nvidia|geforce)\s*)?(?:rtx\s*)?4070", re.I), "NVIDIA GeForce RTX 4070"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4060\s*ti", re.I), "NVIDIA GeForce RTX 4060 Ti"),
     (re.compile(r"(?:geforce\s*)?rtx\s*4060", re.I), "NVIDIA GeForce RTX 4060"),
     (re.compile(r"(?:geforce\s*)?rtx\s*3090(?:\s*ti)?", re.I), "NVIDIA GeForce RTX 3090"),
@@ -22,18 +31,34 @@ GPU_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(?:geforce\s*)?rtx\s*3070(?:\s*ti)?", re.I), "NVIDIA GeForce RTX 3070"),
     (re.compile(r"(?:geforce\s*)?rtx\s*3060(?:\s*ti)?", re.I), "NVIDIA GeForce RTX 3060"),
     (re.compile(r"(?:geforce\s*)?rtx\s*2080(?:\s*ti|\s*super)?", re.I), "NVIDIA GeForce RTX 2080"),
+    (re.compile(r"(?:radeon\s*)?rx\s*9070\s*xt", re.I), "AMD Radeon RX 9070 XT"),
+    (re.compile(r"(?:radeon\s*)?rx\s*9070", re.I), "AMD Radeon RX 9070"),
+    (re.compile(r"(?:radeon\s*)?rx\s*9060\s*xt", re.I), "AMD Radeon RX 9060 XT"),
     (re.compile(r"(?:radeon\s*)?rx\s*7900\s*xtx", re.I), "AMD Radeon RX 7900 XTX"),
     (re.compile(r"(?:radeon\s*)?rx\s*7900\s*xt", re.I), "AMD Radeon RX 7900 XT"),
     (re.compile(r"(?:radeon\s*)?rx\s*7800\s*xt", re.I), "AMD Radeon RX 7800 XT"),
     (re.compile(r"(?:radeon\s*)?rx\s*7700\s*xt", re.I), "AMD Radeon RX 7700 XT"),
+    (re.compile(r"(?:radeon\s*)?rx\s*7700\b", re.I), "AMD Radeon RX 7700"),
     (re.compile(r"(?:radeon\s*)?rx\s*7600", re.I), "AMD Radeon RX 7600"),
     (re.compile(r"(?:radeon\s*)?rx\s*6800\s*xt", re.I), "AMD Radeon RX 6800 XT"),
     (re.compile(r"(?:radeon\s*)?rx\s*6700\s*xt", re.I), "AMD Radeon RX 6700 XT"),
+    (re.compile(r"(?:radeon\s*)?rx\s*6500\s*xt", re.I), "AMD Radeon RX 6500 XT"),
+    (re.compile(r"intel\s*arc\s*b580", re.I), "Intel Arc B580"),
     (re.compile(r"intel\s*arc\s*a770", re.I), "Intel Arc A770"),
     (re.compile(r"intel\s*arc\s*a750", re.I), "Intel Arc A750"),
 ]
 
 CPU_PATTERNS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"ryzen\s*9\s*9950x3d", re.I), "AMD Ryzen 9 9950X3D"),
+    (re.compile(r"ryzen\s*9\s*9950x", re.I), "AMD Ryzen 9 9950X"),
+    (re.compile(r"ryzen\s*9\s*9900x3d", re.I), "AMD Ryzen 9 9900X3D"),
+    (re.compile(r"ryzen\s*9\s*9900x", re.I), "AMD Ryzen 9 9900X"),
+    (re.compile(r"ryzen\s*7\s*9800x3d", re.I), "AMD Ryzen 7 9800X3D"),
+    (re.compile(r"ryzen\s*7\s*9700x", re.I), "AMD Ryzen 7 9700X"),
+    (re.compile(r"ryzen\s*5\s*9600x", re.I), "AMD Ryzen 5 9600X"),
+    (re.compile(r"ryzen\s*5\s*9500f", re.I), "AMD Ryzen 5 9500F"),
+    (re.compile(r"ryzen\s*7\s*8700f", re.I), "AMD Ryzen 7 8700F"),
+    (re.compile(r"ryzen\s*5\s*8400f", re.I), "AMD Ryzen 5 8400F"),
     (re.compile(r"ryzen\s*9\s*7950x3d", re.I), "AMD Ryzen 9 7950X3D"),
     (re.compile(r"ryzen\s*9\s*7950x", re.I), "AMD Ryzen 9 7950X"),
     (re.compile(r"ryzen\s*9\s*7900x", re.I), "AMD Ryzen 9 7900X"),
@@ -43,12 +68,17 @@ CPU_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"ryzen\s*7\s*5800x", re.I), "AMD Ryzen 7 5800X"),
     (re.compile(r"ryzen\s*5\s*7600x", re.I), "AMD Ryzen 5 7600X"),
     (re.compile(r"ryzen\s*5\s*5600x", re.I), "AMD Ryzen 5 5600X"),
+    (re.compile(r"(?:intel\s*)?(?:core\s*)?ultra\s*9[-\s]?285k[f]?", re.I), "Intel Core Ultra 9 285K"),
+    (re.compile(r"(?:intel\s*)?(?:core\s*)?ultra\s*7[-\s]?265k[f]?", re.I), "Intel Core Ultra 7 265K"),
+    (re.compile(r"(?:intel\s*)?(?:core\s*)?ultra\s*7[-\s]?265f", re.I), "Intel Core Ultra 7 265F"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i9[-\s]?14900k[f]?", re.I), "Intel Core i9-14900K"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i9[-\s]?13900k[f]?", re.I), "Intel Core i9-13900K"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i7[-\s]?14700k[f]?", re.I), "Intel Core i7-14700K"),
+    (re.compile(r"(?:intel\s*)?(?:core\s*)?i7[-\s]?14700f", re.I), "Intel Core i7-14700F"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i7[-\s]?13700k[f]?", re.I), "Intel Core i7-13700K"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i7[-\s]?12700k[f]?", re.I), "Intel Core i7-12700K"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i5[-\s]?14600k[f]?", re.I), "Intel Core i5-14600K"),
+    (re.compile(r"(?:intel\s*)?(?:core\s*)?i5[-\s]?14400f", re.I), "Intel Core i5-14400F"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i5[-\s]?13600k[f]?", re.I), "Intel Core i5-13600K"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i5[-\s]?12600k[f]?", re.I), "Intel Core i5-12600K"),
     (re.compile(r"(?:intel\s*)?(?:core\s*)?i5[-\s]?12400f?", re.I), "Intel Core i5-12400"),
@@ -84,7 +114,7 @@ def normalize_storage_type(value: str | None) -> str | None:
     if not value:
         return None
     lowered = value.lower()
-    if "nvme" in lowered or "m.2" in lowered:
+    if "nvme" in lowered or "m.2" in lowered or "pcie" in lowered:
         return "NVMe SSD"
     if "ssd" in lowered:
         return "SATA SSD"
@@ -99,9 +129,9 @@ def normalize_condition(value: str | None) -> str:
     lowered = value.lower().replace("-", " ").replace("_", " ")
     if "brand new" in lowered or lowered.strip() == "new":
         return "new"
-    if "like new" in lowered or "mint" in lowered:
+    if "open box" in lowered or "like new" in lowered or "mint" in lowered:
         return "like_new"
-    if "excellent" in lowered:
+    if "excellent" in lowered or "certified" in lowered:
         return "excellent"
     if "parts" in lowered or "not working" in lowered:
         return "parts"

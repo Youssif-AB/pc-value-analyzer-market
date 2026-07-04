@@ -1,6 +1,7 @@
 from functools import lru_cache
 from pathlib import Path
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -15,13 +16,58 @@ class Settings(BaseSettings):
     model_alias: str = "champion"
     model_artifact_path: Path = Path("backend/artifacts/price_model.joblib")
     model_metadata_path: Path = Path("backend/artifacts/model_metadata.json")
-    cors_origins: str = "http://localhost:5173"
+    cors_origins: str = "http://localhost:5173,http://localhost:8080"
+
+    # Live market configuration. Credentials are intentionally environment-only.
+    market_currency: str = "CAD"
+    live_market_enabled: bool = True
+    live_comp_max_age_hours: int = 72
+    live_comp_max_results: int = 12
+    live_comp_min_similarity: float = 0.52
+    live_comp_blend_cap: float = 0.68
+    market_cache_ttl_hours: int = 24
+    market_refresh_token: str | None = None
+
+    ebay_client_id: str | None = None
+    ebay_client_secret: str | None = None
+    ebay_marketplace_id: str = "EBAY_CA"
+    ebay_category_id: str = "179"
+    ebay_search_queries: str = "gaming desktop,rtx gaming pc,custom gaming pc"
+    ebay_result_limit: int = 50
+
+    bestbuy_api_key: str | None = None
+    bestbuy_category_id: str = "pcmcat287600050002"
+    bestbuy_result_limit: int = 100
+
+    bank_of_canada_fx_enabled: bool = True
+    usd_to_cad_override: float | None = None
+
+
+    @field_validator("usd_to_cad_override", mode="before")
+    @classmethod
+    def blank_optional_float(cls, value: object) -> object:
+        if isinstance(value, str) and not value.strip():
+            return None
+        return value
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
     @property
     def cors_origin_list(self) -> list[str]:
         return [item.strip() for item in self.cors_origins.split(",") if item.strip()]
+
+    @property
+    def ebay_queries(self) -> list[str]:
+        return [item.strip() for item in self.ebay_search_queries.split(",") if item.strip()]
+
+    @property
+    def configured_market_sources(self) -> list[str]:
+        sources: list[str] = []
+        if self.ebay_client_id and self.ebay_client_secret:
+            sources.append("ebay")
+        if self.bestbuy_api_key:
+            sources.append("bestbuy")
+        return sources
 
 
 @lru_cache
