@@ -4,7 +4,7 @@ The training pipeline logs candidate parameters and MAE/RMSE/R² metrics to the 
 
 The selected registry version receives the `champion` alias and `validation_status=selected_by_cv`. Application code can therefore target a promotion decision rather than hard-code a model version.
 
-Locally, Docker Compose exposes MLflow at `http://localhost:5001`; containers reach it at `http://mlflow:5000`. Its backend store is PostgreSQL and artifacts use the `mlflow_artifacts` volume.
+Locally, Docker Compose exposes MLflow at `http://localhost:5002`; containers reach it at `http://mlflow:5000`. Its backend store is PostgreSQL and artifacts use the `mlflow_artifacts` volume.
 
 ## What MLflow does not do
 

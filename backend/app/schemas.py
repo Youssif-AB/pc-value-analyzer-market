@@ -101,6 +101,33 @@ class CorrectionRequest(BaseModel):
         return value
 
 
+class MarketListingItem(BaseModel):
+    id: int
+    source: str
+    source_listing_id: str
+    listing_type: str
+    title: str
+    summary: str | None = None
+    url: str | None = None
+    image_url: str | None = None
+    price: float
+    currency: str
+    price_cad: float
+    condition: str
+    specs: NormalizedSpecs
+    extraction_quality: float = Field(ge=0, le=1)
+    listed_at: datetime | None = None
+    last_seen_at: datetime
+
+
+class MarketBrowseResponse(BaseModel):
+    items: list[MarketListingItem]
+    total: int
+    limit: int
+    offset: int
+    next_offset: int | None = None
+
+
 class MarketSourceStatus(BaseModel):
     source: str
     configured: bool

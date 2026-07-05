@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     model_alias: str = "champion"
     model_artifact_path: Path = Path("backend/artifacts/price_model.joblib")
     model_metadata_path: Path = Path("backend/artifacts/model_metadata.json")
-    cors_origins: str = "http://localhost:5173,http://localhost:8080"
+    cors_origins: str = "http://localhost:5173,http://localhost:8082"
 
     # Live market configuration. Credentials are intentionally environment-only.
     market_currency: str = "CAD"

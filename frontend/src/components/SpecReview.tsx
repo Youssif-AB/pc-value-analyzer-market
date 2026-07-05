@@ -1,8 +1,10 @@
 import { FormEvent, useMemo, useState } from 'react'
+import { Icon } from '../icons'
 import type { ExtractedSpecs, Specs } from '../types'
 
 interface Props {
   extracted: ExtractedSpecs
+  listing: string
   busy: boolean
   error: string | null
   onBack: () => void
@@ -11,7 +13,11 @@ interface Props {
 
 const conditionOptions = ['new', 'like_new', 'excellent', 'good', 'fair', 'parts'] as const
 
-export function SpecReview({ extracted, busy, error, onBack, onConfirm }: Props) {
+function prettyCondition(value: string) {
+  return value.replaceAll('_', ' ').replace(/\b\w/g, (letter) => letter.toUpperCase())
+}
+
+export function SpecReview({ extracted, listing, busy, error, onBack, onConfirm }: Props) {
   const original = useMemo<Specs>(() => ({
     cpu: extracted.cpu,
     gpu: extracted.gpu,
@@ -40,44 +46,86 @@ export function SpecReview({ extracted, busy, error, onBack, onConfirm }: Props)
     await onConfirm(specs, price)
   }
 
-  const warningCount = extracted.extraction_warnings.length + extracted.normalization_failures.length
+  const warnings = [...extracted.extraction_warnings, ...extracted.normalization_failures]
+  const changedFields = Object.entries(specs).filter(([key, value]) => original[key as keyof Specs] !== value).length + (price !== (extracted.asking_price ?? 0) ? 1 : 0)
 
   return (
-    <section className="panel review-panel" aria-labelledby="review-heading">
-      <div className="eyebrow">Step 2 of 3</div>
-      <div className="section-heading">
-        <div>
-          <h2 id="review-heading">Review the extracted specs</h2>
-          <p className="muted">Corrections are intentional model inputs, not cosmetic edits. Fix anything the parser got wrong.</p>
+    <section className="workbench review-workbench" aria-labelledby="review-heading">
+      <div className="workbench-main">
+        <div className="section-intro review-intro">
+          <div>
+            <span className="section-kicker">Normalization review</span>
+            <h2 id="review-heading">Verify the hardware before pricing</h2>
+            <p>The prediction uses these normalized values—not the raw listing text. Correct anything ambiguous or missing.</p>
+          </div>
+          <div className="review-state" aria-live="polite">
+            <span className={warnings.length ? 'review-state-mark warning' : 'review-state-mark'}>{warnings.length ? warnings.length : <Icon name="check" size={13} />}</span>
+            <span>{warnings.length ? `${warnings.length} extraction ${warnings.length === 1 ? 'check' : 'checks'}` : 'No extraction warnings'}</span>
+          </div>
         </div>
-        <span className={`status-pill ${warningCount ? 'warning' : 'clean'}`}>{warningCount ? `${warningCount} checks` : 'Looks complete'}</span>
+
+        {warnings.length > 0 && (
+          <div className="message warning-message" role="status">
+            <Icon name="alert" size={17} />
+            <div>
+              <strong>Review needed</strong>
+              <ul>{warnings.map((warning) => <li key={warning}>{warning}</li>)}</ul>
+            </div>
+          </div>
+        )}
+
+        <form onSubmit={submit} className="spec-form">
+          <fieldset className="form-section">
+            <legend>Core hardware</legend>
+            <div className="form-grid">
+              <label className="field span-2"><span>Processor</span><input value={specs.cpu ?? ''} onChange={(e) => textField('cpu', e.target.value)} placeholder="AMD Ryzen 7 7800X3D" /></label>
+              <label className="field span-2"><span>Graphics card</span><input value={specs.gpu ?? ''} onChange={(e) => textField('gpu', e.target.value)} placeholder="NVIDIA GeForce RTX 4070" /></label>
+            </div>
+          </fieldset>
+
+          <fieldset className="form-section">
+            <legend>Memory & storage</legend>
+            <div className="form-grid four-col">
+              <label className="field"><span>RAM</span><div className="input-with-unit"><input type="number" min="2" max="512" value={specs.ram_gb ?? ''} onChange={(e) => numericField('ram_gb', e.target.value)} /><em>GB</em></div></label>
+              <label className="field"><span>RAM type</span><input value={specs.ram_type ?? ''} onChange={(e) => textField('ram_type', e.target.value)} placeholder="DDR5" /></label>
+              <label className="field"><span>Storage</span><div className="input-with-unit"><input type="number" min="32" max="32768" value={specs.storage_gb ?? ''} onChange={(e) => numericField('storage_gb', e.target.value)} /><em>GB</em></div></label>
+              <label className="field"><span>Drive type</span><input value={specs.storage_type ?? ''} onChange={(e) => textField('storage_type', e.target.value)} placeholder="NVMe SSD" /></label>
+            </div>
+          </fieldset>
+
+          <fieldset className="form-section">
+            <legend>Listing context</legend>
+            <div className="form-grid">
+              <label className="field"><span>Condition</span><select value={specs.condition} onChange={(e) => setSpecs((current) => ({ ...current, condition: e.target.value as Specs['condition'] }))}>{conditionOptions.map((option) => <option key={option} value={option}>{prettyCondition(option)}</option>)}</select></label>
+              <label className="field"><span>Brand / builder</span><input value={specs.brand ?? ''} onChange={(e) => textField('brand', e.target.value)} placeholder="Custom build" /></label>
+              <label className="field"><span>System age</span><div className="input-with-unit"><input type="number" min="0" max="20" step="0.5" value={specs.system_age_years ?? ''} onChange={(e) => numericField('system_age_years', e.target.value)} /><em>years</em></div></label>
+              <label className="field price-input"><span>Asking price</span><div className="input-with-prefix"><em>$</em><input type="number" min="1" max="100000" step="1" value={price || ''} onChange={(e) => setPrice(Number(e.target.value))} required /></div></label>
+            </div>
+          </fieldset>
+
+          {error && <div className="message error-message" role="alert"><Icon name="alert" size={16} /><span>{error}</span></div>}
+          <div className="action-row split-actions">
+            <button type="button" className="button button-secondary" onClick={onBack} disabled={busy}><Icon name="arrow-left" size={15} /><span>Back</span></button>
+            <div className="action-cluster">
+              <span className="change-count">{changedFields ? `${changedFields} ${changedFields === 1 ? 'field' : 'fields'} corrected` : 'No manual changes'}</span>
+              <button type="submit" className="button button-primary" disabled={busy || price <= 0}><span>{busy ? 'Pricing build…' : 'Calculate fair value'}</span>{!busy && <Icon name="arrow-right" size={16} />}</button>
+            </div>
+          </div>
+        </form>
       </div>
 
-      {warningCount > 0 && (
-        <div className="warning-box">
-          {[...extracted.extraction_warnings, ...extracted.normalization_failures].map((warning) => <div key={warning}>• {warning}</div>)}
-        </div>
-      )}
-
-      <form onSubmit={submit} className="spec-form">
-        <div className="field-grid">
-          <label>CPU<input value={specs.cpu ?? ''} onChange={(e) => textField('cpu', e.target.value)} placeholder="e.g. AMD Ryzen 7 7800X3D" /></label>
-          <label>GPU<input value={specs.gpu ?? ''} onChange={(e) => textField('gpu', e.target.value)} placeholder="e.g. NVIDIA GeForce RTX 4070" /></label>
-          <label>RAM (GB)<input type="number" min="2" max="512" value={specs.ram_gb ?? ''} onChange={(e) => numericField('ram_gb', e.target.value)} /></label>
-          <label>RAM type<input value={specs.ram_type ?? ''} onChange={(e) => textField('ram_type', e.target.value)} placeholder="DDR4 / DDR5" /></label>
-          <label>Storage (GB)<input type="number" min="32" max="32768" value={specs.storage_gb ?? ''} onChange={(e) => numericField('storage_gb', e.target.value)} /></label>
-          <label>Storage type<input value={specs.storage_type ?? ''} onChange={(e) => textField('storage_type', e.target.value)} placeholder="NVMe SSD" /></label>
-          <label>Condition<select value={specs.condition} onChange={(e) => setSpecs((current) => ({ ...current, condition: e.target.value as Specs['condition'] }))}>{conditionOptions.map((option) => <option key={option} value={option}>{option.replace('_', ' ')}</option>)}</select></label>
-          <label>Brand / builder<input value={specs.brand ?? ''} onChange={(e) => textField('brand', e.target.value)} placeholder="custom" /></label>
-          <label>System age (years)<input type="number" min="0" max="20" step="0.5" value={specs.system_age_years ?? ''} onChange={(e) => numericField('system_age_years', e.target.value)} /></label>
-          <label className="price-field">Asking price ($)<input type="number" min="1" max="100000" step="1" value={price || ''} onChange={(e) => setPrice(Number(e.target.value))} required /></label>
-        </div>
-        {error && <div className="error" role="alert">{error}</div>}
-        <div className="form-actions split">
-          <button type="button" className="ghost" onClick={onBack} disabled={busy}>Back to listing</button>
-          <button type="submit" className="primary" disabled={busy || price <= 0}>{busy ? 'Valuing…' : 'Estimate fair price'}</button>
-        </div>
-      </form>
+      <aside className="workbench-rail review-rail">
+        <section className="rail-section">
+          <div className="rail-title"><Icon name="edit" size={15} /><h3>Source listing</h3></div>
+          <blockquote className="listing-preview">{listing}</blockquote>
+        </section>
+        <section className="rail-section">
+          <div className="rail-title"><Icon name="signal" size={15} /><h3>Why review matters</h3></div>
+          <p className="rail-copy">CPU and GPU identity carry substantial model weight. A parser miss can move the estimate far more than a cosmetic listing detail.</p>
+          <div className="review-rule"><span>Parser output</span><b>Provisional</b></div>
+          <div className="review-rule"><span>Your corrections</span><b>Model input</b></div>
+        </section>
+      </aside>
     </section>
   )
 }

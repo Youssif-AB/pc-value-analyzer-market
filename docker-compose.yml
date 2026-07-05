@@ -1,3 +1,5 @@
+name: pc-value-analyzer-market-v3
+
 services:
   postgres:
     image: postgres:16-alpine
@@ -5,7 +7,7 @@ services:
       POSTGRES_DB: pcvalue
       POSTGRES_USER: pcvalue
       POSTGRES_PASSWORD: pcvalue
-    ports: ["${POSTGRES_HOST_PORT:-5432}:5432"]
+    ports: ["${POSTGRES_HOST_PORT:-5434}:5432"]
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./db/init:/docker-entrypoint-initdb.d:ro
@@ -16,6 +18,7 @@ services:
       retries: 12
 
   mlflow:
+    image: pc-value-analyzer-market-v3-mlflow:latest
     build:
       context: .
       dockerfile: infra/mlflow/Dockerfile
@@ -24,7 +27,7 @@ services:
       --backend-store-uri postgresql+psycopg://pcvalue:pcvalue@postgres:5432/mlflow
       --default-artifact-root /mlartifacts
       --host 0.0.0.0 --port 5000
-    ports: ["${MLFLOW_HOST_PORT:-5001}:5000"]
+    ports: ["${MLFLOW_HOST_PORT:-5002}:5000"]
     volumes: ["mlflow_artifacts:/mlartifacts"]
     depends_on:
       postgres:
@@ -35,9 +38,10 @@ services:
     command: prefect server start --host 0.0.0.0
     environment:
       PREFECT_SERVER_API_HOST: 0.0.0.0
-    ports: ["${PREFECT_HOST_PORT:-4200}:4200"]
+    ports: ["${PREFECT_HOST_PORT:-4202}:4200"]
 
   backend:
+    image: pc-value-analyzer-market-v3-backend:latest
     build:
       context: .
       dockerfile: backend/Dockerfile
@@ -47,7 +51,7 @@ services:
       MLFLOW_TRACKING_URI: http://mlflow:5000
       MODEL_ARTIFACT_PATH: /app/backend/artifacts/price_model.joblib
       MODEL_METADATA_PATH: /app/backend/artifacts/model_metadata.json
-      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8082}
       LIVE_MARKET_ENABLED: ${LIVE_MARKET_ENABLED:-true}
       MARKET_CURRENCY: ${MARKET_CURRENCY:-CAD}
       LIVE_COMP_MAX_AGE_HOURS: ${LIVE_COMP_MAX_AGE_HOURS:-72}
@@ -67,7 +71,7 @@ services:
       BESTBUY_RESULT_LIMIT: ${BESTBUY_RESULT_LIMIT:-100}
       BANK_OF_CANADA_FX_ENABLED: ${BANK_OF_CANADA_FX_ENABLED:-true}
       USD_TO_CAD_OVERRIDE: ${USD_TO_CAD_OVERRIDE:-}
-    ports: ["${API_HOST_PORT:-8001}:8000"]
+    ports: ["${API_HOST_PORT:-8002}:8000"]
     depends_on:
       postgres:
         condition: service_healthy
@@ -75,6 +79,7 @@ services:
         condition: service_started
 
   market-refresher:
+    image: pc-value-analyzer-market-v3-backend:latest
     build:
       context: .
       dockerfile: backend/Dockerfile
@@ -90,12 +95,13 @@ services:
     restart: unless-stopped
 
   frontend:
+    image: pc-value-analyzer-market-v3-frontend:latest
     build:
       context: .
       dockerfile: frontend/Dockerfile
       args:
-        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8001}
-    ports: ["${WEB_HOST_PORT:-8080}:80"]
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8002}
+    ports: ["${WEB_HOST_PORT:-8082}:80"]
     depends_on: [backend]
 
 volumes:

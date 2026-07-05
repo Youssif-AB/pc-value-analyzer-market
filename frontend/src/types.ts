@@ -69,3 +69,42 @@ export interface MarketStatus {
   last_refresh_status: string | null
   last_refresh_at: string | null
 }
+
+export interface MarketListing {
+  id: number
+  source: string
+  source_listing_id: string
+  listing_type: string
+  title: string
+  summary: string | null
+  url: string | null
+  image_url: string | null
+  price: number
+  currency: string
+  price_cad: number
+  condition: string
+  specs: Specs
+  extraction_quality: number
+  listed_at: string | null
+  last_seen_at: string
+}
+
+export interface MarketBrowseResponse {
+  items: MarketListing[]
+  total: number
+  limit: number
+  offset: number
+  next_offset: number | null
+}
+
+export interface MarketBrowseParams {
+  q?: string
+  source?: string
+  condition?: string
+  listing_type?: string
+  min_price?: number
+  max_price?: number
+  sort?: 'newest' | 'price_asc' | 'price_desc' | 'quality'
+  limit?: number
+  offset?: number
+}

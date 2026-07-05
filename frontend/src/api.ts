@@ -1,6 +1,6 @@
-import type { ExtractedSpecs, MarketStatus, Prediction, Specs } from './types'
+import type { ExtractedSpecs, MarketBrowseParams, MarketBrowseResponse, MarketStatus, Prediction, Specs } from './types'
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8001'
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8002'
 
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
@@ -37,4 +37,12 @@ export function recordCorrection(originalSpecs: Specs, correctedSpecs: Specs, so
 
 export function getMarketStatus() {
   return request<MarketStatus>('/api/v1/market/status')
+}
+
+export function browseMarket(params: MarketBrowseParams = {}) {
+  const query = new URLSearchParams()
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null && value !== '') query.set(key, String(value))
+  })
+  return request<MarketBrowseResponse>(`/api/v1/market/listings${query.size ? `?${query.toString()}` : ''}`)
 }

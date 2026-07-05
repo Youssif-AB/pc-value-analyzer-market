@@ -3,7 +3,8 @@
 ```mermaid
 flowchart LR
     U[User] --> FE[React + TypeScript web app]
-    FE -->|extract + review| API[FastAPI]
+    FE -->|browse / filter live listings| API[FastAPI]
+    FE -->|extract + review| API
     FE -->|predict| API
     API --> EXT[Extractor + normalizer]
     API --> BASE[Structural sklearn model]
@@ -44,7 +45,7 @@ That split avoids a common marketplace-model failure: training a model to reprod
 
 ## Runtime responsibilities
 
-The React application owns listing input, mandatory review/correction, market-source status, and result/comparable presentation.
+The React application opens on a dedicated live Market browser backed by the normalized cache. It owns feed search/filter/sort/infinite-scroll behavior, source links, one-click handoff from a market record into the analyzer, listing input, mandatory review/correction, market-source status, and result/comparable presentation.
 
 FastAPI owns API validation, extraction, normalization, persistence, the structural model contract, comparable selection, hybrid blending, and telemetry. `asking_price` is only used after valuation to calculate the value rating.
 

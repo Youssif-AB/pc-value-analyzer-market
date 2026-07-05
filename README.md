@@ -87,7 +87,8 @@ If live sources are unavailable, stale, or too dissimilar, inference automatical
 ### Product / engineering
 
 - React + TypeScript listing input, loading/error states, spec review/correction, result explanation, responsive styling
-- live market status banner and comparable evidence cards
+- dedicated live Market browser with pooled listings, search/filter/sort, infinite scrolling, source links, normalized hardware, and one-click handoff into the analyzer
+- live market status and comparable evidence inside each valuation
 - FastAPI extraction, correction, prediction, market status/refresh, health, and Prometheus endpoints
 - PostgreSQL entities for listings, normalized specs, corrections, predictions, model metadata, live market observations, and refresh runs
 - inference observability for latency, extraction failures, normalization failures, comparable counts, live blend weights, cache size, confidence/rating distribution
@@ -136,7 +137,7 @@ Docker Compose uses these host ports by default:
 Web app        8080
 API            8001
 MLflow         5001
-Prefect        4200
+Prefect        4201
 PostgreSQL     5432
 ```
 
@@ -146,8 +147,8 @@ If one of those ports is already in use, override it in `.env` without editing `
 WEB_HOST_PORT=8080
 API_HOST_PORT=8001
 MLFLOW_HOST_PORT=5001
-PREFECT_HOST_PORT=4200
-POSTGRES_HOST_PORT=5432
+PREFECT_HOST_PORT=4201
+POSTGRES_HOST_PORT=5434
 ```
 
 If you change `API_HOST_PORT`, also point `VITE_API_BASE_URL` at the same browser-facing port and rebuild the frontend image. Docker-internal service addresses remain unchanged.
@@ -183,14 +184,24 @@ Start everything:
 docker compose up --build
 ```
 
+Verify the running build:
+
+```bash
+curl http://localhost:8002/health
+```
+
+The live-market build reports `"build": "market-browser-v3"`.
+
 Open:
 
-- web app: `http://localhost:8080`
-- FastAPI docs: `http://localhost:8001/docs`
-- market status: `http://localhost:8001/api/v1/market/status`
-- Prometheus metrics: `http://localhost:8001/metrics`
-- MLflow: `http://localhost:5001`
-- Prefect Server: `http://localhost:4200`
+- web app: `http://localhost:8082`
+- FastAPI docs: `http://localhost:8002/docs`
+- market status: `http://localhost:8002/api/v1/market/status`
+- Prometheus metrics: `http://localhost:8002/metrics`
+- MLflow: `http://localhost:5002`
+- Prefect Server: `http://localhost:4202`
+
+The web app opens on **Market**, where current normalized eBay/Best Buy observations can be browsed directly. Search or filter the feed, open the original source listing, or choose **Analyze this PC** to send that market record through extraction review and valuation. The separate **Analyze** tab still accepts pasted listings.
 
 The `market-refresher` container performs an immediate refresh and then serves an hourly Prefect schedule. Provider failures are isolated and written to refresh-run metadata rather than crashing valuation.
 
@@ -199,14 +210,14 @@ The `market-refresher` container performs an immediate refresh and then serves a
 The scheduled Prefect flow is the normal path. For development, the API also exposes an authenticated refresh endpoint:
 
 ```bash
-curl -X POST http://localhost:8001/api/v1/market/refresh \
+curl -X POST http://localhost:8002/api/v1/market/refresh \
   -H "X-Market-Refresh-Token: $MARKET_REFRESH_TOKEN"
 ```
 
 Check cache/source status:
 
 ```bash
-curl http://localhost:8001/api/v1/market/status
+curl http://localhost:8002/api/v1/market/status
 ```
 
 ## Local Python development
@@ -231,7 +242,7 @@ PY
 Run the scheduled Prefect market flow:
 
 ```bash
-export PREFECT_API_URL=http://localhost:4200/api
+export PREFECT_API_URL=http://localhost:4202/api
 python -m ml.pipeline.live_market_flow
 ```
 
@@ -253,6 +264,8 @@ Core endpoints:
 - `GET /api/v1/market/status` — source configuration/cache freshness
 - `POST /api/v1/market/refresh` — authenticated manual refresh
 - `GET /health` — liveness
+- `GET /api/v1/market/listings` — paginated live-market browser feed with search/source/condition/price/sort filters
+- `GET /api/v1/market/status` — source configuration, cache size, and refresh status
 - `GET /metrics` — inference/live-market telemetry
 
 `asking_price` is never a model feature. It is only compared with the estimated fair value after inference.
@@ -263,7 +276,7 @@ Core endpoints:
 pytest -q
 ```
 
-The current backend/data suite has **22 passing tests**, including mocked eBay/Best Buy provider calls, FX conversion, live ingestion/deduplication, multi-source comparable selection, normalization, extraction edge cases, feature leakage protection, API behavior, deterministic inference, and SQLAlchemy persistence.
+The current backend/data suite includes coverage, including mocked eBay/Best Buy provider calls, FX conversion, live ingestion/deduplication, multi-source comparable selection, normalization, extraction edge cases, feature leakage protection, API behavior, deterministic inference, and SQLAlchemy persistence.
 
 Frontend CI runs TypeScript lint and production build checks independently.
 

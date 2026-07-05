@@ -49,6 +49,12 @@ For deterministic tests or an environment without FX access:
 USD_TO_CAD_OVERRIDE=1.38
 ```
 
+## Browsing the pooled feed
+
+The normalized cache is exposed to the frontend through `GET /api/v1/market/listings`. The endpoint only returns active, unexpired observations and supports server-side search, source, condition, listing-type, CAD price range, sort order, offset, and page-size parameters. The React Market view consumes that endpoint with progressive pagination so users can scroll the current pool instead of seeing live data only after a valuation.
+
+Each row retains provider provenance, canonical URL/image where supplied, source currency and original price, normalized CAD price, normalized hardware specs, extraction quality, condition, and freshness timestamps. Selecting **Analyze this PC** converts that market record into the same correction-first analyzer flow used for pasted listings.
+
 ## Adding another source
 
 Implement `MarketSource.fetch()` in `ml/market_sources/` and return `SourceListing` objects containing:

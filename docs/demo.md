@@ -12,10 +12,10 @@ docker compose up --build
 
 Open:
 
-- app: `http://localhost:8080`
-- API docs: `http://localhost:8001/docs`
-- live market status: `http://localhost:8001/api/v1/market/status`
-- MLflow: `http://localhost:5001`
+- app: `http://localhost:8082`
+- API docs: `http://localhost:8002/docs`
+- live market status: `http://localhost:8002/api/v1/market/status`
+- MLflow: `http://localhost:5002`
 - Prefect: `http://localhost:4200`
 
 ## User journey
@@ -62,7 +62,7 @@ Do not expect the same numeric result every day: the live component is intention
 ## API smoke test
 
 ```bash
-curl -X POST http://localhost:8001/api/v1/extract \
+curl -X POST http://localhost:8002/api/v1/extract \
   -H 'Content-Type: application/json' \
   -d '{"listing_text":"Gaming PC - like new. Ryzen 7 7800X3D, GeForce RTX 4070 12GB, 32GB DDR5, 2TB M.2 NVMe. Asking $1,650. Built about 1 year old."}'
 ```
