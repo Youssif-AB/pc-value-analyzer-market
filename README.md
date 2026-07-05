@@ -130,15 +130,27 @@ tests/                   unit/API/integration/source/model-consistency tests
 
 ## Quick start — local stack
 
-This compose file deliberately uses host ports that can coexist with the user's existing TransactScope project:
+Docker Compose uses these host ports by default:
 
 ```text
-PC Value web      8080
-PC Value API      8001
-PC Value MLflow   5001
-Prefect           4200
-PostgreSQL        5432
+Web app        8080
+API            8001
+MLflow         5001
+Prefect        4200
+PostgreSQL     5432
 ```
+
+If one of those ports is already in use, override it in `.env` without editing `docker-compose.yml`:
+
+```dotenv
+WEB_HOST_PORT=8080
+API_HOST_PORT=8001
+MLFLOW_HOST_PORT=5001
+PREFECT_HOST_PORT=4200
+POSTGRES_HOST_PORT=5432
+```
+
+If you change `API_HOST_PORT`, also point `VITE_API_BASE_URL` at the same browser-facing port and rebuild the frontend image. Docker-internal service addresses remain unchanged.
 
 Create `.env`:
 
@@ -253,7 +265,7 @@ pytest -q
 
 The current backend/data suite has **22 passing tests**, including mocked eBay/Best Buy provider calls, FX conversion, live ingestion/deduplication, multi-source comparable selection, normalization, extraction edge cases, feature leakage protection, API behavior, deterministic inference, and SQLAlchemy persistence.
 
-Frontend CI runs TypeScript lint/build independently. Dependency installation timed out in the artifact-generation environment, so the final frontend build is intentionally left to CI/Docker rather than falsely reported as locally verified here.
+Frontend CI runs TypeScript lint and production build checks independently.
 
 ## Documentation index
 
