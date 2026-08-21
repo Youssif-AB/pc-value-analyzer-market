@@ -1,6 +1,7 @@
-import { FormEvent, useMemo, useState } from 'react'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { Icon } from '../icons'
-import type { ExtractedSpecs, Specs } from '../types'
+import type { ExtractedSpecs, HardwareCatalog, Specs } from '../types'
+import { getHardwareCatalog } from '../api'
 
 interface Props {
   extracted: ExtractedSpecs
@@ -31,6 +32,19 @@ export function SpecReview({ extracted, listing, busy, error, onBack, onConfirm 
   }), [extracted])
   const [specs, setSpecs] = useState<Specs>(original)
   const [price, setPrice] = useState(extracted.asking_price ?? 0)
+
+  const [hardware, setHardware] = useState<HardwareCatalog>({
+    cpus: [],
+    gpus: [],
+  })
+
+  useEffect(() => {
+    getHardwareCatalog()
+      .then(setHardware)
+      .catch(() => {
+        // The fields remain editable if the catalog endpoint is unavailable.
+      })
+  }, [])
 
   function textField(key: keyof Specs, value: string) {
     setSpecs((current) => ({ ...current, [key]: value.trim() || null }))
@@ -78,8 +92,52 @@ export function SpecReview({ extracted, listing, busy, error, onBack, onConfirm 
           <fieldset className="form-section">
             <legend>Core hardware</legend>
             <div className="form-grid">
-              <label className="field span-2"><span>Processor</span><input value={specs.cpu ?? ''} onChange={(e) => textField('cpu', e.target.value)} placeholder="AMD Ryzen 7 7800X3D" /></label>
-              <label className="field span-2"><span>Graphics card</span><input value={specs.gpu ?? ''} onChange={(e) => textField('gpu', e.target.value)} placeholder="NVIDIA GeForce RTX 4070" /></label>
+              <label className="field span-2">
+                <span>Processor</span>
+
+                <input
+                  list="cpu-catalog"
+                  value={specs.cpu ?? ''}
+                  onChange={(e) => textField('cpu', e.target.value)}
+                  placeholder="Search processors…"
+                  autoComplete="off"
+                />
+
+                <datalist id="cpu-catalog">
+                  {hardware.cpus.map((cpu) => (
+                    <option key={cpu} value={cpu} />
+                  ))}
+                </datalist>
+
+                {specs.cpu && hardware.cpus.length > 0 && !hardware.cpus.includes(specs.cpu) && (
+                  <small className="hardware-warning">
+                    Not in the model's canonical CPU catalog
+                  </small>
+                )}
+              </label>
+              <label className="field span-2">
+                <span>Graphics card</span>
+
+                <input
+                  list="gpu-catalog"
+                  value={specs.gpu ?? ''}
+                  onChange={(e) => textField('gpu', e.target.value)}
+                  placeholder="Search graphics cards…"
+                  autoComplete="off"
+                />
+
+                <datalist id="gpu-catalog">
+                  {hardware.gpus.map((gpu) => (
+                    <option key={gpu} value={gpu} />
+                  ))}
+                </datalist>
+
+                {specs.gpu && hardware.gpus.length > 0 && !hardware.gpus.includes(specs.gpu) && (
+                  <small className="hardware-warning">
+                    Not in the model's canonical GPU catalog
+                  </small>
+                )}
+              </label>
             </div>
           </fieldset>
 

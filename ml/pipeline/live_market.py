@@ -8,7 +8,7 @@ from pathlib import Path
 
 from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
-
+from ml.market_sources.google_shopping import GoogleShoppingSource
 from backend.app.config import Settings, get_settings
 from backend.app.db import Base, engine
 from backend.app.models import LiveMarketListing, MarketRefreshRun
@@ -32,12 +32,17 @@ class RefreshSummary:
 
 def _source_adapters(settings: Settings) -> list[MarketSource]:
     sources: list[MarketSource] = []
+
     if settings.ebay_client_id and settings.ebay_client_secret:
         sources.append(EbayBrowseSource(settings))
+
+    if settings.serpapi_api_key:
+        sources.append(GoogleShoppingSource(settings))
+
     if settings.bestbuy_api_key:
         sources.append(BestBuySource(settings))
-    return sources
 
+    return sources
 
 def _fingerprint(item: SourceListing, specs: dict[str, object], price_cad: float) -> str:
     identity = {

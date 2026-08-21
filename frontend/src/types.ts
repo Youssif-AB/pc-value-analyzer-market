@@ -108,3 +108,8 @@ export interface MarketBrowseParams {
   limit?: number
   offset?: number
 }
+
+export interface HardwareCatalog {
+  cpus: string[]
+  gpus: string[]
+}

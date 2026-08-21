@@ -12,7 +12,10 @@ function money(value: number) {
 }
 
 function sourceName(source: string) {
-  return source === 'ebay' ? 'eBay' : source === 'bestbuy' ? 'Best Buy' : source
+  if (source === 'ebay') return 'eBay'
+  if (source === 'google_shopping') return 'Google Shopping'
+  if (source === 'bestbuy') return 'Best Buy'
+  return source
 }
 
 function pretty(value: string) {

@@ -39,6 +39,22 @@ class Settings(BaseSettings):
     bestbuy_category_id: str = "pcmcat287600050002"
     bestbuy_result_limit: int = 100
 
+    serpapi_api_key: str | None = None
+
+    google_shopping_queries: str = (
+        "gaming desktop,"
+        "RTX gaming PC,"
+        "Ryzen gaming desktop,"
+        "prebuilt gaming PC,"
+        "custom gaming PC"
+    )
+
+    google_shopping_location: str = "Calgary, Alberta, Canada"
+    google_shopping_gl: str = "ca"
+    google_shopping_hl: str = "en"
+    google_shopping_currency: str = "CAD"
+    google_shopping_result_limit: int = 40
+
     bank_of_canada_fx_enabled: bool = True
     usd_to_cad_override: float | None = None
 
@@ -63,12 +79,25 @@ class Settings(BaseSettings):
     @property
     def configured_market_sources(self) -> list[str]:
         sources: list[str] = []
+
         if self.ebay_client_id and self.ebay_client_secret:
             sources.append("ebay")
+
+        if self.serpapi_api_key:
+            sources.append("google_shopping")
+
         if self.bestbuy_api_key:
             sources.append("bestbuy")
+
         return sources
 
+    @property
+    def google_shopping_query_list(self) -> list[str]:
+        return [
+            item.strip()
+            for item in self.google_shopping_queries.split(",")
+            if item.strip()
+        ]
 
 @lru_cache
 def get_settings() -> Settings:
