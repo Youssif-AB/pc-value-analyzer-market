@@ -1,4 +1,13 @@
-import type { ExtractedSpecs, MarketBrowseParams, MarketBrowseResponse, MarketStatus, Prediction, Specs } from './types'
+import type {
+  ExtractedSpecs,
+  HardwareCatalog,
+  MarketBrowseParams,
+  MarketBrowseResponse,
+  MarketStatus,
+  Prediction,
+  Specs,
+} from './types'
+
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8002'
 
@@ -12,6 +21,10 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
     throw new Error(body.detail ?? `Request failed (${response.status})`)
   }
   return response.json() as Promise<T>
+}
+
+export function getHardwareCatalog() {
+  return request<HardwareCatalog>('/api/v1/hardware/catalog')
 }
 
 export function extractListing(listingText: string) {
@@ -46,3 +59,4 @@ export function browseMarket(params: MarketBrowseParams = {}) {
   })
   return request<MarketBrowseResponse>(`/api/v1/market/listings${query.size ? `?${query.toString()}` : ''}`)
 }
+

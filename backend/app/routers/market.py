@@ -35,7 +35,7 @@ def market_status(db: Session = Depends(get_db)) -> MarketStatusResponse:
         )
     ) or 0
     source_rows: list[MarketSourceStatus] = []
-    for source in ["ebay", "bestbuy"]:
+    for source in ["ebay", "google_shopping", "bestbuy"]:
         count = db.scalar(
             select(func.count()).select_from(LiveMarketListing).where(
                 LiveMarketListing.source == source,
