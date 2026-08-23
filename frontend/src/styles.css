@@ -37,15 +37,6 @@ a { color: inherit; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 680; letter-spacing: -.02em; font-size: .94rem; }
 .brand-mark { width: 28px; height: 28px; display: grid; place-items: center; color: #11150b; background: var(--accent); border-radius: 3px; }
 
-.build-tag {
-  margin-left: 2px;
-  color: var(--muted-2);
-  font-family: var(--mono);
-  font-size: .58rem;
-  font-weight: 650;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
 .market-chip { display: flex; align-items: center; gap: 8px; min-width: 0; color: var(--muted); font-size: .78rem; }
 .market-chip-main { color: #b9bec3; white-space: nowrap; }
 .market-chip-meta { padding-left: 8px; border-left: 1px solid var(--line); white-space: nowrap; }

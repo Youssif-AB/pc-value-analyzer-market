@@ -127,7 +127,6 @@ export default function App() {
           <button className="brand brand-button" type="button" aria-label="Open live market" onClick={() => switchView('market')}>
             <span className="brand-mark"><Icon name="cpu" size={17} /></span>
             <span>PC Value</span>
-            <span className="build-tag">Market v3</span>
           </button>
           <nav className="product-nav" aria-label="Primary navigation">
             <button type="button" className={view === 'market' ? 'active' : ''} onClick={() => switchView('market')}><Icon name="market" size={14} /> Market</button>
