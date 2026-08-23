@@ -51,6 +51,10 @@ export interface Prediction {
   upper_bound: number
   model_version: string
   confidence: 'low' | 'medium' | 'high'
+  coverage_score: number
+  coverage_label: 'weak' | 'limited' | 'strong'
+  interval_coverage_target: number | null
+  interval_empirical_coverage: number | null
   drivers: Array<{ feature: string; direction: 'up' | 'down' | 'neutral'; explanation: string }>
   warnings: string[]
   live_market: LiveMarketEvidence

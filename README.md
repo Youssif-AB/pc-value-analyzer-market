@@ -1,10 +1,12 @@
 # PC Specs / Value Analyzer
 
-An end-to-end ML product that turns a messy PC marketplace listing into **reviewable normalized hardware specs**, lets the user correct extraction mistakes, estimates fair value, and explains whether the asking price looks overpriced, fair, or like a good deal.
+An end-to-end ML product that turns a messy PC marketplace listing into **reviewable normalized hardware specs**, lets the user correct extraction mistakes, estimates market listing price, and compares that estimate with current asking prices.
 
-The current version is a **hybrid valuation system**. A reproducible regression model provides a structural baseline, while fresh comparable PC listings from multiple live sources calibrate that baseline to the current market when enough similar observations are available.
+The current version is a **hybrid demonstration system**. A reproducible demo regression provides a structural baseline, while fresh comparable PC listings from multiple live sources provide visibly separate current-market evidence.
 
-> **Data/accuracy boundary:** the checked-in regression artifact is trained on a synthetic but realistic demo dataset so the full research and deployment workflow is reproducible without redistributing marketplace datasets. Live eBay and Best Buy observations are used as short-lived comparable-market evidence, not silently relabeled as completed-sale ground truth. Real production accuracy still requires licensed recent sold-price data and measured validation against eventual outcomes.
+> **Data/accuracy boundary:** there are currently **0 real usable training observations** in the repository. The checked-in regression artifact is trained on synthetic demo data. Its metrics are workflow checks, not real-market accuracy. Live eBay, Best Buy, and Google Shopping observations are current asking-price evidence and are not silently relabeled as sold outcomes or training labels.
+
+For a real-data run, the target is **observed market listing price in CAD**, unless a separately authorized source verifiably supplies completed prices. See [`docs/modeling-report.md`](docs/modeling-report.md) for the exact evidence status and stop condition.
 
 ## Product flow
 
@@ -97,7 +99,7 @@ If live sources are unavailable, stale, or too dissimilar, inference automatical
 - GitHub Actions CI for Python tests/lint, frontend build, and container builds
 - Azure Container Apps deployment scaffolding
 
-## Evidence-selected demo model
+## Demo-only benchmark
 
 The checked-in demo run selects the model with the lowest mean 5-fold cross-validation MAE on the training split:
 
@@ -246,12 +248,29 @@ export PREFECT_API_URL=http://localhost:4202/api
 python -m ml.pipeline.live_market_flow
 ```
 
-Generate demo sold-price data and retrain the baseline:
+Generate demo data and retrain the demo artifact:
 
 ```bash
 python -m ml.data.generate_sample_data --rows 1200 --output data/raw/sample_market_listings.csv
 python -m ml.pipeline.flow
 ```
+
+Import an authorized real listing export, keeping every stage separate:
+
+```bash
+python -m ml.data.market_dataset --input data/raw/authorized_market_export.csv
+python -m ml.training.train --input data/validated/market_listings.csv --manifest data/manifests/market_listings.json
+```
+
+Create and score the required human normalization review:
+
+```bash
+python -m ml.data.normalization_review sample --dataset data/normalized/market_listings.csv --output data/review/normalization_sample.csv
+# Human reviewer fills reviewed_cpu and reviewed_gpu.
+python -m ml.data.normalization_review score --review data/review/normalization_sample.csv
+```
+
+The training command produces model comparison, feature ablation, and segment/error-analysis CSVs. Timestamped real data uses an oldest 60% train / next 20% calibration / newest 20% untouched test split, grouped by listing identity. The calibration split supplies a finite-sample split-conformal interval; metadata reports actual test coverage and mean width.
 
 To retrain the existing workflow against ModelControl's MLflow server, set `MLFLOW_TRACKING_URI` (the host default is `http://localhost:5000`) and enable tracking:
 

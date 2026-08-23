@@ -79,12 +79,40 @@ CPU_SCORE = {
     "Intel Core i5-12400": 55,
 }
 
-CONDITION_SCORE = {"new": 1.0, "like_new": 0.95, "excellent": 0.90, "good": 0.84, "fair": 0.72, "parts": 0.35}
+CONDITION_SCORE = {
+    "new": 1.0,
+    "like_new": 0.95,
+    "excellent": 0.90,
+    "good": 0.84,
+    "fair": 0.72,
+    "parts": 0.35,
+}
 
 FEATURE_COLUMNS = [
-    "cpu", "gpu", "ram_type", "storage_type", "condition", "brand",
-    "ram_gb", "storage_gb", "system_age_years", "cpu_score", "gpu_score", "condition_score",
+    "cpu",
+    "gpu",
+    "ram_type",
+    "storage_type",
+    "condition",
+    "brand",
+    "source",
+    "ram_gb",
+    "storage_gb",
+    "system_age_years",
+    "cpu_score",
+    "gpu_score",
+    "condition_score",
+    "cpu_generation",
+    "gpu_generation",
+    "component_age_years",
 ]
+
+
+def _generation(value: str | None, pattern: str) -> str:
+    import re
+
+    match = re.search(pattern, value or "", re.I)
+    return match.group(1) if match else "unknown"
 
 
 def specs_to_record(specs: NormalizedSpecs) -> dict[str, object]:
@@ -95,12 +123,20 @@ def specs_to_record(specs: NormalizedSpecs) -> dict[str, object]:
         "storage_type": specs.storage_type or "UNKNOWN",
         "condition": specs.condition,
         "brand": specs.brand or "custom",
+        "source": "user_input",
         "ram_gb": specs.ram_gb or 0,
         "storage_gb": specs.storage_gb or 0,
         "system_age_years": specs.system_age_years if specs.system_age_years is not None else 3.0,
         "cpu_score": CPU_SCORE.get(specs.cpu or "", 35),
         "gpu_score": GPU_SCORE.get(specs.gpu or "", 30),
         "condition_score": CONDITION_SCORE.get(specs.condition, 0.84),
+        "cpu_generation": _generation(
+            specs.cpu, r"(?:Ryzen\s+\d\s+|i[3579]-|Ultra\s+\d\s+)(\d{1,2})"
+        ),
+        "gpu_generation": _generation(specs.gpu, r"(?:RTX|RX|Arc\s+[AB])(\d{1,2})"),
+        "component_age_years": specs.system_age_years
+        if specs.system_age_years is not None
+        else 3.0,
     }
 
 

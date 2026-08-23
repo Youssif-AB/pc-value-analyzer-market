@@ -50,7 +50,7 @@ export function PredictionResult({ prediction, specs, onReset }: Props) {
             <span className="rating-text">{prediction.rating}</span>
             <span className="confidence-text">{prediction.confidence} confidence</span>
           </div>
-          <h2 id="result-heading">Fair value is about {money(prediction.estimated_fair_price)}.</h2>
+          <h2 id="result-heading">Estimated market listing price: {money(prediction.estimated_fair_price)}.</h2>
           <p>{buyerSavings >= 0 ? `The seller is asking ${money(Math.abs(buyerSavings))} less than the estimate.` : `The seller is asking ${money(Math.abs(buyerSavings))} more than the estimate.`}</p>
         </div>
         <div className="decision-price">
@@ -145,6 +145,12 @@ export function PredictionResult({ prediction, specs, onReset }: Props) {
               {specs.system_age_years !== null && <div><dt>Age</dt><dd>{specs.system_age_years} years</dd></div>}
               {specs.brand && <div><dt>Builder</dt><dd>{specs.brand}</dd></div>}
             </dl>
+          </section>
+
+          <section className="config-section">
+            <div className="rail-title"><Icon name="database" size={15} /><h3>Training coverage</h3></div>
+            <p><strong>{pretty(prediction.coverage_label)}</strong> ({Math.round(prediction.coverage_score * 100)}%)</p>
+            <p>The likely range is a conformal interval, not a guarantee.{prediction.interval_empirical_coverage !== null ? ` Its held-out empirical coverage was ${Math.round(prediction.interval_empirical_coverage * 100)}%.` : ''}</p>
           </section>
 
           {prediction.warnings.length > 0 && (

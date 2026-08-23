@@ -49,7 +49,11 @@ def test_market_status_api_returns_source_state() -> None:
     assert response.status_code == 200
     body = response.json()
     assert body["target_currency"] == "CAD"
-    assert {source["source"] for source in body["sources"]} == {"ebay", "bestbuy"}
+    assert {source["source"] for source in body["sources"]} == {
+        "ebay",
+        "bestbuy",
+        "google_shopping",
+    }
 
 
 def test_market_browse_api_filters_and_pages() -> None:

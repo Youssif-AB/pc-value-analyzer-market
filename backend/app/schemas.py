@@ -74,6 +74,10 @@ class PredictionResponse(BaseModel):
     upper_bound: float
     model_version: str
     confidence: Literal["low", "medium", "high"]
+    coverage_score: float = Field(ge=0, le=1)
+    coverage_label: Literal["weak", "limited", "strong"]
+    interval_coverage_target: float | None = Field(default=None, ge=0, le=1)
+    interval_empirical_coverage: float | None = Field(default=None, ge=0, le=1)
     drivers: list[FeatureContribution]
     warnings: list[str]
     live_market: LiveMarketEvidence
