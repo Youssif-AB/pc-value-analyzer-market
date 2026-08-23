@@ -7,6 +7,8 @@ class NormalizationResult:
     value: str | None
     matched: bool
     raw: str | None = None
+    confidence: float = 0.0
+    reason: str = "unresolved"
 
 
 GPU_PATTERNS: list[tuple[re.Pattern[str], str]] = [
@@ -87,12 +89,15 @@ CPU_PATTERNS: list[tuple[re.Pattern[str], str]] = [
 
 def _normalize(value: str | None, patterns: list[tuple[re.Pattern[str], str]]) -> NormalizationResult:
     if not value:
-        return NormalizationResult(None, False, value)
+        return NormalizationResult(None, False, value, 0.0, "missing")
     compact = re.sub(r"[_]+", " ", value).strip()
     for pattern, canonical in patterns:
         if pattern.search(compact):
-            return NormalizationResult(canonical, True, value)
-    return NormalizationResult(compact, False, value)
+            # Regex aliases are deterministic but still require a reviewed benchmark before
+            # their aggregate accuracy can be claimed.
+            return NormalizationResult(canonical, True, value, 0.95, "catalog_pattern")
+    # Preserve the source string. An unresolved value is preferable to a confident wrong ID.
+    return NormalizationResult(compact, False, value, 0.0, "no_catalog_match")
 
 
 def normalize_gpu(value: str | None) -> NormalizationResult:
