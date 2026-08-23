@@ -66,7 +66,7 @@ If live sources are unavailable, stale, or too dissimilar, inference automatical
 - error analysis by price band, condition, rare/unknown hardware sensitivity
 - evidence-based production-model selection
 - exported sklearn preprocessing + model pipeline
-- MLflow experiment logging, registry integration, and `champion` alias
+- MLflow candidate-run tracking and `PCValueAnalyzer` registry integration with a `champion` alias
 - explicit methodology separating sold-price training targets from active-market calibration data
 
 ### Live data engineering
@@ -252,6 +252,14 @@ Generate demo sold-price data and retrain the baseline:
 python -m ml.data.generate_sample_data --rows 1200 --output data/raw/sample_market_listings.csv
 python -m ml.pipeline.flow
 ```
+
+To retrain the existing workflow against ModelControl's MLflow server, set `MLFLOW_TRACKING_URI` (the host default is `http://localhost:5000`) and enable tracking:
+
+```bash
+python -m ml.training.train --mlflow
+```
+
+This logs the real candidate results from the included synthetic demo dataset to the `pc-value-analyzer` experiment and registers the cross-validation winner as `PCValueAnalyzer`. Omit `--mlflow` to train and export locally without requiring a tracking server.
 
 ## API contract
 

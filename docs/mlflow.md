@@ -1,10 +1,18 @@
 # MLflow experiment and registry contract
 
-The training pipeline logs candidate parameters and MAE/RMSE/R² metrics to the `pc-value-analyzer` experiment. After cross-validation chooses the winner, the selected sklearn pipeline is registered as `pc-value-regressor`.
+The training pipeline logs each candidate's parameters, full preprocessing/inference pipeline, input example, model signature, and holdout MAE/RMSE/R² metrics to the `pc-value-analyzer` experiment. After the unchanged five-fold cross-validation rule chooses the winner, that candidate run's model is registered as `PCValueAnalyzer`.
 
 The selected registry version receives the `champion` alias and `validation_status=selected_by_cv`. Application code can therefore target a promotion decision rather than hard-code a model version.
 
-Locally, Docker Compose exposes MLflow at `http://localhost:5002`; containers reach it at `http://mlflow:5000`. Its backend store is PostgreSQL and artifacts use the `mlflow_artifacts` volume.
+`MLFLOW_TRACKING_URI` configures the server and defaults to `http://localhost:5000` for host-based training. `MLFLOW_EXPERIMENT_NAME`, `MLFLOW_REGISTERED_MODEL_NAME`, and `MLFLOW_MODEL_ALIAS` can override the defaults. No ModelControl source dependency is used: integration is exclusively through the MLflow API.
+
+Run tracking explicitly with:
+
+```bash
+python -m ml.training.train --mlflow
+```
+
+Without `--mlflow`, the same local training and artifact export workflow runs without contacting an MLflow server. The Docker Compose stack in this repository exposes its own optional MLflow service on port 5002; containers reach that service at `http://mlflow:5000`.
 
 ## What MLflow does not do
 
