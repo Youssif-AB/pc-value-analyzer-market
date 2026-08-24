@@ -6,7 +6,12 @@ from pathlib import Path
 import pandas as pd
 
 from backend.app.services.features import CONDITION_SCORE, CPU_SCORE, GPU_SCORE
-from backend.app.services.normalization import normalize_cpu, normalize_gpu, normalize_ram_type, normalize_storage_type
+from backend.app.services.normalization import (
+    normalize_cpu,
+    normalize_gpu,
+    normalize_ram_type,
+    normalize_storage_type,
+)
 from ml.pipeline.quality import validate_market_data
 
 

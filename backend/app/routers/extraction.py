@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from backend.app.observability import EXTRACTION_FAILURES, NORMALIZATION_FAILURES
-from backend.app.schemas import AnalyzeRequest, AnalyzeResponse, ExtractRequest, ExtractedSpecs
+from backend.app.schemas import AnalyzeRequest, AnalyzeResponse, ExtractedSpecs, ExtractRequest
 from backend.app.services.extraction import extract_listing
 
 router = APIRouter(prefix="/extract", tags=["extraction"])

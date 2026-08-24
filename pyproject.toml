@@ -46,6 +46,10 @@ target-version = "py311"
 select = ["E", "F", "I", "B"]
 ignore = ["E501"]
 
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI evaluates dependency markers; Depends is intentionally called in signatures.
+extend-immutable-calls = ["fastapi.Depends"]
+
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"

@@ -8,7 +8,7 @@ from pathlib import Path
 
 from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
-from ml.market_sources.google_shopping import GoogleShoppingSource
+
 from backend.app.config import Settings, get_settings
 from backend.app.db import Base, engine
 from backend.app.models import LiveMarketListing, MarketRefreshRun
@@ -17,6 +17,7 @@ from ml.market_sources.base import MarketSource, MarketSourceError, SourceListin
 from ml.market_sources.bestbuy import BestBuySource
 from ml.market_sources.ebay import EbayBrowseSource
 from ml.market_sources.fx import FxConverter
+from ml.market_sources.google_shopping import GoogleShoppingSource
 
 
 @dataclass

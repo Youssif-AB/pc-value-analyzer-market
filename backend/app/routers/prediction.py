@@ -4,8 +4,13 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from backend.app.db import get_db
-from backend.app.observability import LIVE_MARKET_BLEND, LIVE_MARKET_COMPS, PREDICTIONS, PREDICTION_LATENCY
-from backend.app.schemas import PredictRequest, PredictionResponse
+from backend.app.observability import (
+    LIVE_MARKET_BLEND,
+    LIVE_MARKET_COMPS,
+    PREDICTION_LATENCY,
+    PREDICTIONS,
+)
+from backend.app.schemas import PredictionResponse, PredictRequest
 from backend.app.services.valuation_service import ValuationService
 
 router = APIRouter(prefix="/predict", tags=["prediction"])
