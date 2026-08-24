@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   python:
     runs-on: ubuntu-latest
@@ -29,7 +32,9 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: '22'
-      - run: npm install
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
       - run: npm run lint
       - run: npm run build
 
@@ -39,6 +44,38 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: docker/setup-buildx-action@v3
-      - run: docker compose config
-      - run: docker build -f backend/Dockerfile -t pc-value-api:ci .
-      - run: docker build -f frontend/Dockerfile -t pc-value-web:ci .
+      - name: Validate Compose
+        run: docker compose config
+      - name: Build and start stack
+        run: docker compose up -d --build
+      - name: Wait for API health
+        shell: bash
+        run: |
+          for i in {1..60}; do
+            if curl --fail --silent http://localhost:8002/health > /dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose ps
+          docker compose logs backend
+          exit 1
+      - name: Wait for web app
+        shell: bash
+        run: |
+          for i in {1..40}; do
+            if curl --fail --silent http://localhost:8082 > /dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose ps
+          docker compose logs frontend
+          exit 1
+      - name: Check market status endpoint
+        run: curl --fail http://localhost:8002/api/v1/market/status
+      - name: Show container status
+        run: docker compose ps
+      - name: Clean up
+        if: always()
+        run: docker compose down -v
