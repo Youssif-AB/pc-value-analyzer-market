@@ -96,7 +96,7 @@ If live sources are unavailable, stale, or too dissimilar, inference automatical
 - inference observability for latency, extraction failures, normalization failures, comparable counts, live blend weights, cache size, confidence/rating distribution
 - Docker Compose for web, API, PostgreSQL, MLflow, Prefect Server, and the scheduled market refresher
 - automated tests for normalization, messy extraction, feature engineering, malformed inputs, API inference, deterministic model behavior, database integration, provider adapters, FX, live-market dedupe, and hybrid comparable selection
-- GitHub Actions CI for Python tests/lint, frontend build, and container builds
+- GitHub Actions CI for Python tests/lint, frontend type/build checks, and full-stack Docker smoke tests
 - Azure Container Apps deployment scaffolding
 
 ## Demo-only benchmark
@@ -136,20 +136,20 @@ tests/                   unit/API/integration/source/model-consistency tests
 Docker Compose uses these host ports by default:
 
 ```text
-Web app        8080
-API            8001
-MLflow         5001
-Prefect        4201
-PostgreSQL     5432
+Web app        8082
+API            8002
+MLflow         5002
+Prefect        4202
+PostgreSQL     5434
 ```
 
 If one of those ports is already in use, override it in `.env` without editing `docker-compose.yml`:
 
 ```dotenv
-WEB_HOST_PORT=8080
-API_HOST_PORT=8001
-MLFLOW_HOST_PORT=5001
-PREFECT_HOST_PORT=4201
+WEB_HOST_PORT=8082
+API_HOST_PORT=8002
+MLFLOW_HOST_PORT=5002
+PREFECT_HOST_PORT=4202
 POSTGRES_HOST_PORT=5434
 ```
 
@@ -288,11 +288,10 @@ Core endpoints:
 - `POST /api/v1/extract/review` — parse plus readiness signal
 - `POST /api/v1/corrections` — persist reviewed user corrections
 - `POST /api/v1/predict` — hybrid valuation from corrected specs
-- `GET /api/v1/market/status` — source configuration/cache freshness
+- `GET /api/v1/market/status` — source configuration, cache size, and refresh status
 - `POST /api/v1/market/refresh` — authenticated manual refresh
 - `GET /health` — liveness
 - `GET /api/v1/market/listings` — paginated live-market browser feed with search/source/condition/price/sort filters
-- `GET /api/v1/market/status` — source configuration, cache size, and refresh status
 - `GET /metrics` — inference/live-market telemetry
 
 `asking_price` is never a model feature. It is only compared with the estimated fair value after inference.
@@ -305,7 +304,7 @@ pytest -q
 
 The current backend/data suite includes coverage, including mocked eBay/Best Buy provider calls, FX conversion, live ingestion/deduplication, multi-source comparable selection, normalization, extraction edge cases, feature leakage protection, API behavior, deterministic inference, and SQLAlchemy persistence.
 
-Frontend CI runs TypeScript lint and production build checks independently.
+Frontend CI currently runs TypeScript checks and a production build. The stack CI then starts the Docker Compose application and smoke-tests the API, web app, and market-status endpoint.
 
 ## Documentation index
 
