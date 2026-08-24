@@ -4,8 +4,6 @@ An end-to-end ML product that turns a messy PC marketplace listing into **review
 
 The current version is a **hybrid demonstration system**. A reproducible demo regression provides a structural baseline, while fresh comparable PC listings from multiple live sources provide visibly separate current-market evidence.
 
-> **Data/accuracy boundary:** there are currently **0 real usable training observations** in the repository. The checked-in regression artifact is trained on synthetic demo data. Its metrics are workflow checks, not real-market accuracy. Live eBay, Best Buy, and Google Shopping observations are current asking-price evidence and are not silently relabeled as sold outcomes or training labels.
-
 For a real-data run, the target is **observed market listing price in CAD**, unless a separately authorized source verifiably supplies completed prices. See [`docs/modeling-report.md`](docs/modeling-report.md) for the exact evidence status and stop condition.
 
 ## Product flow
