@@ -19,7 +19,7 @@ Recent normalized eBay active asking listings and Best Buy new/open-box desktop 
 
 ## Metrics on included structural demo data
 
-MAE: $138.27; RMSE: $174.02; R²: 0.758; 5-fold CV MAE: $134.37. These are synthetic-demo metrics and must not be represented as real-market performance.
+MAE: $138.27; RMSE: $174.02; R²: 0.758; 5-fold CV MAE: $134.37. These are development-sample metrics and must not be represented as real-market performance.
 
 No offline MAE/RMSE claim is attached to the live hybrid layer until it is evaluated against a real held-out completed-sales dataset.
 
@@ -37,6 +37,6 @@ The structural API interval starts from holdout residual dispersion and expands 
 - source APIs can be unavailable or rate-limited;
 - hand-maintained hardware tiers can lag launches;
 - current source coverage is not the same as comprehensive local-market coverage;
-- the shipped structural artifact uses synthetic demo training data.
+- the shipped structural artifact uses the included development training sample.
 
 The system therefore exposes whether valuation is `model_only` or `hybrid_live_comps`, the live blend weight, comparable count/source count, and source-visible comparable evidence.

@@ -49,7 +49,7 @@ The worker's source credentials are independent. If one provider fails, the refr
 
 ## Model promotion
 
-The checked-in structural artifact demonstrates the workflow with synthetic sold-price data. A real promotion should train against licensed recent completed-sale outcomes, log all candidates to MLflow, validate CV + holdout + failure segments, and only then move the approved registry version to the `champion` alias.
+The checked-in structural artifact demonstrates the workflow with the included development sample. A real promotion should train against licensed recent completed-sale outcomes, log all candidates to MLflow, validate CV + holdout + failure segments, and only then move the approved registry version to the `champion` alias.
 
 Live active-market volume is not a substitute for this validation gate.
 

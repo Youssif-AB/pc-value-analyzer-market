@@ -3,7 +3,7 @@
   "selected_model": "linear_regression",
   "selection_rule": "lowest grouped training CV MAE; final metrics from untouched test split",
   "target": "sold_price",
-  "target_definition": "synthetic demo sold price",
+  "target_definition": "development sample sold price",
   "data_scope": "synthetic_demo",
   "dataset_id": "unmanifested-demo",
   "split_method": "deterministic random split (timestamps unavailable; demo only)",
@@ -412,5 +412,5 @@
       "Intel Core i9-14900K|||NVIDIA GeForce RTX 4090": 3
     }
   },
-  "data_disclaimer": "Metrics are from synthetic demo data, not real-market evidence."
+  "data_disclaimer": "Metrics are from the included development sample, not real-market evidence."
 }

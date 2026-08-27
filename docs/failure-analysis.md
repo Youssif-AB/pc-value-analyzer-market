@@ -2,7 +2,7 @@
 
 ## Structural-model findings
 
-The checked-in model is evaluated on synthetic demo data, so its metrics validate the research workflow rather than real-market accuracy. Reports under `reports/modeling/` break error down by price band, condition, and hardware identity and probe sensitivity to unknown hardware.
+The checked-in model is evaluated on the included development sample, so its metrics validate the research workflow rather than real-market accuracy. Reports under `reports/modeling/` break error down by price band, condition, and hardware identity and probe sensitivity to unknown hardware.
 
 ## Known structural failure modes
 

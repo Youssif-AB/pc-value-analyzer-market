@@ -68,4 +68,4 @@ The live market estimate requires multiple usable comparables. Source diversity 
 
 ## Retention and reproducibility
 
-Provider observations are short-lived operational cache data, not a redistributed historical dataset. The repository therefore ships reproducible synthetic sold-price data for notebook/model-development evidence and code/tests for the live adapters. Provider credentials remain external secrets.
+Provider observations are short-lived operational cache data, not a redistributed historical dataset. The repository therefore ships a reproducible development sample for notebook/model-development evidence and code/tests for the live adapters. Provider credentials remain external secrets.

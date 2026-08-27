@@ -535,7 +535,7 @@ def train(
         "selected_model": winner_name,
         "selection_rule": "lowest grouped training CV MAE; final metrics from untouched test split",
         "target": target,
-        "target_definition": "synthetic demo sold price"
+        "target_definition": "development sample sold price"
         if scope == "synthetic_demo"
         else "observed market listing price in CAD",
         "data_scope": scope,
@@ -568,7 +568,7 @@ def train(
                 "|||".join(map(str, key)): int(value) for key, value in config_counts.items()
             },
         },
-        "data_disclaimer": "Metrics are from synthetic demo data, not real-market evidence."
+        "data_disclaimer": "Metrics are from the included development sample, not real-market evidence."
         if scope == "synthetic_demo"
         else "The target is active asking/listing price, not verified completed-sale value.",
     }

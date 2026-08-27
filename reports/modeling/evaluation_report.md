@@ -1,6 +1,6 @@
 # Held-out evaluation report
 
-Model `demo-20260827-v1` · N=240 untouched held-out observations · synthetic_demo
+Model `demo-20260827-v1` · N=240 untouched held-out development observations
 
 ## Predicted vs actual
 

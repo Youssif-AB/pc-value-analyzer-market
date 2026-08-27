@@ -1,10 +1,10 @@
 # Modeling report
 
-The reproducible visual evaluation is generated at `reports/modeling/evaluation_report.md`, with version-matched SVGs in `reports/modeling/figures/`. It records the question, measured result, restrained conclusion, and limitation for predicted-vs-actual performance, price-band MAE, residuals, and conformal coverage. Regenerate it with `python -m ml.training.train`; the checked-in run is synthetic demo validation, not real-market accuracy evidence.
+The reproducible visual evaluation is generated at `reports/modeling/evaluation_report.md`, with version-matched SVGs in `reports/modeling/figures/`. It records the question, measured result, restrained conclusion, and limitation for predicted-vs-actual performance, price-band MAE, residuals, and conformal coverage. Regenerate it with `python -m ml.training.train`; the checked-in run validates the development workflow, not real-market accuracy.
 
 ## Evidence status and target
 
-No authorized historical real-listing export is checked into this repository. Therefore the number of real usable training observations is **0**, no real date range exists, and no real-world accuracy is claimed. The shipped artifact remains a development demonstration trained on 1,196 validated synthetic rows.
+No authorized historical real-listing export is checked into this repository. Therefore the number of real usable training observations is **0**, no real date range exists, and no real-world accuracy is claimed. The shipped artifact remains a development demonstration trained on 1,196 validated sample rows.
 
 When an authorized eBay, Best Buy, Google Shopping, open-dataset, or user export is imported, the supervised target is **observed market listing price in CAD**. It is an asking/listing price, not a completed-sale price or verified resale outcome. A completed-price target may only be configured for a source whose provenance establishes that semantic.
 
@@ -18,7 +18,7 @@ Duplicates are grouped by source/listing ID. Missing timestamps, invalid prices,
 
 Real timestamped data is sorted chronologically into oldest 60% training, next 20% calibration, and newest 20% untouched test data. All snapshots sharing a listing identity remain in one split. Model selection uses grouped folds inside the training period. The calibration period is reserved for split-conformal intervals and feature-ablation comparison. The newest test period is read only for final metrics and interval coverage.
 
-The timestamp-free synthetic fixture necessarily uses a seeded 60/20/20 random demo split. That result is not evidence for deployment.
+The timestamp-free development fixture necessarily uses a seeded 60/20/20 random demo split. That result is not evidence for deployment.
 
 ## Current demo results
 
@@ -29,7 +29,7 @@ The timestamp-free synthetic fixture necessarily uses a seeded 60/20/20 random d
 | Histogram gradient boosting | see `reports/modeling/model_comparison.csv` | | |
 | Random forest | see `reports/modeling/model_comparison.csv` | | |
 
-Linear regression is the demo champion because it has the lowest training cross-validation MAE. The 90% split-conformal interval has 90% empirical demo-test coverage and a mean width of $566. These figures are synthetic-only.
+Linear regression is the demo champion because it has the lowest training cross-validation MAE. The 90% split-conformal interval has 90% empirical demo-test coverage and a mean width of $566. These figures apply only to the included development sample.
 
 Feature-ablation measurements are in `reports/modeling/feature_ablation.csv`. Segment counts, MAE, RMSE, and mean residual by price band, source, condition, CPU/GPU generation, and common/rare/unseen coverage are in `reports/modeling/error_analysis.csv`. They must be regenerated after a real import; no feature or segment conclusion from the demo data is asserted as a market finding.
 
