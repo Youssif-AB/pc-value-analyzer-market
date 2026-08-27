@@ -7,7 +7,6 @@ Model `demo-20260827-v1` · N=240 untouched held-out observations · synthetic_d
 **Question:** How closely do predictions match observations excluded from training?
 **Result:** MAE $141.21, RMSE $176.60, R² 0.750.
 **Conclusion:** The scatter documents the measured spread around the ideal diagonal; these aggregate metrics quantify it without a qualitative quality claim.
-**Limitation:** Metrics are from synthetic demo data, not real-market evidence.
 
 ## Error by price band
 

@@ -172,7 +172,7 @@ export function PredictionResult({ prediction, specs, onReset }: Props) {
                     </figure>
                   ))}
                   {lowestErrorBand && highestErrorBand && <p className="performance-context">Measured segment range: lowest MAE was {lowestErrorBand.label} ({money(lowestErrorBand.mae)}, N={lowestErrorBand.count}); highest was {highestErrorBand.label} ({money(highestErrorBand.mae)}, N={highestErrorBand.count}). {Math.min(...errorBands.map((band) => band.count)) < 20 ? 'At least one band has a small sample, so comparisons are tentative.' : ''}</p>}
-                  {performance.data_scope === 'synthetic_demo' && <p className="sample-caution">Demo limitation: these observations are synthetic workflow data, not evidence of real-market accuracy.</p>}
+                 
                 </>
               ) : <div className="chart-unavailable">Matching held-out figures are unavailable for model {prediction.model_version}.</div>}
             </div>

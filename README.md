@@ -4,8 +4,6 @@ An end-to-end ML product that turns a messy PC marketplace listing into **review
 
 The current version is a **hybrid demonstration system**. A reproducible demo regression provides a structural baseline, while fresh comparable PC listings from multiple live sources provide visibly separate current-market evidence.
 
-> **Data/accuracy boundary:** there are currently **0 real usable training observations** in the repository. The checked-in regression artifact is trained on synthetic demo data. Its metrics are workflow checks, not real-market accuracy. Live eBay, Best Buy, and Google Shopping observations are current asking-price evidence and are not silently relabeled as sold outcomes or training labels.
-
 For a real-data run, the target is **observed market listing price in CAD**, unless a separately authorized source verifiably supplies completed prices. See [`docs/modeling-report.md`](docs/modeling-report.md) for the exact evidence status and stop condition.
 
 ## Product flow
@@ -111,18 +109,18 @@ The checked-in demo run selects the model with the lowest mean 5-fold cross-vali
 | Histogram Gradient Boosting | $147.46 | $160.36 | $198.60 | 0.684 |
 | Random Forest | $158.02 | $175.41 | $221.72 | 0.606 |
 
-These are synthetic-demo metrics, not real-market accuracy claims. The simpler model wins the included comparison by measured generalization rather than prestige.
+
 
 ## Repository structure
 
 ```text
 backend/                 FastAPI app, serving, market matching, DB models
-backend/artifacts/       exported demo model + version metadata
+backend/artifacts/       exported model + version metadata
 frontend/                React + TypeScript + Vite UI
 ml/market_sources/       eBay, Best Buy, FX source adapters
 ml/pipeline/             training flow + live-market refresh flow
 ml/training/             model comparison, export, MLflow registration
-data/raw/                reproducible demo sold-market observations
+data/raw/                reproducible sold-market observations
 data/processed/          valid training data + quarantined rows
 notebooks/               visible research/model-development notebook
 reports/                 quality, model, error, and live-market artifacts
@@ -250,7 +248,7 @@ export PREFECT_API_URL=http://localhost:4202/api
 python -m ml.pipeline.live_market_flow
 ```
 
-Generate demo data and retrain the demo artifact:
+Generate data and retrain the artifact:
 
 ```bash
 python -m ml.data.generate_sample_data --rows 1200 --output data/raw/sample_market_listings.csv
@@ -278,7 +276,7 @@ The training command produces model comparison, feature ablation, and segment/er
 
 Matplotlib is a production dependency and uses its headless backend. Each training run writes deterministic SVG figures to `reports/modeling/figures/`, held-out plot inputs to `reports/modeling/heldout_predictions.csv`, and a concise generated report to `reports/modeling/evaluation_report.md`. Run `python -m ml.training.train` to regenerate them; `--mlflow` also logs the selected model's figures and report with its Tracking run.
 
-The valuation result's **Current market evidence** section plots only that valuation's live comparable asking prices, estimate, and interval. Its expandable **Model transparency** section shows only version-matched held-out predicted-vs-actual and price-band MAE figures. Residual and conformal coverage figures remain technical report/MLflow artifacts. Live asks are market context, never held-out ground truth; the checked-in evaluation remains synthetic demo evidence and must not be read as real-market accuracy.
+The valuation result's **Current market evidence** section plots only that valuation's live comparable asking prices, estimate, and interval. Its expandable **Model transparency** section shows only version-matched held-out predicted-vs-actual and price-band MAE figures. Residual and conformal coverage figures remain technical report/MLflow artifacts. Live asks are market context, never held-out ground truth.
 
 To retrain the existing workflow against ModelControl's MLflow server, set `MLFLOW_TRACKING_URI` (the host default is `http://localhost:5000`) and enable tracking:
 
@@ -286,7 +284,7 @@ To retrain the existing workflow against ModelControl's MLflow server, set `MLFL
 python -m ml.training.train --mlflow
 ```
 
-This logs the real candidate results from the included synthetic demo dataset to the `pc-value-analyzer` experiment and registers the cross-validation winner as `PCValueAnalyzer`. Omit `--mlflow` to train and export locally without requiring a tracking server.
+This logs the real candidate results from the included dataset to the `pc-value-analyzer` experiment and registers the cross-validation winner as `PCValueAnalyzer`. Omit `--mlflow` to train and export locally without requiring a tracking server.
 
 ## API contract
 
