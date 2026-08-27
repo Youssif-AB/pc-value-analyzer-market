@@ -40,6 +40,21 @@ export interface LiveMarketEvidence {
   valuation_method: 'model_only' | 'hybrid_live_comps'
   comparables: MarketComparable[]
   note: string
+  market_context_figure: string | null
+}
+
+export interface ModelPerformance {
+  available: boolean
+  model_version: string | null
+  data_scope: string | null
+  target_definition: string | null
+  sample_count: number
+  mae: number | null
+  rmse: number | null
+  r2: number | null
+  price_bands: Array<{ band: string; label: string; count: number; mae: number }>
+  figures: Array<{ key: 'predicted_vs_actual' | 'error_by_price_band'; data_uri: string; alt: string }>
+  note: string
 }
 
 export interface Prediction {

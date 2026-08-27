@@ -1,6 +1,6 @@
 # MLflow experiment and registry contract
 
-The training pipeline logs each candidate's parameters, full preprocessing/inference pipeline, input example, model signature, and holdout MAE/RMSE/R² metrics to the `pc-value-analyzer` experiment. After the unchanged five-fold cross-validation rule chooses the winner, that candidate run's model is registered as `PCValueAnalyzer`.
+The training pipeline logs each candidate's parameters, full preprocessing/inference pipeline, input example, model signature, and holdout MAE/RMSE/R² metrics to the `pc-value-analyzer` experiment. The selected candidate's Tracking run also receives the predicted-vs-actual, price-band error, residual, and conformal-coverage SVGs, held-out plot inputs, and generated evaluation report under `evaluation/`. After the unchanged five-fold cross-validation rule chooses the winner, that candidate run's model is registered as `PCValueAnalyzer`.
 
 The selected registry version receives the `champion` alias and `validation_status=selected_by_cv`. Application code can therefore target a promotion decision rather than hard-code a model version.
 

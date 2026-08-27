@@ -4,6 +4,7 @@ import type {
   MarketBrowseParams,
   MarketBrowseResponse,
   MarketStatus,
+  ModelPerformance,
   Prediction,
   Specs,
 } from './types'
@@ -50,6 +51,10 @@ export function recordCorrection(originalSpecs: Specs, correctedSpecs: Specs, so
 
 export function getMarketStatus() {
   return request<MarketStatus>('/api/v1/market/status')
+}
+
+export function getModelPerformance() {
+  return request<ModelPerformance>('/api/v1/model-performance')
 }
 
 export function browseMarket(params: MarketBrowseParams = {}) {

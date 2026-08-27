@@ -18,6 +18,8 @@ from sklearn.model_selection import GroupKFold, KFold, cross_val_score, train_te
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from ml.training.visualization import generate_evaluation_figures, price_bands
+
 FEATURES = [
     "cpu",
     "gpu",
@@ -269,9 +271,7 @@ def error_analysis(
     work["actual"] = y.to_numpy()
     work["prediction"] = prediction
     work["residual"] = work.actual - work.prediction
-    work["price_band"] = pd.cut(
-        work.actual, [-np.inf, 800, 1800, np.inf], labels=["low", "mid", "high"]
-    )
+    work["price_band"] = price_bands(work.actual)
     cpu, gpu = training.cpu.value_counts(), training.gpu.value_counts()
     work["coverage_segment"] = np.where(
         ~work.cpu.isin(cpu.index) | ~work.gpu.isin(gpu.index),
@@ -367,6 +367,57 @@ def register_selected_model(run_id: str, metadata: dict[str, object], comparison
     return str(registered.version)
 
 
+def write_evaluation_report(
+    path: Path,
+    metadata: dict[str, object],
+    errors: pd.DataFrame,
+    heldout: pd.DataFrame,
+) -> None:
+    price = errors[errors.segment.eq("price_band")].sort_values("mae")
+    lowest, highest = price.iloc[0], price.iloc[-1]
+    coverage = heldout.groupby("price_band", observed=True).agg(
+        count=("covered", "size"), coverage=("covered", "mean"), width=("interval_width", "mean")
+    )
+    segment_results = ", ".join(
+        f"{index} {row.coverage:.1%} (N={int(row['count'])}, width ${row.width:,.0f})"
+        for index, row in coverage.iterrows()
+    )
+    smallest = int(price["count"].min())
+    text = f"""# Held-out evaluation report
+
+Model `{metadata["model_version"]}` · N={metadata["split_counts"]["test"]} untouched held-out observations · {metadata["data_scope"]}
+
+## Predicted vs actual
+
+**Question:** How closely do predictions match observations excluded from training?
+**Result:** MAE ${metadata["validation_mae"]:,.2f}, RMSE ${metadata["validation_rmse"]:,.2f}, R² {metadata["validation_r2"]:.3f}.
+**Conclusion:** The scatter documents the measured spread around the ideal diagonal; these aggregate metrics quantify it without a qualitative quality claim.
+**Limitation:** {metadata["data_disclaimer"]}
+
+## Error by price band
+
+**Question:** Does absolute error change with actual PC price?
+**Result:** Lowest measured MAE: {lowest["value"]} (${lowest["mae"]:,.2f}, N={int(lowest["count"])}); highest: {highest["value"]} (${highest["mae"]:,.2f}, N={int(highest["count"])}).
+**Conclusion:** Error differs across the configured under-$800 / $800–$1,800 / over-$1,800 segments.
+**Limitation:** The smallest segment has N={smallest}; small segments are weak evidence and should not be generalized.
+
+## Residual diagnostic
+
+**Question:** Do residuals (actual − predicted) lean positive or negative or widen by price?
+**Result:** Mean held-out residual ${heldout.residual.mean():,.2f}; positive means underprediction and negative means overprediction.
+**Conclusion:** The figure exposes the observed direction and spread without asserting a pattern from visual inspection alone.
+**Limitation:** A residual plot diagnoses this fixed held-out sample; it does not establish future bias.
+
+## Conformal uncertainty
+
+**Question:** Do split-conformal intervals reach their nominal coverage across price bands?
+**Result:** Overall empirical coverage {metadata["test_interval_coverage"]:.1%} versus configured {metadata["conformal_coverage_target"]:.1%}; mean width ${metadata["mean_interval_width"]:,.2f}. Segment results: {segment_results}.
+**Conclusion:** Measured segment coverage and width show where the fixed evaluation sample differs from the configured target.
+**Limitation:** Split-conformal coverage is empirical and exchangeability-dependent, not a guarantee for future listings.
+"""
+    path.write_text(text, encoding="utf-8")
+
+
 def train(
     input_path: Path,
     output_path: Path,
@@ -453,13 +504,34 @@ def train(
     error_path = comparison_path.with_name("error_analysis.csv")
     pd.DataFrame(ablations).to_csv(ablation_path, index=False)
     errors.to_csv(error_path, index=False)
+    heldout = pd.DataFrame(
+        {
+            "actual": test[target].to_numpy(),
+            "prediction": test_pred,
+            "residual": test[target].to_numpy() - test_pred,
+            "lower": test_pred - quantile,
+            "upper": test_pred + quantile,
+        }
+    )
+    heldout["covered"] = heldout.actual.between(heldout.lower, heldout.upper)
+    heldout["interval_width"] = heldout.upper - heldout.lower
+    heldout["price_band"] = price_bands(heldout.actual)
+    heldout_path = comparison_path.with_name("heldout_predictions.csv")
+    heldout.to_csv(heldout_path, index=False)
+    figure_paths = generate_evaluation_figures(
+        heldout, errors, comparison_path.parent / "figures", nominal_coverage=0.9
+    )
     manifest = (
         json.loads(manifest_path.read_text()) if manifest_path and manifest_path.exists() else {}
     )
     config_counts = training.groupby(["cpu", "gpu"]).size()
     metrics = evaluate(test[target], test_pred)
+    model_version = (
+        f"{'demo' if scope == 'synthetic_demo' else 'market'}-"
+        f"{datetime.now(UTC).strftime('%Y%m%d')}-v1"
+    )
     metadata = {
-        "model_version": f"{'demo' if scope == 'synthetic_demo' else 'market'}-{datetime.now(UTC).strftime('%Y%m%d')}-v1",
+        "model_version": model_version,
         "selected_model": winner_name,
         "selection_rule": "lowest grouped training CV MAE; final metrics from untouched test split",
         "target": target,
@@ -481,6 +553,13 @@ def train(
         "conformal_quantile": quantile,
         "test_interval_coverage": coverage,
         "mean_interval_width": 2 * quantile,
+        "evaluation_figures": {
+            name: {
+                "path": str(Path(path).as_posix()),
+                "model_version": model_version,
+            }
+            for name, path in figure_paths.items()
+        },
         "feature_contract": FEATURES,
         "training_frequencies": {
             "cpu": training.cpu.value_counts().to_dict(),
@@ -493,6 +572,8 @@ def train(
         if scope == "synthetic_demo"
         else "The target is active asking/listing price, not verified completed-sale value.",
     }
+    report_path = comparison_path.with_name("evaluation_report.md")
+    write_evaluation_report(report_path, metadata, errors, heldout)
     run_ids = {}
     for name, (model, _, _) in fitted.items():
         row = comparison[comparison.model.eq(name)].iloc[0]
@@ -503,7 +584,8 @@ def train(
             training,
             target,
             metadata,
-            [comparison_path, ablation_path, error_path],
+            [comparison_path, ablation_path, error_path, heldout_path, report_path]
+            + ([Path(path) for path in figure_paths.values()] if name == winner_name else []),
             enable_mlflow,
         )
         if run_id:

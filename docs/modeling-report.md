@@ -1,5 +1,7 @@
 # Modeling report
 
+The reproducible visual evaluation is generated at `reports/modeling/evaluation_report.md`, with version-matched SVGs in `reports/modeling/figures/`. It records the question, measured result, restrained conclusion, and limitation for predicted-vs-actual performance, price-band MAE, residuals, and conformal coverage. Regenerate it with `python -m ml.training.train`; the checked-in run is synthetic demo validation, not real-market accuracy evidence.
+
 ## Evidence status and target
 
 No authorized historical real-listing export is checked into this repository. Therefore the number of real usable training observations is **0**, no real date range exists, and no real-world accuracy is claimed. The shipped artifact remains a development demonstration trained on 1,196 validated synthetic rows.

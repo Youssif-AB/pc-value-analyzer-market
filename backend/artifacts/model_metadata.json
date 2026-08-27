@@ -1,5 +1,5 @@
 {
-  "model_version": "demo-20260823-v1",
+  "model_version": "demo-20260827-v1",
   "selected_model": "linear_regression",
   "selection_rule": "lowest grouped training CV MAE; final metrics from untouched test split",
   "target": "sold_price",
@@ -19,6 +19,24 @@
   "conformal_quantile": 282.9578590399826,
   "test_interval_coverage": 0.9,
   "mean_interval_width": 565.9157180799652,
+  "evaluation_figures": {
+    "predicted_vs_actual": {
+      "path": "reports/modeling/figures/predicted_vs_actual.svg",
+      "model_version": "demo-20260827-v1"
+    },
+    "error_by_price_band": {
+      "path": "reports/modeling/figures/error_by_price_band.svg",
+      "model_version": "demo-20260827-v1"
+    },
+    "residual_diagnostic": {
+      "path": "reports/modeling/figures/residual_vs_actual.svg",
+      "model_version": "demo-20260827-v1"
+    },
+    "conformal_by_price_band": {
+      "path": "reports/modeling/figures/conformal_coverage_by_price_band.svg",
+      "model_version": "demo-20260827-v1"
+    }
+  },
   "feature_contract": [
     "cpu",
     "gpu",

@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react'
+import { getModelPerformance } from '../api'
 import { Icon } from '../icons'
-import type { Prediction, Specs } from '../types'
+import type { ModelPerformance, Prediction, Specs } from '../types'
 
 interface Props {
   prediction: Prediction
@@ -30,8 +32,15 @@ function observedLabel(iso: string | null) {
 }
 
 export function PredictionResult({ prediction, specs, onReset }: Props) {
+  const [performance, setPerformance] = useState<ModelPerformance | null>(null)
+  useEffect(() => {
+    getModelPerformance().then(setPerformance).catch(() => setPerformance(null))
+  }, [prediction.model_version])
   const buyerSavings = prediction.estimated_fair_price - prediction.asking_price
   const live = prediction.live_market
+  const errorBands = performance?.price_bands ?? []
+  const lowestErrorBand = errorBands.length ? errorBands.reduce((best, band) => band.mae < best.mae ? band : best) : null
+  const highestErrorBand = errorBands.length ? errorBands.reduce((worst, band) => band.mae > worst.mae ? band : worst) : null
   const scaleMin = Math.max(0, Math.min(prediction.lower_bound, prediction.asking_price) * 0.9)
   const scaleMax = Math.max(prediction.upper_bound, prediction.asking_price) * 1.1
   const span = Math.max(1, scaleMax - scaleMin)
@@ -94,6 +103,19 @@ export function PredictionResult({ prediction, specs, onReset }: Props) {
               <div><span>Newest observation</span><strong>{observedLabel(live.newest_observation_at)}</strong></div>
             </div>
 
+            <div className="visualization-block">
+              <div className="visualization-copy">
+                <strong>Estimate in today’s comparable market</strong>
+                <span>{live.comp_count > 0 ? `${live.comp_count} current asking-price comparable${live.comp_count === 1 ? '' : 's'}; dots are individual listings, not completed sales.` : 'No suitable comparable listings were available for this valuation.'}</span>
+              </div>
+              {live.market_context_figure ? (
+                <img src={live.market_context_figure} alt={`Market context from ${live.comp_count} live comparable asking prices. Model estimate ${money(prediction.estimated_fair_price)} with prediction interval ${money(prediction.lower_bound)} to ${money(prediction.upper_bound)}.`} />
+              ) : (
+                <div className="chart-unavailable">Market context visualization unavailable. The valuation remains valid without it.</div>
+              )}
+              {live.comp_count > 0 && live.comp_count < 5 && <p className="sample-caution">Small sample: these listings provide limited context, not a reliable market distribution.</p>}
+            </div>
+
             {live.comparables.length > 0 ? (
               <div className="comp-table" role="table" aria-label="Comparable market listings">
                 <div className="comp-table-head" role="row">
@@ -131,6 +153,30 @@ export function PredictionResult({ prediction, specs, onReset }: Props) {
               ))}
             </div>
           </section>
+
+          <details className="performance-section">
+            <summary><span><span className="section-kicker">Model transparency</span><strong>Held-out model performance</strong></span><span>View evaluation</span></summary>
+            <div className="performance-body">
+              {performance?.available && performance.model_version === prediction.model_version ? (
+                <>
+                  <p className="performance-context">Historical held-out evaluation only — separate from current market comparables. N={performance.sample_count}. {performance.note}</p>
+                  <div className="metric-strip">
+                    <div><span>MAE</span><strong>{performance.mae === null ? '—' : money(performance.mae)}</strong></div>
+                    <div><span>RMSE</span><strong>{performance.rmse === null ? '—' : money(performance.rmse)}</strong></div>
+                    <div><span>R²</span><strong>{performance.r2 === null ? '—' : performance.r2.toFixed(3)}</strong></div>
+                  </div>
+                  {performance.figures.map((figure) => (
+                    <figure className="performance-figure" key={figure.key}>
+                      <figcaption><strong>{figure.key === 'predicted_vs_actual' ? 'Predicted vs. actual' : 'Error by price band'}</strong><span>{figure.key === 'predicted_vs_actual' ? 'Points near the diagonal are closer predictions; distance from it is error.' : 'Mean absolute error by actual observed price. N labels show the evidence behind each bar.'}</span></figcaption>
+                      <img src={figure.data_uri} alt={figure.alt} />
+                    </figure>
+                  ))}
+                  {lowestErrorBand && highestErrorBand && <p className="performance-context">Measured segment range: lowest MAE was {lowestErrorBand.label} ({money(lowestErrorBand.mae)}, N={lowestErrorBand.count}); highest was {highestErrorBand.label} ({money(highestErrorBand.mae)}, N={highestErrorBand.count}). {Math.min(...errorBands.map((band) => band.count)) < 20 ? 'At least one band has a small sample, so comparisons are tentative.' : ''}</p>}
+                  {performance.data_scope === 'synthetic_demo' && <p className="sample-caution">Demo limitation: these observations are synthetic workflow data, not evidence of real-market accuracy.</p>}
+                </>
+              ) : <div className="chart-unavailable">Matching held-out figures are unavailable for model {prediction.model_version}.</div>}
+            </div>
+          </details>
         </div>
 
         <aside className="result-sidebar">

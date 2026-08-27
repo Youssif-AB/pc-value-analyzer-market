@@ -14,6 +14,7 @@ from backend.app.routers import (
     health,
     market,
     prediction,
+    transparency,
 )
 
 
@@ -43,4 +44,5 @@ app.include_router(prediction.router, prefix=API_PREFIX)
 app.include_router(corrections.router, prefix=API_PREFIX)
 app.include_router(hardware.router, prefix=API_PREFIX)
 app.include_router(market.router, prefix=API_PREFIX)
+app.include_router(transparency.router, prefix=API_PREFIX)
 app.mount("/metrics", make_asgi_app())

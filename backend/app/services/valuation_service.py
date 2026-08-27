@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from backend.app.schemas import FeatureContribution, NormalizedSpecs, PredictionResponse
 from backend.app.services.live_market import LiveMarketService
 from backend.app.services.model_service import ModelService
+from ml.training.visualization import market_context_svg
 
 
 class ValuationService:
@@ -24,6 +25,9 @@ class ValuationService:
         )
         weight = evidence.blend_weight
         if not weight or evidence.adjusted_market_estimate_cad is None:
+            evidence = self._with_market_context(
+                evidence, baseline.estimated_fair_price, baseline.lower_bound, baseline.upper_bound
+            )
             warnings = list(baseline.warnings)
             if evidence.enabled and evidence.comp_count:
                 warnings.append(f"Found {evidence.comp_count} live comparable(s), but evidence was too sparse to blend into the estimate.")
@@ -57,16 +61,31 @@ class ValuationService:
         warnings = list(baseline.warnings)
         warnings.append("Live sources are active asking/open-box prices, not guaranteed completed-sale prices; the app keeps that evidence separate from supervised training labels.")
 
+        final_lower = round(max(0, final_estimate - half_width), 2)
+        final_upper = round(final_estimate + half_width, 2)
+        evidence = self._with_market_context(evidence, final_estimate, final_lower, final_upper)
+
         return baseline.model_copy(
             update={
                 "estimated_fair_price": round(final_estimate, 2),
                 "difference_percent": round(difference, 1),
                 "rating": self.model_service.rating(difference),
-                "lower_bound": round(max(0, final_estimate - half_width), 2),
-                "upper_bound": round(final_estimate + half_width, 2),
+                "lower_bound": final_lower,
+                "upper_bound": final_upper,
                 "confidence": confidence,
                 "drivers": drivers[:5],
                 "warnings": warnings,
                 "live_market": evidence,
             }
         )
+
+    @staticmethod
+    def _with_market_context(evidence, estimate: float, lower: float, upper: float):
+        try:
+            figure = market_context_svg(
+                [comp.price_cad for comp in evidence.comparables], estimate, lower, upper
+            )
+            return evidence.model_copy(update={"market_context_figure": figure})
+        except Exception:
+            # Visualization is supplementary and must never break valuation.
+            return evidence

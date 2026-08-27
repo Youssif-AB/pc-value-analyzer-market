@@ -70,6 +70,7 @@ If live sources are unavailable, stale, or too dissimilar, inference automatical
 - exported sklearn preprocessing + model pipeline
 - MLflow candidate-run tracking and `PCValueAnalyzer` registry integration with a `champion` alias
 - explicit methodology separating sold-price training targets from active-market calibration data
+- Matplotlib evaluation figures for held-out predicted-vs-actual, price-band error, residuals, and conformal coverage
 
 ### Live data engineering
 
@@ -91,6 +92,7 @@ If live sources are unavailable, stale, or too dissimilar, inference automatical
 - React + TypeScript listing input, loading/error states, spec review/correction, result explanation, responsive styling
 - dedicated live Market browser with pooled listings, search/filter/sort, infinite scrolling, source links, normalized hardware, and one-click handoff into the analyzer
 - live market status and comparable evidence inside each valuation
+- compact per-valuation market context plus an expandable, version-safe held-out performance section
 - FastAPI extraction, correction, prediction, market status/refresh, health, and Prometheus endpoints
 - PostgreSQL entities for listings, normalized specs, corrections, predictions, model metadata, live market observations, and refresh runs
 - inference observability for latency, extraction failures, normalization failures, comparable counts, live blend weights, cache size, confidence/rating distribution
@@ -271,6 +273,12 @@ python -m ml.data.normalization_review score --review data/review/normalization_
 ```
 
 The training command produces model comparison, feature ablation, and segment/error-analysis CSVs. Timestamped real data uses an oldest 60% train / next 20% calibration / newest 20% untouched test split, grouped by listing identity. The calibration split supplies a finite-sample split-conformal interval; metadata reports actual test coverage and mean width.
+
+### Evaluation and visualization
+
+Matplotlib is a production dependency and uses its headless backend. Each training run writes deterministic SVG figures to `reports/modeling/figures/`, held-out plot inputs to `reports/modeling/heldout_predictions.csv`, and a concise generated report to `reports/modeling/evaluation_report.md`. Run `python -m ml.training.train` to regenerate them; `--mlflow` also logs the selected model's figures and report with its Tracking run.
+
+The valuation result's **Current market evidence** section plots only that valuation's live comparable asking prices, estimate, and interval. Its expandable **Model transparency** section shows only version-matched held-out predicted-vs-actual and price-band MAE figures. Residual and conformal coverage figures remain technical report/MLflow artifacts. Live asks are market context, never held-out ground truth; the checked-in evaluation remains synthetic demo evidence and must not be read as real-market accuracy.
 
 To retrain the existing workflow against ModelControl's MLflow server, set `MLFLOW_TRACKING_URI` (the host default is `http://localhost:5000`) and enable tracking:
 

@@ -63,6 +63,27 @@ class LiveMarketEvidence(BaseModel):
     valuation_method: Literal["model_only", "hybrid_live_comps"] = "model_only"
     comparables: list[MarketComparable] = Field(default_factory=list)
     note: str = "Active asking-price comparables are market evidence, not completed-sale ground truth."
+    market_context_figure: str | None = None
+
+
+class EvaluationFigure(BaseModel):
+    key: str
+    data_uri: str
+    alt: str
+
+
+class ModelPerformanceResponse(BaseModel):
+    available: bool
+    model_version: str | None = None
+    data_scope: str | None = None
+    target_definition: str | None = None
+    sample_count: int = 0
+    mae: float | None = None
+    rmse: float | None = None
+    r2: float | None = None
+    price_bands: list[dict[str, str | int | float]] = Field(default_factory=list)
+    figures: list[EvaluationFigure] = Field(default_factory=list)
+    note: str
 
 
 class PredictionResponse(BaseModel):
