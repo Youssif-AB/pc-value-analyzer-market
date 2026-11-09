@@ -1,7 +1,7 @@
 # Model card — PC fair-value hybrid estimator
 
 **Structural artifact:** `backend/artifacts/price_model.joblib`
-**Demo model version:** `demo-20260820-v1`
+**Demo model version:** `demo-20260827-v1`
 **Selected structural estimator:** Linear Regression pipeline
 **Runtime estimator:** structural model + optional live comparable calibration
 
@@ -19,7 +19,7 @@ Recent normalized eBay active asking listings and Best Buy new/open-box desktop 
 
 ## Metrics on included structural demo data
 
-MAE: $138.27; RMSE: $174.02; R²: 0.758; 5-fold CV MAE: $134.37. These are development-sample metrics and must not be represented as real-market performance.
+MAE: $141.21; RMSE: $176.60; R²: 0.750 on 240 untouched test observations (717 training, 239 calibration). The included development sample uses a deterministic random split because timestamps are unavailable; these metrics must not be represented as real-market performance.
 
 No offline MAE/RMSE claim is attached to the live hybrid layer until it is evaluated against a real held-out completed-sales dataset.
 
